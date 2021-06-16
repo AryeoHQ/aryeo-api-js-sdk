@@ -1,6 +1,7 @@
 # Aryeo.Group
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | ID of the group. | 
@@ -17,10 +18,17 @@ Name | Type | Description | Notes
 **defaultOrderForm** | [**OrderForm**](OrderForm.md) |  | [optional] 
 **orderForms** | [**[OrderForm]**](OrderForm.md) | An array of order forms. | [optional] 
 
-<a name="GroupTypeEnum"></a>
+
+
 ## Enum: GroupTypeEnum
 
+
 * `creator` (value: `"creator"`)
+
 * `agent` (value: `"agent"`)
+
 * `brokerage` (value: `"brokerage"`)
+
+
+
 

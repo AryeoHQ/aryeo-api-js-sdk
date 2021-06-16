@@ -1,6 +1,7 @@
 # Aryeo.Listing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | ID of the listing. | 
@@ -18,9 +19,15 @@ Name | Type | Description | Notes
 **downloadsEnabled** | **Boolean** | Are downloads enabled for this listing? | 
 **orders** | [**[Order]**](Order.md) | orders | [optional] 
 
-<a name="DeliveryStatusEnum"></a>
+
+
 ## Enum: DeliveryStatusEnum
 
+
 * `delivered` (value: `"delivered"`)
+
 * `undelivered` (value: `"undelivered"`)
+
+
+
 

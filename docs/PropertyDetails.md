@@ -1,6 +1,7 @@
 # Aryeo.PropertyDetails
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **Number** | The price of the property in dollars. | [optional] 
@@ -14,23 +15,43 @@ Name | Type | Description | Notes
 **propertyType** | **String** | Type of property. | [optional] 
 **description** | **String** | Property description. | [optional] 
 
-<a name="PropertyTypeEnum"></a>
+
+
 ## Enum: PropertyTypeEnum
 
-* `singleFamily` (value: `"Single Family"`)
-* `singleFamilyAttached` (value: `"Single Family Attached"`)
-* `singleFamilyDetached` (value: `"Single Family Detached"`)
-* `colonial` (value: `"Colonial"`)
-* `condo` (value: `"Condo"`)
-* `townhome` (value: `"Townhome"`)
-* `twinhome` (value: `"Twinhome"`)
-* `duplex` (value: `"Duplex"`)
-* `lot` (value: `"Lot"`)
-* `land` (value: `"Land"`)
-* `manufacturedHome` (value: `"Manufactured Home"`)
-* `semiDetached` (value: `"Semi-Detached"`)
-* `rental` (value: `"Rental"`)
-* `rowHouse` (value: `"Row House"`)
-* `horseFarm` (value: `"Horse Farm"`)
-* `other` (value: `"Other"`)
+
+* `Single Family` (value: `"Single Family"`)
+
+* `Single Family Attached` (value: `"Single Family Attached"`)
+
+* `Single Family Detached` (value: `"Single Family Detached"`)
+
+* `Colonial` (value: `"Colonial"`)
+
+* `Condo` (value: `"Condo"`)
+
+* `Townhome` (value: `"Townhome"`)
+
+* `Twinhome` (value: `"Twinhome"`)
+
+* `Duplex` (value: `"Duplex"`)
+
+* `Lot` (value: `"Lot"`)
+
+* `Land` (value: `"Land"`)
+
+* `Manufactured Home` (value: `"Manufactured Home"`)
+
+* `Semi-Detached` (value: `"Semi-Detached"`)
+
+* `Rental` (value: `"Rental"`)
+
+* `Row House` (value: `"Row House"`)
+
+* `Horse Farm` (value: `"Horse Farm"`)
+
+* `Other` (value: `"Other"`)
+
+
+
 

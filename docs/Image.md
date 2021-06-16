@@ -1,6 +1,7 @@
 # Aryeo.Image
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | ID of the image. | 
@@ -10,3 +11,5 @@ Name | Type | Description | Notes
 **index** | **Number** | The order in which the image should be displayed amongst other related images. | [optional] 
 **caption** | **String** | A brief explanation of the image. | [optional] 
 **displayInGallery** | **Boolean** | Should the image be displayed in a gallery? | 
+
+

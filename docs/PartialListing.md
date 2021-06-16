@@ -1,6 +1,7 @@
 # Aryeo.PartialListing
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | ID of the listing. | 
@@ -18,27 +19,48 @@ Name | Type | Description | Notes
 **agent** | [**PartialGroup**](PartialGroup.md) |  | [optional] 
 **coAgent** | [**PartialGroup**](PartialGroup.md) |  | [optional] 
 
-<a name="DeliveryStatusEnum"></a>
+
+
 ## Enum: DeliveryStatusEnum
 
+
 * `delivered` (value: `"delivered"`)
+
 * `undelivered` (value: `"undelivered"`)
 
 
-<a name="StatusEnum"></a>
+
+
+
 ## Enum: StatusEnum
 
-* `offMarket` (value: `"Off Market"`)
-* `pendingLease` (value: `"Pending Lease"`)
-* `vacationRental` (value: `"Vacation Rental"`)
-* `leased` (value: `"Leased"`)
-* `forSale` (value: `"For Sale"`)
-* `draft` (value: `"Draft"`)
-* `comingSoon` (value: `"Coming Soon"`)
-* `soldm` (value: `"Soldm"`)
+
+* `Off Market` (value: `"Off Market"`)
+
+* `Pending Lease` (value: `"Pending Lease"`)
+
+* `Vacation Rental` (value: `"Vacation Rental"`)
+
+* `Leased` (value: `"Leased"`)
+
+* `For Sale` (value: `"For Sale"`)
+
+* `Draft` (value: `"Draft"`)
+
+* `Coming Soon` (value: `"Coming Soon"`)
+
+* `Soldm` (value: `"Soldm"`)
+
 * `NULL` (value: `"NULL"`)
-* `forLease` (value: `"For Lease"`)
-* `pendingSale` (value: `"Pending Sale"`)
-* `priceReduction` (value: `"Price Reduction"`)
-* `sold` (value: `"Sold"`)
+
+* `For Lease` (value: `"For Lease"`)
+
+* `Pending Sale` (value: `"Pending Sale"`)
+
+* `Price Reduction` (value: `"Price Reduction"`)
+
+* `Sold` (value: `"Sold"`)
+
+
+
 

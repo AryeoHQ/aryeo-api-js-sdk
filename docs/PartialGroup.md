@@ -1,6 +1,7 @@
 # Aryeo.PartialGroup
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | ID of the group. | 
@@ -11,10 +12,17 @@ Name | Type | Description | Notes
 **phone** | **String** | Phone number. | [optional] 
 **isBrokerageOrBrokerageAgent** | **Boolean** | Does this group represent a brokerage or an agent who belongs to a brokerage? | 
 
-<a name="GroupTypeEnum"></a>
+
+
 ## Enum: GroupTypeEnum
 
+
 * `creator` (value: `"creator"`)
+
 * `agent` (value: `"agent"`)
+
 * `brokerage` (value: `"brokerage"`)
+
+
+
 

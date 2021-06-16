@@ -1,6 +1,7 @@
 # Aryeo.Video
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | ID of the video. | 
@@ -10,24 +11,39 @@ Name | Type | Description | Notes
 **thumbnailUrl** | **String** | Thumbnail URL for the video. | 
 **playbackUrl** | **String** | A URL linking to the video. | 
 **downloadUrl** | **String** | A URL for downloading the video. | [optional] 
-**seconds** | **Number** | The video&#x27;s runtime in seconds. | [optional] 
+**seconds** | **Number** | The video&#39;s runtime in seconds. | [optional] 
 **shareUrl** | **String** | Aryeo iFrame player URL | [optional] 
 
-<a name="DisplayTypeEnum"></a>
+
+
 ## Enum: DisplayTypeEnum
 
+
 * `branded` (value: `"branded"`)
+
 * `unbranded` (value: `"unbranded"`)
+
 * `both` (value: `"both"`)
+
 * `none` (value: `"none"`)
 
 
-<a name="SourceTypeEnum"></a>
+
+
+
 ## Enum: SourceTypeEnum
 
+
 * `youtube` (value: `"youtube"`)
+
 * `vimeo` (value: `"vimeo"`)
+
 * `optimized` (value: `"optimized"`)
+
 * `uploaded` (value: `"uploaded"`)
+
 * `link` (value: `"link"`)
+
+
+
 

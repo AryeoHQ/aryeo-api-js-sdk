@@ -1,6 +1,7 @@
 # Aryeo.Order
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | ID of the order. | 
@@ -12,16 +13,26 @@ Name | Type | Description | Notes
 **listing** | [**PartialListing**](PartialListing.md) |  | [optional] 
 **fulfillmentStatus** | **String** | The fulfillment status of the order. | 
 
-<a name="PaymentStatusEnum"></a>
+
+
 ## Enum: PaymentStatusEnum
 
+
 * `paid` (value: `"paid"`)
+
 * `unpaid` (value: `"unpaid"`)
 
 
-<a name="FulfillmentStatusEnum"></a>
+
+
+
 ## Enum: FulfillmentStatusEnum
 
+
 * `fulfilled` (value: `"fulfilled"`)
+
 * `unfulfilled` (value: `"unfulfilled"`)
+
+
+
 

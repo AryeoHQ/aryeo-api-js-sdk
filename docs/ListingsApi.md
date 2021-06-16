@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**getListings**](ListingsApi.md#getListings) | **GET** /listings | Get the listings available to a group.
 [**getListingsId**](ListingsApi.md#getListingsId) | **GET** /listings/{id} | Get information about a listing.
 
-<a name="getListings"></a>
-# **getListings**
+
+
+## getListings
+
 > PartialListingCollection getListings(opts)
 
 Get the listings available to a group.
@@ -16,20 +18,23 @@ Get the listings available to a group.
 Get the listings available to a group.
 
 ### Example
-```javascript
-import {Aryeo} from 'aryeo';
-let defaultClient = Aryeo.ApiClient.instance;
 
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.ListingsApi();
-let opts = { 
-  'query': "query_example", // String | A search query.
-  'perPage': "perPage_example", // String | The number of items per page. Defaults to 25.
-  'page': "page_example", // String | The requested page. Defaults to 1.
-  'status': "status_example", // String | The status you want to scope down to, example sold,  coming_soon,  for_sale, sold
-  'price': 56, // Number | The price value and greater will be returned.
-  'bathrooms': 1.2, // Number | Number of bathrooms minimum.
-  'bedrooms': 56 // Number | Number of bedrooms minimum.
+let opts = {
+  'query': thoroughbred trail, // String | A search query.
+  'perPage': 25, // String | The number of items per page. Defaults to 25.
+  'page': 2, // String | The requested page. Defaults to 1.
+  'status': coming_soon, // String | The status you want to scope down to, example sold,  coming_soon,  for_sale, sold
+  'price': 100000, // Number | The price value and greater will be returned.
+  'bathrooms': 3.5, // Number | Number of bathrooms minimum.
+  'bedrooms': 4 // Number | Number of bedrooms minimum.
 };
 apiInstance.getListings(opts, (error, data, response) => {
   if (error) {
@@ -41,6 +46,7 @@ apiInstance.getListings(opts, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,11 +68,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getListingsId"></a>
-# **getListingsId**
+
+## getListingsId
+
 > ListingResource getListingsId(id)
 
 Get information about a listing.
@@ -74,14 +81,16 @@ Get information about a listing.
 Get information about a listing.
 
 ### Example
-```javascript
-import {Aryeo} from 'aryeo';
-let defaultClient = Aryeo.ApiClient.instance;
 
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.ListingsApi();
-let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | The UUID of a listing.
-
+let id = 05a1c594-f469-483c-b490-51d790090593; // String | The UUID of a listing.
 apiInstance.getListingsId(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -92,6 +101,7 @@ apiInstance.getListingsId(id, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -107,6 +117,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

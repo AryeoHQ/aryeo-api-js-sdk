@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /orders | Get orders available to a group.
 [**postOrders**](OrdersApi.md#postOrders) | **POST** /orders | Create an order.
 
-<a name="getOrders"></a>
-# **getOrders**
+
+
+## getOrders
+
 > OrderCollection getOrders()
 
 Get orders available to a group.
@@ -16,10 +18,13 @@ Get orders available to a group.
 Get orders of a group.
 
 ### Example
-```javascript
-import {Aryeo} from 'aryeo';
-let defaultClient = Aryeo.ApiClient.instance;
 
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.OrdersApi();
 apiInstance.getOrders((error, data, response) => {
@@ -32,6 +37,7 @@ apiInstance.getOrders((error, data, response) => {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,11 +50,12 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="postOrders"></a>
-# **postOrders**
+
+## postOrders
+
 > OrderResource postOrders(opts)
 
 Create an order.
@@ -56,14 +63,17 @@ Create an order.
 Create an order.
 
 ### Example
-```javascript
-import {Aryeo} from 'aryeo';
-let defaultClient = Aryeo.ApiClient.instance;
 
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.OrdersApi();
-let opts = { 
-  'body': new Aryeo.OrderPostPayload() // OrderPostPayload | OrderPostPayload
+let opts = {
+  'orderPostPayload': new Aryeo.OrderPostPayload() // OrderPostPayload | 
 };
 apiInstance.postOrders(opts, (error, data, response) => {
   if (error) {
@@ -76,9 +86,10 @@ apiInstance.postOrders(opts, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**OrderPostPayload**](OrderPostPayload.md)| OrderPostPayload | [optional] 
+ **orderPostPayload** | [**OrderPostPayload**](OrderPostPayload.md)|  | [optional] 
 
 ### Return type
 
@@ -90,6 +101,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

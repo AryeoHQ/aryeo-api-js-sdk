@@ -5,10 +5,12 @@ All URIs are relative to *https://api.aryeo.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getVendors**](VendorsApi.md#getVendors) | **GET** /vendors | Get vendors available to a group.
-[**getVendorsSearch**](VendorsApi.md#getVendorsSearch) | **GET** /vendors/search | Get vendors that can be added to the group&#x27;s vendor list.
+[**getVendorsSearch**](VendorsApi.md#getVendorsSearch) | **GET** /vendors/search | Get vendors that can be added to the group&#39;s vendor list.
 
-<a name="getVendors"></a>
-# **getVendors**
+
+
+## getVendors
+
 > GroupCollection getVendors()
 
 Get vendors available to a group.
@@ -16,10 +18,13 @@ Get vendors available to a group.
 Get vendors available to a group.
 
 ### Example
-```javascript
-import {Aryeo} from 'aryeo';
-let defaultClient = Aryeo.ApiClient.instance;
 
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.VendorsApi();
 apiInstance.getVendors((error, data, response) => {
@@ -32,6 +37,7 @@ apiInstance.getVendors((error, data, response) => {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -44,28 +50,32 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="getVendorsSearch"></a>
-# **getVendorsSearch**
+
+## getVendorsSearch
+
 > GroupCollection getVendorsSearch(opts)
 
-Get vendors that can be added to the group&#x27;s vendor list.
+Get vendors that can be added to the group&#39;s vendor list.
 
-Get vendors that can be added to the group&#x27;s vendor list, excluding those already available to a group. 
+Get vendors that can be added to the group&#39;s vendor list, excluding those already available to a group. 
 
 ### Example
-```javascript
-import {Aryeo} from 'aryeo';
-let defaultClient = Aryeo.ApiClient.instance;
 
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: JWT
+let JWT = defaultClient.authentications['JWT'];
+JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.VendorsApi();
-let opts = { 
-  'query': "query_example", // String | A search query.
-  'perPage': "perPage_example", // String | The number of items per page. Defaults to 25.
-  'page': "page_example" // String | The requested page. Defaults to 1.
+let opts = {
+  'query': Demo Photography Company, // String | A search query.
+  'perPage': 25, // String | The number of items per page. Defaults to 25.
+  'page': 2 // String | The requested page. Defaults to 1.
 };
 apiInstance.getVendorsSearch(opts, (error, data, response) => {
   if (error) {
@@ -77,6 +87,7 @@ apiInstance.getVendorsSearch(opts, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -94,6 +105,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 

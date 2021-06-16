@@ -1,6 +1,7 @@
 # Aryeo.PartialAddress
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** | ID of address. | 
@@ -15,3 +16,5 @@ Name | Type | Description | Notes
 **city** | **String** | City | [optional] 
 **state** | **String** | State | [optional] 
 **postalCode** | **String** | Postal Code | [optional] 
+
+
