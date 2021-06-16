@@ -1,0 +1,41 @@
+{
+  "name": "aryeo",
+  "version": "1.0.0",
+  "description": "_IntroductionThe_Aryeo_API_gives_access_to_the_Aryeo_platform__You_can_use_your_favorite_HTTPREST_library_for_interfacing_with_the_Aryeo_API_or_you_can_use_one_of_our_SDKs__Our_SDKs_are_procedurally_generated_and_a_great_starting_point_for_experimental_testing__If_there_is_an_additional_language_or_framework_that_you_want_to_see_supported_then_please_reach_and_out_and_make_a_contributionp_aligncenter_a_hrefhttpsgithub_comAryeoHQaryeo_api_dart_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesdart_svg_altDart_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_a_hrefhttpsgithub_comAryeoHQaryeo_api_go_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesgo_svg_altGo_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_a_hrefhttpsgithub_comAryeoHQaryeo_api_js_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesjs_svg_altNode_JS_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_a_hrefhttpsgithub_comAryeoHQaryeo_api_php_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesphp_svg_altPHP_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_a_hrefhttpsgithub_comAryeoHQaryeo_api_ruby_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesruby_svg_altRuby_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_a_hrefhttpsgithub_comAryeoHQaryeo_api_rust_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesrust_svg_altRust_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_a_hrefhttpsgithub_comAryeoHQaryeo_api_swift_sdkimg_srchttpsraw_githubusercontent_comAryeoHQaryeo_api_docsmasterpublicimagesswift_svg_altSwift_width44_stylepadding10pxborder_1px_solid_d3d3d3border_radius_5pxmargin4pxa_pNote_Some_SDKs_may_require_you_to_manually_add_the_Accept_header_to_all_Aryeo_API_requests__If_so_use_the_value_applicationjson__AuthenticationTo_start_using_the_Aryeo_API_you_will_need_to_generate_an_API_key_from_your_groups_developer_settings__You_can_then_authenticate_to_the_Aryeo_API_by_providing_your_key_in_the_appropriate_request_header__Requests_made_without_an_API_key_will_result_in_a_401_Unauthorized_error_",
+  "license": "Apache 2.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "superagent": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^8.0.1",
+    "sinon": "^7.2.0"
+  }
+}
