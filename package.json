@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "babel --plugins @babel/plugin-transform-modules-commonjs src -d dist",
+    "prepare": "npm run build",
     "test": "mocha --require @babel/register --recursive"
   },
   "browser": {
