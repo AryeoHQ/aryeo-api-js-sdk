@@ -1,3 +1,14 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * Aryeo
  * # Introduction The Aryeo API gives access to the Aryeo platform. You can use your favorite HTTP/REST library for interfacing with the Aryeo API, or you can use one of our SDKs. Our SDKs are procedurally generated and a great starting point for experimental testing. If there is an additional language or framework that you want to see supported, then please reach and out and make a contribution!  <p align=\"center\"> <a href=\"https://github.com/AryeoHQ/aryeo-api-dart-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/dart.svg\" alt=\"Dart\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-go-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/go.svg\" alt=\"Go\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-js-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/js.svg\" alt=\"Node JS\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-php-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/php.svg\" alt=\"PHP\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-ruby-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/ruby.svg\" alt=\"Ruby\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-rust-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/rust.svg\" alt=\"Rust\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-swift-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/swift.svg\" alt=\"Swift\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> </p>  **Note**: Some SDKs may require you to manually add the `Accept` header to all Aryeo API requests. If so, use the value `application/json`.  # Authentication To start using the Aryeo API, you will need to generate an API key from your group's developer settings. You can then authenticate to the Aryeo API by providing your key in the appropriate request header. Requests made without an API key will result in a `401 Unauthorized` error. 
@@ -10,13 +21,12 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from '../ApiClient';
+
 /**
  * The PaginationLinks model module.
  * @module model/PaginationLinks
  * @version 1.0.0
  */
-
 class PaginationLinks {
   /**
    * Constructs a new <code>PaginationLinks</code>.
@@ -53,19 +63,19 @@ class PaginationLinks {
       obj = obj || new PaginationLinks();
 
       if (data.hasOwnProperty('first')) {
-        obj['first'] = ApiClient.convertToType(data['first'], 'String');
+        obj['first'] = _ApiClient.default.convertToType(data['first'], 'String');
       }
 
       if (data.hasOwnProperty('last')) {
-        obj['last'] = ApiClient.convertToType(data['last'], 'String');
+        obj['last'] = _ApiClient.default.convertToType(data['last'], 'String');
       }
 
       if (data.hasOwnProperty('prev')) {
-        obj['prev'] = ApiClient.convertToType(data['prev'], 'String');
+        obj['prev'] = _ApiClient.default.convertToType(data['prev'], 'String');
       }
 
       if (data.hasOwnProperty('next')) {
-        obj['next'] = ApiClient.convertToType(data['next'], 'String');
+        obj['next'] = _ApiClient.default.convertToType(data['next'], 'String');
       }
     }
 
@@ -98,4 +108,5 @@ PaginationLinks.prototype['prev'] = undefined;
  */
 
 PaginationLinks.prototype['next'] = undefined;
-export default PaginationLinks;
+var _default = PaginationLinks;
+exports.default = _default;

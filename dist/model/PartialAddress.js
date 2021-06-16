@@ -1,3 +1,14 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * Aryeo
  * # Introduction The Aryeo API gives access to the Aryeo platform. You can use your favorite HTTP/REST library for interfacing with the Aryeo API, or you can use one of our SDKs. Our SDKs are procedurally generated and a great starting point for experimental testing. If there is an additional language or framework that you want to see supported, then please reach and out and make a contribution!  <p align=\"center\"> <a href=\"https://github.com/AryeoHQ/aryeo-api-dart-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/dart.svg\" alt=\"Dart\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-go-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/go.svg\" alt=\"Go\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-js-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/js.svg\" alt=\"Node JS\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-php-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/php.svg\" alt=\"PHP\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-ruby-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/ruby.svg\" alt=\"Ruby\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-rust-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/rust.svg\" alt=\"Rust\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-swift-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/swift.svg\" alt=\"Swift\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> </p>  **Note**: Some SDKs may require you to manually add the `Accept` header to all Aryeo API requests. If so, use the value `application/json`.  # Authentication To start using the Aryeo API, you will need to generate an API key from your group's developer settings. You can then authenticate to the Aryeo API by providing your key in the appropriate request header. Requests made without an API key will result in a `401 Unauthorized` error. 
@@ -10,13 +21,12 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from '../ApiClient';
+
 /**
  * The PartialAddress model module.
  * @module model/PartialAddress
  * @version 1.0.0
  */
-
 class PartialAddress {
   /**
    * Constructs a new <code>PartialAddress</code>.
@@ -59,51 +69,51 @@ class PartialAddress {
       obj = obj || new PartialAddress();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+        obj['id'] = _ApiClient.default.convertToType(data['id'], 'Number');
       }
 
       if (data.hasOwnProperty('full_address')) {
-        obj['full_address'] = ApiClient.convertToType(data['full_address'], 'String');
+        obj['full_address'] = _ApiClient.default.convertToType(data['full_address'], 'String');
       }
 
       if (data.hasOwnProperty('formatted_address_1')) {
-        obj['formatted_address_1'] = ApiClient.convertToType(data['formatted_address_1'], 'String');
+        obj['formatted_address_1'] = _ApiClient.default.convertToType(data['formatted_address_1'], 'String');
       }
 
       if (data.hasOwnProperty('formatted_address_2')) {
-        obj['formatted_address_2'] = ApiClient.convertToType(data['formatted_address_2'], 'String');
+        obj['formatted_address_2'] = _ApiClient.default.convertToType(data['formatted_address_2'], 'String');
       }
 
       if (data.hasOwnProperty('latitude')) {
-        obj['latitude'] = ApiClient.convertToType(data['latitude'], 'Number');
+        obj['latitude'] = _ApiClient.default.convertToType(data['latitude'], 'Number');
       }
 
       if (data.hasOwnProperty('longitude')) {
-        obj['longitude'] = ApiClient.convertToType(data['longitude'], 'Number');
+        obj['longitude'] = _ApiClient.default.convertToType(data['longitude'], 'Number');
       }
 
       if (data.hasOwnProperty('place_id')) {
-        obj['place_id'] = ApiClient.convertToType(data['place_id'], 'String');
+        obj['place_id'] = _ApiClient.default.convertToType(data['place_id'], 'String');
       }
 
       if (data.hasOwnProperty('address_line_1')) {
-        obj['address_line_1'] = ApiClient.convertToType(data['address_line_1'], 'String');
+        obj['address_line_1'] = _ApiClient.default.convertToType(data['address_line_1'], 'String');
       }
 
       if (data.hasOwnProperty('address_line_2')) {
-        obj['address_line_2'] = ApiClient.convertToType(data['address_line_2'], 'String');
+        obj['address_line_2'] = _ApiClient.default.convertToType(data['address_line_2'], 'String');
       }
 
       if (data.hasOwnProperty('city')) {
-        obj['city'] = ApiClient.convertToType(data['city'], 'String');
+        obj['city'] = _ApiClient.default.convertToType(data['city'], 'String');
       }
 
       if (data.hasOwnProperty('state')) {
-        obj['state'] = ApiClient.convertToType(data['state'], 'String');
+        obj['state'] = _ApiClient.default.convertToType(data['state'], 'String');
       }
 
       if (data.hasOwnProperty('postal_code')) {
-        obj['postal_code'] = ApiClient.convertToType(data['postal_code'], 'String');
+        obj['postal_code'] = _ApiClient.default.convertToType(data['postal_code'], 'String');
       }
     }
 
@@ -184,4 +194,5 @@ PartialAddress.prototype['state'] = undefined;
  */
 
 PartialAddress.prototype['postal_code'] = undefined;
-export default PartialAddress;
+var _default = PartialAddress;
+exports.default = _default;

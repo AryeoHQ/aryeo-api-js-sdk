@@ -1,3 +1,32 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+
+var _FloorPlan = _interopRequireDefault(require("./FloorPlan"));
+
+var _Group = _interopRequireDefault(require("./Group"));
+
+var _Image = _interopRequireDefault(require("./Image"));
+
+var _InteractiveContent = _interopRequireDefault(require("./InteractiveContent"));
+
+var _Order = _interopRequireDefault(require("./Order"));
+
+var _PartialAddress = _interopRequireDefault(require("./PartialAddress"));
+
+var _PropertyDetails = _interopRequireDefault(require("./PropertyDetails"));
+
+var _PropertyWebsites = _interopRequireDefault(require("./PropertyWebsites"));
+
+var _Video = _interopRequireDefault(require("./Video"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
  * Aryeo
  * # Introduction The Aryeo API gives access to the Aryeo platform. You can use your favorite HTTP/REST library for interfacing with the Aryeo API, or you can use one of our SDKs. Our SDKs are procedurally generated and a great starting point for experimental testing. If there is an additional language or framework that you want to see supported, then please reach and out and make a contribution!  <p align=\"center\"> <a href=\"https://github.com/AryeoHQ/aryeo-api-dart-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/dart.svg\" alt=\"Dart\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-go-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/go.svg\" alt=\"Go\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-js-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/js.svg\" alt=\"Node JS\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-php-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/php.svg\" alt=\"PHP\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-ruby-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/ruby.svg\" alt=\"Ruby\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-rust-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/rust.svg\" alt=\"Rust\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> <a href=\"https://github.com/AryeoHQ/aryeo-api-swift-sdk\"><img src=\"https://raw.githubusercontent.com/AryeoHQ/aryeo-api-docs/master/public/images/swift.svg\" alt=\"Swift\" width=\"44\" style=\"padding:10px;border: 1px solid #d3d3d3;border-radius: 5px;margin:4px;\"/></a> </p>  **Note**: Some SDKs may require you to manually add the `Accept` header to all Aryeo API requests. If so, use the value `application/json`.  # Authentication To start using the Aryeo API, you will need to generate an API key from your group's developer settings. You can then authenticate to the Aryeo API by providing your key in the appropriate request header. Requests made without an API key will result in a `401 Unauthorized` error. 
@@ -10,22 +39,12 @@
  * Do not edit the class manually.
  *
  */
-import ApiClient from '../ApiClient';
-import FloorPlan from './FloorPlan';
-import Group from './Group';
-import Image from './Image';
-import InteractiveContent from './InteractiveContent';
-import Order from './Order';
-import PartialAddress from './PartialAddress';
-import PropertyDetails from './PropertyDetails';
-import PropertyWebsites from './PropertyWebsites';
-import Video from './Video';
+
 /**
  * The Listing model module.
  * @module model/Listing
  * @version 1.0.0
  */
-
 class Listing {
   /**
    * Constructs a new <code>Listing</code>.
@@ -66,59 +85,59 @@ class Listing {
       obj = obj || new Listing();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+        obj['id'] = _ApiClient.default.convertToType(data['id'], 'String');
       }
 
       if (data.hasOwnProperty('address')) {
-        obj['address'] = PartialAddress.constructFromObject(data['address']);
+        obj['address'] = _PartialAddress.default.constructFromObject(data['address']);
       }
 
       if (data.hasOwnProperty('delivery_status')) {
-        obj['delivery_status'] = ApiClient.convertToType(data['delivery_status'], 'String');
+        obj['delivery_status'] = _ApiClient.default.convertToType(data['delivery_status'], 'String');
       }
 
       if (data.hasOwnProperty('thumbnail_url')) {
-        obj['thumbnail_url'] = ApiClient.convertToType(data['thumbnail_url'], 'String');
+        obj['thumbnail_url'] = _ApiClient.default.convertToType(data['thumbnail_url'], 'String');
       }
 
       if (data.hasOwnProperty('agent')) {
-        obj['agent'] = Group.constructFromObject(data['agent']);
+        obj['agent'] = _Group.default.constructFromObject(data['agent']);
       }
 
       if (data.hasOwnProperty('co_agent')) {
-        obj['co_agent'] = Group.constructFromObject(data['co_agent']);
+        obj['co_agent'] = _Group.default.constructFromObject(data['co_agent']);
       }
 
       if (data.hasOwnProperty('images')) {
-        obj['images'] = ApiClient.convertToType(data['images'], [Image]);
+        obj['images'] = _ApiClient.default.convertToType(data['images'], [_Image.default]);
       }
 
       if (data.hasOwnProperty('videos')) {
-        obj['videos'] = ApiClient.convertToType(data['videos'], [Video]);
+        obj['videos'] = _ApiClient.default.convertToType(data['videos'], [_Video.default]);
       }
 
       if (data.hasOwnProperty('floor_plans')) {
-        obj['floor_plans'] = ApiClient.convertToType(data['floor_plans'], [FloorPlan]);
+        obj['floor_plans'] = _ApiClient.default.convertToType(data['floor_plans'], [_FloorPlan.default]);
       }
 
       if (data.hasOwnProperty('property_websites')) {
-        obj['property_websites'] = PropertyWebsites.constructFromObject(data['property_websites']);
+        obj['property_websites'] = _PropertyWebsites.default.constructFromObject(data['property_websites']);
       }
 
       if (data.hasOwnProperty('interactive_content')) {
-        obj['interactive_content'] = ApiClient.convertToType(data['interactive_content'], [InteractiveContent]);
+        obj['interactive_content'] = _ApiClient.default.convertToType(data['interactive_content'], [_InteractiveContent.default]);
       }
 
       if (data.hasOwnProperty('property_details')) {
-        obj['property_details'] = PropertyDetails.constructFromObject(data['property_details']);
+        obj['property_details'] = _PropertyDetails.default.constructFromObject(data['property_details']);
       }
 
       if (data.hasOwnProperty('downloads_enabled')) {
-        obj['downloads_enabled'] = ApiClient.convertToType(data['downloads_enabled'], 'Boolean');
+        obj['downloads_enabled'] = _ApiClient.default.convertToType(data['downloads_enabled'], 'Boolean');
       }
 
       if (data.hasOwnProperty('orders')) {
-        obj['orders'] = ApiClient.convertToType(data['orders'], [Order]);
+        obj['orders'] = _ApiClient.default.convertToType(data['orders'], [_Order.default]);
       }
     }
 
@@ -225,4 +244,5 @@ Listing['DeliveryStatusEnum'] = {
    */
   "undelivered": "undelivered"
 };
-export default Listing;
+var _default = Listing;
+exports.default = _default;
