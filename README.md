@@ -50,6 +50,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Aryeo.ListingsApi* | [**getListings**](docs/ListingsApi.md#getListings) | **GET** /listings | Get the listings available to a group.
 *Aryeo.ListingsApi* | [**getListingsId**](docs/ListingsApi.md#getListingsId) | **GET** /listings/{id} | Get information about a listing.
+*Aryeo.MarketingMaterialsApi* | [**putMarketingMaterialsUuidPublish**](docs/MarketingMaterialsApi.md#putMarketingMaterialsUuidPublish) | **PUT** /marketing-materials/{uuid}/publish | Publish a marketing material.
 *Aryeo.OrdersApi* | [**getOrders**](docs/OrdersApi.md#getOrders) | **GET** /orders | Get orders available to a group.
 *Aryeo.OrdersApi* | [**postOrders**](docs/OrdersApi.md#postOrders) | **POST** /orders | Create an order.
 *Aryeo.VendorsApi* | [**getVendors**](docs/VendorsApi.md#getVendors) | **GET** /vendors | Get vendors available to a group.
@@ -68,6 +69,7 @@ Class | Method | HTTP request | Description
  - [Aryeo.InteractiveContent](docs/InteractiveContent.md)
  - [Aryeo.Listing](docs/Listing.md)
  - [Aryeo.ListingResource](docs/ListingResource.md)
+ - [Aryeo.MarketingMaterialPublishPayload](docs/MarketingMaterialPublishPayload.md)
  - [Aryeo.Order](docs/Order.md)
  - [Aryeo.OrderCollection](docs/OrderCollection.md)
  - [Aryeo.OrderForm](docs/OrderForm.md)

@@ -80,6 +80,9 @@ class Order {
             if (data.hasOwnProperty('fulfillment_status')) {
                 obj['fulfillment_status'] = ApiClient.convertToType(data['fulfillment_status'], 'String');
             }
+            if (data.hasOwnProperty('status_url')) {
+                obj['status_url'] = ApiClient.convertToType(data['status_url'], 'String');
+            }
         }
         return obj;
     }
@@ -132,6 +135,12 @@ Order.prototype['listing'] = undefined;
  * @member {module:model/Order.FulfillmentStatusEnum} fulfillment_status
  */
 Order.prototype['fulfillment_status'] = undefined;
+
+/**
+ * A URL to see the order's status.
+ * @member {String} status_url
+ */
+Order.prototype['status_url'] = undefined;
 
 
 

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **paymentUrl** | **String** | A URL for to pay for the order. | [optional] 
 **listing** | [**PartialListing**](PartialListing.md) |  | [optional] 
 **fulfillmentStatus** | **String** | The fulfillment status of the order. | 
+**statusUrl** | **String** | A URL to see the order&#39;s status. | [optional] 
 
 
 

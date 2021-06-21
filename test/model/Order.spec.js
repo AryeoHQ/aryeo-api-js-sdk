@@ -96,6 +96,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property statusUrl (base name: "status_url")', function() {
+      // uncomment below and update the code to test the property statusUrl
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

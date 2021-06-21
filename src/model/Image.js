@@ -55,6 +55,9 @@ class Image {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
             }
+            if (data.hasOwnProperty('uuid')) {
+                obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
+            }
             if (data.hasOwnProperty('thumbnail_url')) {
                 obj['thumbnail_url'] = ApiClient.convertToType(data['thumbnail_url'], 'String');
             }
@@ -85,6 +88,12 @@ class Image {
  * @member {Number} id
  */
 Image.prototype['id'] = undefined;
+
+/**
+ * The UUID of the image.
+ * @member {String} uuid
+ */
+Image.prototype['uuid'] = undefined;
 
 /**
  * A URL for a thumbnail-sized version of the image.
