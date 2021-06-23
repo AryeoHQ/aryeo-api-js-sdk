@@ -9,6 +9,7 @@
 import ApiClient from "../ApiClient";
 import ApiError from '../model/ApiError';
 import MarketingMaterialPublishPayload from '../model/MarketingMaterialPublishPayload';
+import MarketingMaterialTemplatePublishPayload from '../model/MarketingMaterialTemplatePublishPayload';
 
 /**
 * MarketingMaterials service.
@@ -28,6 +29,51 @@ export default class MarketingMaterialsApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the putMarketingMaterialsTemplatesUuidPublish operation.
+     * @callback module:api/MarketingMaterialsApi~putMarketingMaterialsTemplatesUuidPublishCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Publish a marketing material template.
+     * Publish a marketing material template.
+     * @param {String} uuid UUID of the marketing material template record.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/MarketingMaterialTemplatePublishPayload} opts.marketingMaterialTemplatePublishPayload 
+     * @param {module:api/MarketingMaterialsApi~putMarketingMaterialsTemplatesUuidPublishCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    putMarketingMaterialsTemplatesUuidPublish(uuid, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['marketingMaterialTemplatePublishPayload'];
+      // verify the required parameter 'uuid' is set
+      if (uuid === undefined || uuid === null) {
+        throw new Error("Missing the required parameter 'uuid' when calling putMarketingMaterialsTemplatesUuidPublish");
+      }
+
+      let pathParams = {
+        'uuid': uuid
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['JWT'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/marketing-materials/templates/{uuid}/publish', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the putMarketingMaterialsUuidPublish operation.

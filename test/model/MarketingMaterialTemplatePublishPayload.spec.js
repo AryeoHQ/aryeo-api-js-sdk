@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.MarketingMaterialsApi();
+    instance = new Aryeo.MarketingMaterialTemplatePublishPayload();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,27 +41,19 @@
       object[property] = value;
   }
 
-  describe('MarketingMaterialsApi', function() {
-    describe('putMarketingMaterialsTemplatesUuidPublish', function() {
-      it('should call putMarketingMaterialsTemplatesUuidPublish successfully', function(done) {
-        //uncomment below and update the code to test putMarketingMaterialsTemplatesUuidPublish
-        //instance.putMarketingMaterialsTemplatesUuidPublish(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('MarketingMaterialTemplatePublishPayload', function() {
+    it('should create an instance of MarketingMaterialTemplatePublishPayload', function() {
+      // uncomment below and update the code to test MarketingMaterialTemplatePublishPayload
+      //var instane = new Aryeo.MarketingMaterialTemplatePublishPayload();
+      //expect(instance).to.be.a(Aryeo.MarketingMaterialTemplatePublishPayload);
     });
-    describe('putMarketingMaterialsUuidPublish', function() {
-      it('should call putMarketingMaterialsUuidPublish successfully', function(done) {
-        //uncomment below and update the code to test putMarketingMaterialsUuidPublish
-        //instance.putMarketingMaterialsUuidPublish(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property polotnoJson (base name: "polotno_json")', function() {
+      // uncomment below and update the code to test the property polotnoJson
+      //var instance = new Aryeo.MarketingMaterialTemplatePublishPayload();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

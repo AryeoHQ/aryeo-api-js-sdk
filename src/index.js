@@ -18,6 +18,7 @@ import InteractiveContent from './model/InteractiveContent';
 import Listing from './model/Listing';
 import ListingResource from './model/ListingResource';
 import MarketingMaterialPublishPayload from './model/MarketingMaterialPublishPayload';
+import MarketingMaterialTemplatePublishPayload from './model/MarketingMaterialTemplatePublishPayload';
 import Order from './model/Order';
 import OrderCollection from './model/OrderCollection';
 import OrderForm from './model/OrderForm';
@@ -144,6 +145,12 @@ export {
      * @property {module:model/MarketingMaterialPublishPayload}
      */
     MarketingMaterialPublishPayload,
+
+    /**
+     * The MarketingMaterialTemplatePublishPayload model constructor.
+     * @property {module:model/MarketingMaterialTemplatePublishPayload}
+     */
+    MarketingMaterialTemplatePublishPayload,
 
     /**
      * The Order model constructor.
