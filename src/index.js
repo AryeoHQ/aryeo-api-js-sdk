@@ -17,8 +17,6 @@ import Image from './model/Image';
 import InteractiveContent from './model/InteractiveContent';
 import Listing from './model/Listing';
 import ListingResource from './model/ListingResource';
-import MarketingMaterialPublishPayload from './model/MarketingMaterialPublishPayload';
-import MarketingMaterialTemplatePublishPayload from './model/MarketingMaterialTemplatePublishPayload';
 import Order from './model/Order';
 import OrderCollection from './model/OrderCollection';
 import OrderForm from './model/OrderForm';
@@ -37,7 +35,6 @@ import SocialProfiles from './model/SocialProfiles';
 import User from './model/User';
 import Video from './model/Video';
 import ListingsApi from './api/ListingsApi';
-import MarketingMaterialsApi from './api/MarketingMaterialsApi';
 import OrdersApi from './api/OrdersApi';
 import VendorsApi from './api/VendorsApi';
 
@@ -139,18 +136,6 @@ export {
      * @property {module:model/ListingResource}
      */
     ListingResource,
-
-    /**
-     * The MarketingMaterialPublishPayload model constructor.
-     * @property {module:model/MarketingMaterialPublishPayload}
-     */
-    MarketingMaterialPublishPayload,
-
-    /**
-     * The MarketingMaterialTemplatePublishPayload model constructor.
-     * @property {module:model/MarketingMaterialTemplatePublishPayload}
-     */
-    MarketingMaterialTemplatePublishPayload,
 
     /**
      * The Order model constructor.
@@ -259,12 +244,6 @@ export {
     * @property {module:api/ListingsApi}
     */
     ListingsApi,
-
-    /**
-    * The MarketingMaterialsApi service constructor.
-    * @property {module:api/MarketingMaterialsApi}
-    */
-    MarketingMaterialsApi,
 
     /**
     * The OrdersApi service constructor.
