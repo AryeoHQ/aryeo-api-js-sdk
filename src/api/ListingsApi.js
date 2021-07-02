@@ -94,19 +94,19 @@ export default class ListingsApi {
     /**
      * Get information about a listing.
      * Get information about a listing.
-     * @param {String} uuid The UUID of a listing.
+     * @param {String} id The UUID of a listing.
      * @param {module:api/ListingsApi~getListingsIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ListingResource}
      */
-    getListingsId(uuid, callback) {
+    getListingsId(id, callback) {
       let postBody = null;
-      // verify the required parameter 'uuid' is set
-      if (uuid === undefined || uuid === null) {
-        throw new Error("Missing the required parameter 'uuid' when calling getListingsId");
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getListingsId");
       }
 
       let pathParams = {
-        'uuid': uuid
+        'id': id
       };
       let queryParams = {
       };
@@ -120,7 +120,7 @@ export default class ListingsApi {
       let accepts = ['application/json'];
       let returnType = ListingResource;
       return this.apiClient.callApi(
-        '/listings/{uuid}', 'GET',
+        '/listings/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

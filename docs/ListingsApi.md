@@ -5,7 +5,7 @@ All URIs are relative to *https://api.aryeo.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getListings**](ListingsApi.md#getListings) | **GET** /listings | Get the listings available to a group.
-[**getListingsId**](ListingsApi.md#getListingsId) | **GET** /listings/{uuid} | Get information about a listing.
+[**getListingsId**](ListingsApi.md#getListingsId) | **GET** /listings/{id} | Get information about a listing.
 
 
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ## getListingsId
 
-> ListingResource getListingsId(uuid)
+> ListingResource getListingsId(id)
 
 Get information about a listing.
 
@@ -90,8 +90,8 @@ let JWT = defaultClient.authentications['JWT'];
 JWT.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.ListingsApi();
-let uuid = 05a1c594-f469-483c-b490-51d790090593; // String | The UUID of a listing.
-apiInstance.getListingsId(uuid, (error, data, response) => {
+let id = 05a1c594-f469-483c-b490-51d790090593; // String | The UUID of a listing.
+apiInstance.getListingsId(id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -105,7 +105,7 @@ apiInstance.getListingsId(uuid, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**String**](.md)| The UUID of a listing. | 
+ **id** | [**String**](.md)| The UUID of a listing. | 
 
 ### Return type
 
