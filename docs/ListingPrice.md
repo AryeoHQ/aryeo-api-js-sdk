@@ -1,9 +1,9 @@
-# Aryeo.ProductItem
+# Aryeo.ListingPrice
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | ID of the product item. | [optional] 
+**listPrice** | **Number** | The current price of the listing. | [optional] 
 
 

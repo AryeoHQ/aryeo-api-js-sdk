@@ -15,11 +15,11 @@ Name | Type | Description | Notes
 ## Enum: DisplayTypeEnum
 
 
-* `branded` (value: `"branded"`)
+* `BRANDED` (value: `"BRANDED"`)
 
-* `unbranded` (value: `"unbranded"`)
+* `UNBRANDED` (value: `"UNBRANDED"`)
 
-* `both` (value: `"both"`)
+* `BOTH` (value: `"BOTH"`)
 
 
 
@@ -28,9 +28,9 @@ Name | Type | Description | Notes
 ## Enum: ContentTypeEnum
 
 
-* `matterport` (value: `"matterport"`)
+* `MATTERPORT` (value: `"MATTERPORT"`)
 
-* `other` (value: `"other"`)
+* `OTHER` (value: `"OTHER"`)
 
 
 

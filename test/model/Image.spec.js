@@ -54,12 +54,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property uuid (base name: "uuid")', function() {
-      // uncomment below and update the code to test the property uuid
-      //var instance = new Aryeo.Image();
-      //expect(instance).to.be();
-    });
-
     it('should have the property thumbnailUrl (base name: "thumbnail_url")', function() {
       // uncomment below and update the code to test the property thumbnailUrl
       //var instance = new Aryeo.Image();

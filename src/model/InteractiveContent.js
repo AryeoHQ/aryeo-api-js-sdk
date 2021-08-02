@@ -10,7 +10,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InteractiveContent model module.
  * @module model/InteractiveContent
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class InteractiveContent {
     /**
@@ -114,22 +114,22 @@ InteractiveContent.prototype['thumbnail_url'] = undefined;
 InteractiveContent['DisplayTypeEnum'] = {
 
     /**
-     * value: "branded"
+     * value: "BRANDED"
      * @const
      */
-    "branded": "branded",
+    "BRANDED": "BRANDED",
 
     /**
-     * value: "unbranded"
+     * value: "UNBRANDED"
      * @const
      */
-    "unbranded": "unbranded",
+    "UNBRANDED": "UNBRANDED",
 
     /**
-     * value: "both"
+     * value: "BOTH"
      * @const
      */
-    "both": "both"
+    "BOTH": "BOTH"
 };
 
 
@@ -141,16 +141,16 @@ InteractiveContent['DisplayTypeEnum'] = {
 InteractiveContent['ContentTypeEnum'] = {
 
     /**
-     * value: "matterport"
+     * value: "MATTERPORT"
      * @const
      */
-    "matterport": "matterport",
+    "MATTERPORT": "MATTERPORT",
 
     /**
-     * value: "other"
+     * value: "OTHER"
      * @const
      */
-    "other": "other"
+    "OTHER": "OTHER"
 };
 
 

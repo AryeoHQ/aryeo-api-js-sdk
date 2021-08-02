@@ -11,17 +11,18 @@ import Order from './Order';
 /**
  * The OrderResource model module.
  * @module model/OrderResource
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class OrderResource {
     /**
      * Constructs a new <code>OrderResource</code>.
      * An order.
      * @alias module:model/OrderResource
+     * @param status {String} What was the state of the request?
      */
-    constructor() { 
+    constructor(status) { 
         
-        OrderResource.initialize(this);
+        OrderResource.initialize(this, status);
     }
 
     /**
@@ -29,7 +30,8 @@ class OrderResource {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, status) { 
+        obj['status'] = status;
     }
 
     /**
@@ -43,6 +45,9 @@ class OrderResource {
         if (data) {
             obj = obj || new OrderResource();
 
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = Order.constructFromObject(data['data']);
             }
@@ -52,6 +57,12 @@ class OrderResource {
 
 
 }
+
+/**
+ * What was the state of the request?
+ * @member {String} status
+ */
+OrderResource.prototype['status'] = undefined;
 
 /**
  * @member {module:model/Order} data

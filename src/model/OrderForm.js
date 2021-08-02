@@ -10,7 +10,7 @@ import ApiClient from '../ApiClient';
 /**
  * The OrderForm model module.
  * @module model/OrderForm
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class OrderForm {
     /**
@@ -49,8 +49,8 @@ class OrderForm {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('title')) {
+                obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
             if (data.hasOwnProperty('url')) {
                 obj['url'] = ApiClient.convertToType(data['url'], 'String');
@@ -69,10 +69,10 @@ class OrderForm {
 OrderForm.prototype['id'] = undefined;
 
 /**
- * The name of the order form.
- * @member {String} name
+ * The title or name of the order form.
+ * @member {String} title
  */
-OrderForm.prototype['name'] = undefined;
+OrderForm.prototype['title'] = undefined;
 
 /**
  * A URL of a publicly-accessible webpage for this order form.

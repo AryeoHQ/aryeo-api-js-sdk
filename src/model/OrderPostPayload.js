@@ -6,12 +6,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import ProductItem from './ProductItem';
 
 /**
  * The OrderPostPayload model module.
  * @module model/OrderPostPayload
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class OrderPostPayload {
     /**
@@ -49,9 +48,6 @@ class OrderPostPayload {
             if (data.hasOwnProperty('payment_status')) {
                 obj['payment_status'] = ApiClient.convertToType(data['payment_status'], 'String');
             }
-            if (data.hasOwnProperty('product_items')) {
-                obj['product_items'] = ApiClient.convertToType(data['product_items'], [ProductItem]);
-            }
         }
         return obj;
     }
@@ -60,22 +56,16 @@ class OrderPostPayload {
 }
 
 /**
- * The fulfillment status of the order.
+ * The fulfillment status of the order. Defaults to \"UNFULFILLED\".
  * @member {module:model/OrderPostPayload.FulfillmentStatusEnum} fulfillment_status
  */
 OrderPostPayload.prototype['fulfillment_status'] = undefined;
 
 /**
- * The payment status of the order.
+ * The payment status of the order. Defaults to \"UNPAID\". 
  * @member {module:model/OrderPostPayload.PaymentStatusEnum} payment_status
  */
 OrderPostPayload.prototype['payment_status'] = undefined;
-
-/**
- * product_items
- * @member {Array.<module:model/ProductItem>} product_items
- */
-OrderPostPayload.prototype['product_items'] = undefined;
 
 
 
@@ -89,16 +79,16 @@ OrderPostPayload.prototype['product_items'] = undefined;
 OrderPostPayload['FulfillmentStatusEnum'] = {
 
     /**
-     * value: "fulfilled"
+     * value: "FULFILLED"
      * @const
      */
-    "fulfilled": "fulfilled",
+    "FULFILLED": "FULFILLED",
 
     /**
-     * value: "unfulfilled"
+     * value: "UNFULFILLED"
      * @const
      */
-    "unfulfilled": "unfulfilled"
+    "UNFULFILLED": "UNFULFILLED"
 };
 
 
@@ -110,16 +100,16 @@ OrderPostPayload['FulfillmentStatusEnum'] = {
 OrderPostPayload['PaymentStatusEnum'] = {
 
     /**
-     * value: "paid"
+     * value: "PAID"
      * @const
      */
-    "paid": "paid",
+    "PAID": "PAID",
 
     /**
-     * value: "unpaid"
+     * value: "UNPAID"
      * @const
      */
-    "unpaid": "unpaid"
+    "UNPAID": "UNPAID"
 };
 
 

@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.MarketingMaterialsApi();
+    instance = new Aryeo.ListingPrice();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,27 +41,19 @@
       object[property] = value;
   }
 
-  describe('MarketingMaterialsApi', function() {
-    describe('putMarketingMaterialsTemplatesUuidPublish', function() {
-      it('should call putMarketingMaterialsTemplatesUuidPublish successfully', function(done) {
-        //uncomment below and update the code to test putMarketingMaterialsTemplatesUuidPublish
-        //instance.putMarketingMaterialsTemplatesUuidPublish(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ListingPrice', function() {
+    it('should create an instance of ListingPrice', function() {
+      // uncomment below and update the code to test ListingPrice
+      //var instane = new Aryeo.ListingPrice();
+      //expect(instance).to.be.a(Aryeo.ListingPrice);
     });
-    describe('putMarketingMaterialsUuidPublish', function() {
-      it('should call putMarketingMaterialsUuidPublish successfully', function(done) {
-        //uncomment below and update the code to test putMarketingMaterialsUuidPublish
-        //instance.putMarketingMaterialsUuidPublish(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property listPrice (base name: "list_price")', function() {
+      // uncomment below and update the code to test the property listPrice
+      //var instance = new Aryeo.ListingPrice();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

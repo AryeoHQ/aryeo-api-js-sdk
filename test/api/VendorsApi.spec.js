@@ -52,10 +52,10 @@
         done();
       });
     });
-    describe('getVendorsSearch', function() {
-      it('should call getVendorsSearch successfully', function(done) {
-        //uncomment below and update the code to test getVendorsSearch
-        //instance.getVendorsSearch(function(error) {
+    describe('getVendorsId', function() {
+      it('should call getVendorsId successfully', function(done) {
+        //uncomment below and update the code to test getVendorsId
+        //instance.getVendorsId(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

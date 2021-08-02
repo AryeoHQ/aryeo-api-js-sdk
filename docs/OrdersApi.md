@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## getOrders
 
-> OrderCollection getOrders()
+> OrderCollection getOrders(opts)
 
 Get orders available to a group.
 
@@ -22,12 +22,17 @@ Get orders of a group.
 ```javascript
 import Aryeo from 'aryeo';
 let defaultClient = Aryeo.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.accessToken = "YOUR ACCESS TOKEN"
+// Configure Bearer access token for authorization: Token
+let Token = defaultClient.authentications['Token'];
+Token.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.OrdersApi();
-apiInstance.getOrders((error, data, response) => {
+let opts = {
+  'sort': -created_at, // String | Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `-created_at`.
+  'perPage': 25, // String | The number of items per page. Defaults to 25.
+  'page': 2 // String | The requested page. Defaults to 1.
+};
+apiInstance.getOrders(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -38,7 +43,12 @@ apiInstance.getOrders((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **String**| Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to &#x60;-created_at&#x60;. | [optional] 
+ **perPage** | **String**| The number of items per page. Defaults to 25. | [optional] 
+ **page** | **String**| The requested page. Defaults to 1. | [optional] 
 
 ### Return type
 
@@ -46,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 
@@ -67,13 +77,13 @@ Create an order.
 ```javascript
 import Aryeo from 'aryeo';
 let defaultClient = Aryeo.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: JWT
-let JWT = defaultClient.authentications['JWT'];
-JWT.accessToken = "YOUR ACCESS TOKEN"
+// Configure Bearer access token for authorization: Token
+let Token = defaultClient.authentications['Token'];
+Token.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.OrdersApi();
 let opts = {
-  'orderPostPayload': new Aryeo.OrderPostPayload() // OrderPostPayload | 
+  'orderPostPayload': new Aryeo.OrderPostPayload() // OrderPostPayload | OrderPostPayload
 };
 apiInstance.postOrders(opts, (error, data, response) => {
   if (error) {
@@ -89,7 +99,7 @@ apiInstance.postOrders(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderPostPayload** | [**OrderPostPayload**](OrderPostPayload.md)|  | [optional] 
+ **orderPostPayload** | [**OrderPostPayload**](OrderPostPayload.md)| OrderPostPayload | [optional] 
 
 ### Return type
 
@@ -97,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../README.md#JWT)
+[Token](../README.md#Token)
 
 ### HTTP request headers
 

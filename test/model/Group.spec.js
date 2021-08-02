@@ -54,20 +54,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property groupType (base name: "group_type")', function() {
-      // uncomment below and update the code to test the property groupType
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
       //var instance = new Aryeo.Group();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instance = new Aryeo.Group();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property logo (base name: "logo")', function() {
-      // uncomment below and update the code to test the property logo
       //var instance = new Aryeo.Group();
       //expect(instance).to.be();
     });
@@ -84,32 +78,38 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property website (base name: "website")', function() {
-      // uncomment below and update the code to test the property website
+    it('should have the property websiteUrl (base name: "website_url")', function() {
+      // uncomment below and update the code to test the property websiteUrl
       //var instance = new Aryeo.Group();
       //expect(instance).to.be();
     });
 
-    it('should have the property isBrokerageOrBrokerageAgent (base name: "is_brokerage_or_brokerage_agent")', function() {
-      // uncomment below and update the code to test the property isBrokerageOrBrokerageAgent
+    it('should have the property logoUrl (base name: "logo_url")', function() {
+      // uncomment below and update the code to test the property logoUrl
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property avatarUrl (base name: "avatar_url")', function() {
+      // uncomment below and update the code to test the property avatarUrl
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property officeName (base name: "office_name")', function() {
+      // uncomment below and update the code to test the property officeName
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property licenseNumber (base name: "license_number")', function() {
+      // uncomment below and update the code to test the property licenseNumber
       //var instance = new Aryeo.Group();
       //expect(instance).to.be();
     });
 
     it('should have the property socialProfiles (base name: "social_profiles")', function() {
       // uncomment below and update the code to test the property socialProfiles
-      //var instance = new Aryeo.Group();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property agentProperties (base name: "agent_properties")', function() {
-      // uncomment below and update the code to test the property agentProperties
-      //var instance = new Aryeo.Group();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property users (base name: "users")', function() {
-      // uncomment below and update the code to test the property users
       //var instance = new Aryeo.Group();
       //expect(instance).to.be();
     });
@@ -122,6 +122,24 @@
 
     it('should have the property orderForms (base name: "order_forms")', function() {
       // uncomment below and update the code to test the property orderForms
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property owner (base name: "owner")', function() {
+      // uncomment below and update the code to test the property owner
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property users (base name: "users")', function() {
+      // uncomment below and update the code to test the property users
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property isBrokerageOrBrokerageAgent (base name: "is_brokerage_or_brokerage_agent")', function() {
+      // uncomment below and update the code to test the property isBrokerageOrBrokerageAgent
       //var instance = new Aryeo.Group();
       //expect(instance).to.be();
     });

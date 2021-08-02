@@ -8,6 +8,7 @@
 
 import ApiClient from "../ApiClient";
 import ApiError from '../model/ApiError';
+import ApiFail from '../model/ApiFail';
 import OrderCollection from '../model/OrderCollection';
 import OrderPostPayload from '../model/OrderPostPayload';
 import OrderResource from '../model/OrderResource';
@@ -15,7 +16,7 @@ import OrderResource from '../model/OrderResource';
 /**
 * Orders service.
 * @module api/OrdersApi
-* @version 1.0.0
+* @version 2021-06-17
 */
 export default class OrdersApi {
 
@@ -42,22 +43,30 @@ export default class OrdersApi {
     /**
      * Get orders available to a group.
      * Get orders of a group.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sort Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `-created_at`.
+     * @param {String} opts.perPage The number of items per page. Defaults to 25.
+     * @param {String} opts.page The requested page. Defaults to 1.
      * @param {module:api/OrdersApi~getOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrderCollection}
      */
-    getOrders(callback) {
+    getOrders(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'sort': opts['sort'],
+        'per_page': opts['perPage'],
+        'page': opts['page']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['Token'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = OrderCollection;
@@ -80,7 +89,7 @@ export default class OrdersApi {
      * Create an order.
      * Create an order.
      * @param {Object} opts Optional parameters
-     * @param {module:model/OrderPostPayload} opts.orderPostPayload 
+     * @param {module:model/OrderPostPayload} opts.orderPostPayload OrderPostPayload
      * @param {module:api/OrdersApi~postOrdersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OrderResource}
      */
@@ -97,7 +106,7 @@ export default class OrdersApi {
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['Token'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = OrderResource;

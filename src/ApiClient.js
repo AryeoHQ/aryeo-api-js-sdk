@@ -11,7 +11,7 @@ import querystring from "querystring";
 
 /**
 * @module ApiClient
-* @version 1.0.0
+* @version 2021-06-17
 */
 
 /**
@@ -35,7 +35,7 @@ class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
-            'JWT': {type: 'bearer'} // JWT
+            'Token': {type: 'bearer'}
         }
 
         /**
@@ -44,7 +44,7 @@ class ApiClient {
          * @default {}
          */
         this.defaultHeaders = {
-            'User-Agent': 'OpenAPI-Generator/1.0.0/Javascript'
+            'User-Agent': 'OpenAPI-Generator/2021-06-17/Javascript'
         };
 
         /**

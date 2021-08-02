@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fulfillmentStatus** | **String** | The fulfillment status of the order. | [optional] 
-**paymentStatus** | **String** | The payment status of the order. | [optional] 
-**productItems** | [**[ProductItem]**](ProductItem.md) | product_items | [optional] 
+**fulfillmentStatus** | **String** | The fulfillment status of the order. Defaults to \&quot;UNFULFILLED\&quot;. | [optional] 
+**paymentStatus** | **String** | The payment status of the order. Defaults to \&quot;UNPAID\&quot;.  | [optional] 
 
 
 
 ## Enum: FulfillmentStatusEnum
 
 
-* `fulfilled` (value: `"fulfilled"`)
+* `FULFILLED` (value: `"FULFILLED"`)
 
-* `unfulfilled` (value: `"unfulfilled"`)
+* `UNFULFILLED` (value: `"UNFULFILLED"`)
 
 
 
@@ -24,9 +23,9 @@ Name | Type | Description | Notes
 ## Enum: PaymentStatusEnum
 
 
-* `paid` (value: `"paid"`)
+* `PAID` (value: `"PAID"`)
 
-* `unpaid` (value: `"unpaid"`)
+* `UNPAID` (value: `"UNPAID"`)
 
 
 

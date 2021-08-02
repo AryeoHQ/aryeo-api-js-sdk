@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.Currency();
+    instance = new Aryeo.ListingCollection();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,34 +41,34 @@
       object[property] = value;
   }
 
-  describe('Currency', function() {
-    it('should create an instance of Currency', function() {
-      // uncomment below and update the code to test Currency
-      //var instane = new Aryeo.Currency();
-      //expect(instance).to.be.a(Aryeo.Currency);
+  describe('ListingCollection', function() {
+    it('should create an instance of ListingCollection', function() {
+      // uncomment below and update the code to test ListingCollection
+      //var instane = new Aryeo.ListingCollection();
+      //expect(instance).to.be.a(Aryeo.ListingCollection);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new Aryeo.Currency();
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Aryeo.ListingCollection();
       //expect(instance).to.be();
     });
 
-    it('should have the property name (base name: "name")', function() {
-      // uncomment below and update the code to test the property name
-      //var instance = new Aryeo.Currency();
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
+      //var instance = new Aryeo.ListingCollection();
       //expect(instance).to.be();
     });
 
-    it('should have the property symbol (base name: "symbol")', function() {
-      // uncomment below and update the code to test the property symbol
-      //var instance = new Aryeo.Currency();
+    it('should have the property meta (base name: "meta")', function() {
+      // uncomment below and update the code to test the property meta
+      //var instance = new Aryeo.ListingCollection();
       //expect(instance).to.be();
     });
 
-    it('should have the property enabled (base name: "enabled")', function() {
-      // uncomment below and update the code to test the property enabled
-      //var instance = new Aryeo.Currency();
+    it('should have the property links (base name: "links")', function() {
+      // uncomment below and update the code to test the property links
+      //var instance = new Aryeo.ListingCollection();
       //expect(instance).to.be();
     });
 

@@ -54,8 +54,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property thumbnailUrl (base name: "thumbnail_url")', function() {
-      // uncomment below and update the code to test the property thumbnailUrl
+    it('should have the property originalUrl (base name: "original_url")', function() {
+      // uncomment below and update the code to test the property originalUrl
       //var instance = new Aryeo.FloorPlan();
       //expect(instance).to.be();
     });
@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property originalUrl (base name: "original_url")', function() {
-      // uncomment below and update the code to test the property originalUrl
+    it('should have the property thumbnailUrl (base name: "thumbnail_url")', function() {
+      // uncomment below and update the code to test the property thumbnailUrl
       //var instance = new Aryeo.FloorPlan();
       //expect(instance).to.be();
     });

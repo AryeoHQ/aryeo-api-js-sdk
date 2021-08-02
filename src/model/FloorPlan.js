@@ -10,21 +10,21 @@ import ApiClient from '../ApiClient';
 /**
  * The FloorPlan model module.
  * @module model/FloorPlan
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class FloorPlan {
     /**
      * Constructs a new <code>FloorPlan</code>.
      * A scale diagram of the arrangement of a building.
      * @alias module:model/FloorPlan
-     * @param id {Number} ID of the floor plan.
-     * @param thumbnailUrl {String} A URL for a thumbnail-sized version of the floor plan.
-     * @param largeUrl {String} A URL for a large version of the floor plan.
+     * @param id {String} ID of the floor plan.
      * @param originalUrl {String} A URL for the original, full-resolution version of the floor plan. Useful for downloading.
+     * @param largeUrl {String} A URL for a large version of the floor plan.
+     * @param thumbnailUrl {String} A URL for a thumbnail-sized version of the floor plan.
      */
-    constructor(id, thumbnailUrl, largeUrl, originalUrl) { 
+    constructor(id, originalUrl, largeUrl, thumbnailUrl) { 
         
-        FloorPlan.initialize(this, id, thumbnailUrl, largeUrl, originalUrl);
+        FloorPlan.initialize(this, id, originalUrl, largeUrl, thumbnailUrl);
     }
 
     /**
@@ -32,11 +32,11 @@ class FloorPlan {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, thumbnailUrl, largeUrl, originalUrl) { 
+    static initialize(obj, id, originalUrl, largeUrl, thumbnailUrl) { 
         obj['id'] = id;
-        obj['thumbnail_url'] = thumbnailUrl;
-        obj['large_url'] = largeUrl;
         obj['original_url'] = originalUrl;
+        obj['large_url'] = largeUrl;
+        obj['thumbnail_url'] = thumbnailUrl;
     }
 
     /**
@@ -51,16 +51,16 @@ class FloorPlan {
             obj = obj || new FloorPlan();
 
             if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('thumbnail_url')) {
-                obj['thumbnail_url'] = ApiClient.convertToType(data['thumbnail_url'], 'String');
+            if (data.hasOwnProperty('original_url')) {
+                obj['original_url'] = ApiClient.convertToType(data['original_url'], 'String');
             }
             if (data.hasOwnProperty('large_url')) {
                 obj['large_url'] = ApiClient.convertToType(data['large_url'], 'String');
             }
-            if (data.hasOwnProperty('original_url')) {
-                obj['original_url'] = ApiClient.convertToType(data['original_url'], 'String');
+            if (data.hasOwnProperty('thumbnail_url')) {
+                obj['thumbnail_url'] = ApiClient.convertToType(data['thumbnail_url'], 'String');
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
@@ -77,15 +77,15 @@ class FloorPlan {
 
 /**
  * ID of the floor plan.
- * @member {Number} id
+ * @member {String} id
  */
 FloorPlan.prototype['id'] = undefined;
 
 /**
- * A URL for a thumbnail-sized version of the floor plan.
- * @member {String} thumbnail_url
+ * A URL for the original, full-resolution version of the floor plan. Useful for downloading.
+ * @member {String} original_url
  */
-FloorPlan.prototype['thumbnail_url'] = undefined;
+FloorPlan.prototype['original_url'] = undefined;
 
 /**
  * A URL for a large version of the floor plan.
@@ -94,10 +94,10 @@ FloorPlan.prototype['thumbnail_url'] = undefined;
 FloorPlan.prototype['large_url'] = undefined;
 
 /**
- * A URL for the original, full-resolution version of the floor plan. Useful for downloading.
- * @member {String} original_url
+ * A URL for a thumbnail-sized version of the floor plan.
+ * @member {String} thumbnail_url
  */
-FloorPlan.prototype['original_url'] = undefined;
+FloorPlan.prototype['thumbnail_url'] = undefined;
 
 /**
  * The title (or caption) of the floor plan.

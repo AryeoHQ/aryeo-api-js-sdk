@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.GroupAgentProperties();
+    instance = new Aryeo.ApiFail();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,28 +41,16 @@
       object[property] = value;
   }
 
-  describe('GroupAgentProperties', function() {
-    it('should create an instance of GroupAgentProperties', function() {
-      // uncomment below and update the code to test GroupAgentProperties
-      //var instane = new Aryeo.GroupAgentProperties();
-      //expect(instance).to.be.a(Aryeo.GroupAgentProperties);
+  describe('ApiFail', function() {
+    it('should create an instance of ApiFail', function() {
+      // uncomment below and update the code to test ApiFail
+      //var instane = new Aryeo.ApiFail();
+      //expect(instance).to.be.a(Aryeo.ApiFail);
     });
 
-    it('should have the property brokerageName (base name: "brokerage_name")', function() {
-      // uncomment below and update the code to test the property brokerageName
-      //var instance = new Aryeo.GroupAgentProperties();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property agentLicenseNumber (base name: "agent_license_number")', function() {
-      // uncomment below and update the code to test the property agentLicenseNumber
-      //var instance = new Aryeo.GroupAgentProperties();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property agentAvatar (base name: "agent_avatar")', function() {
-      // uncomment below and update the code to test the property agentAvatar
-      //var instance = new Aryeo.GroupAgentProperties();
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Aryeo.ApiFail();
       //expect(instance).to.be();
     });
 

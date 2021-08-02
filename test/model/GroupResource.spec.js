@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.MarketingMaterialTemplatePublishPayload();
+    instance = new Aryeo.GroupResource();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,16 +41,22 @@
       object[property] = value;
   }
 
-  describe('MarketingMaterialTemplatePublishPayload', function() {
-    it('should create an instance of MarketingMaterialTemplatePublishPayload', function() {
-      // uncomment below and update the code to test MarketingMaterialTemplatePublishPayload
-      //var instane = new Aryeo.MarketingMaterialTemplatePublishPayload();
-      //expect(instance).to.be.a(Aryeo.MarketingMaterialTemplatePublishPayload);
+  describe('GroupResource', function() {
+    it('should create an instance of GroupResource', function() {
+      // uncomment below and update the code to test GroupResource
+      //var instane = new Aryeo.GroupResource();
+      //expect(instance).to.be.a(Aryeo.GroupResource);
     });
 
-    it('should have the property polotnoJson (base name: "polotno_json")', function() {
-      // uncomment below and update the code to test the property polotnoJson
-      //var instance = new Aryeo.MarketingMaterialTemplatePublishPayload();
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Aryeo.GroupResource();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
+      //var instance = new Aryeo.GroupResource();
       //expect(instance).to.be();
     });
 

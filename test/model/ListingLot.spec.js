@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.MarketingMaterialPublishPayload();
+    instance = new Aryeo.ListingLot();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,16 +41,22 @@
       object[property] = value;
   }
 
-  describe('MarketingMaterialPublishPayload', function() {
-    it('should create an instance of MarketingMaterialPublishPayload', function() {
-      // uncomment below and update the code to test MarketingMaterialPublishPayload
-      //var instane = new Aryeo.MarketingMaterialPublishPayload();
-      //expect(instance).to.be.a(Aryeo.MarketingMaterialPublishPayload);
+  describe('ListingLot', function() {
+    it('should create an instance of ListingLot', function() {
+      // uncomment below and update the code to test ListingLot
+      //var instane = new Aryeo.ListingLot();
+      //expect(instance).to.be.a(Aryeo.ListingLot);
     });
 
-    it('should have the property polotnoJson (base name: "polotno_json")', function() {
-      // uncomment below and update the code to test the property polotnoJson
-      //var instance = new Aryeo.MarketingMaterialPublishPayload();
+    it('should have the property sizeAcres (base name: "size_acres")', function() {
+      // uncomment below and update the code to test the property sizeAcres
+      //var instance = new Aryeo.ListingLot();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property openParkingSpaces (base name: "open_parking_spaces")', function() {
+      // uncomment below and update the code to test the property openParkingSpaces
+      //var instance = new Aryeo.ListingLot();
       //expect(instance).to.be();
     });
 

@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property duration (base name: "duration")', function() {
+      // uncomment below and update the code to test the property duration
+      //var instance = new Aryeo.Video();
+      //expect(instance).to.be();
+    });
+
     it('should have the property displayType (base name: "display_type")', function() {
       // uncomment below and update the code to test the property displayType
       //var instance = new Aryeo.Video();
@@ -86,12 +92,6 @@
 
     it('should have the property downloadUrl (base name: "download_url")', function() {
       // uncomment below and update the code to test the property downloadUrl
-      //var instance = new Aryeo.Video();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property seconds (base name: "seconds")', function() {
-      // uncomment below and update the code to test the property seconds
       //var instance = new Aryeo.Video();
       //expect(instance).to.be();
     });

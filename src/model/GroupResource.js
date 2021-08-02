@@ -6,23 +6,23 @@
  */
 
 import ApiClient from '../ApiClient';
-import Listing from './Listing';
+import Group from './Group';
 
 /**
- * The ListingResource model module.
- * @module model/ListingResource
+ * The GroupResource model module.
+ * @module model/GroupResource
  * @version 2021-06-17
  */
-class ListingResource {
+class GroupResource {
     /**
-     * Constructs a new <code>ListingResource</code>.
-     * A listing.
-     * @alias module:model/ListingResource
+     * Constructs a new <code>GroupResource</code>.
+     * A group.
+     * @alias module:model/GroupResource
      * @param status {String} What was the state of the request?
      */
     constructor(status) { 
         
-        ListingResource.initialize(this, status);
+        GroupResource.initialize(this, status);
     }
 
     /**
@@ -35,21 +35,21 @@ class ListingResource {
     }
 
     /**
-     * Constructs a <code>ListingResource</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>GroupResource</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListingResource} obj Optional instance to populate.
-     * @return {module:model/ListingResource} The populated <code>ListingResource</code> instance.
+     * @param {module:model/GroupResource} obj Optional instance to populate.
+     * @return {module:model/GroupResource} The populated <code>GroupResource</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListingResource();
+            obj = obj || new GroupResource();
 
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('data')) {
-                obj['data'] = Listing.constructFromObject(data['data']);
+                obj['data'] = Group.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -62,17 +62,17 @@ class ListingResource {
  * What was the state of the request?
  * @member {String} status
  */
-ListingResource.prototype['status'] = undefined;
+GroupResource.prototype['status'] = undefined;
 
 /**
- * @member {module:model/Listing} data
+ * @member {module:model/Group} data
  */
-ListingResource.prototype['data'] = undefined;
+GroupResource.prototype['data'] = undefined;
 
 
 
 
 
 
-export default ListingResource;
+export default GroupResource;
 

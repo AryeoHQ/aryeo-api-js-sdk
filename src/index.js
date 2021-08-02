@@ -7,18 +7,21 @@
 
 
 import ApiClient from './ApiClient';
+import Address from './model/Address';
 import ApiError from './model/ApiError';
-import Currency from './model/Currency';
+import ApiFail from './model/ApiFail';
 import FloorPlan from './model/FloorPlan';
 import Group from './model/Group';
-import GroupAgentProperties from './model/GroupAgentProperties';
 import GroupCollection from './model/GroupCollection';
+import GroupResource from './model/GroupResource';
 import Image from './model/Image';
 import InteractiveContent from './model/InteractiveContent';
 import Listing from './model/Listing';
+import ListingBuilding from './model/ListingBuilding';
+import ListingCollection from './model/ListingCollection';
+import ListingLot from './model/ListingLot';
+import ListingPrice from './model/ListingPrice';
 import ListingResource from './model/ListingResource';
-import MarketingMaterialPublishPayload from './model/MarketingMaterialPublishPayload';
-import MarketingMaterialTemplatePublishPayload from './model/MarketingMaterialTemplatePublishPayload';
 import Order from './model/Order';
 import OrderCollection from './model/OrderCollection';
 import OrderForm from './model/OrderForm';
@@ -26,18 +29,11 @@ import OrderPostPayload from './model/OrderPostPayload';
 import OrderResource from './model/OrderResource';
 import PaginationLinks from './model/PaginationLinks';
 import PaginationMeta from './model/PaginationMeta';
-import PartialAddress from './model/PartialAddress';
-import PartialGroup from './model/PartialGroup';
-import PartialListing from './model/PartialListing';
-import PartialListingCollection from './model/PartialListingCollection';
-import ProductItem from './model/ProductItem';
-import PropertyDetails from './model/PropertyDetails';
-import PropertyWebsites from './model/PropertyWebsites';
+import PropertyWebsite from './model/PropertyWebsite';
 import SocialProfiles from './model/SocialProfiles';
 import User from './model/User';
 import Video from './model/Video';
 import ListingsApi from './api/ListingsApi';
-import MarketingMaterialsApi from './api/MarketingMaterialsApi';
 import OrdersApi from './api/OrdersApi';
 import VendorsApi from './api/VendorsApi';
 
@@ -71,7 +67,7 @@ import VendorsApi from './api/VendorsApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.0
+* @version 2021-06-17
 */
 export {
     /**
@@ -81,16 +77,22 @@ export {
     ApiClient,
 
     /**
+     * The Address model constructor.
+     * @property {module:model/Address}
+     */
+    Address,
+
+    /**
      * The ApiError model constructor.
      * @property {module:model/ApiError}
      */
     ApiError,
 
     /**
-     * The Currency model constructor.
-     * @property {module:model/Currency}
+     * The ApiFail model constructor.
+     * @property {module:model/ApiFail}
      */
-    Currency,
+    ApiFail,
 
     /**
      * The FloorPlan model constructor.
@@ -105,16 +107,16 @@ export {
     Group,
 
     /**
-     * The GroupAgentProperties model constructor.
-     * @property {module:model/GroupAgentProperties}
-     */
-    GroupAgentProperties,
-
-    /**
      * The GroupCollection model constructor.
      * @property {module:model/GroupCollection}
      */
     GroupCollection,
+
+    /**
+     * The GroupResource model constructor.
+     * @property {module:model/GroupResource}
+     */
+    GroupResource,
 
     /**
      * The Image model constructor.
@@ -135,22 +137,34 @@ export {
     Listing,
 
     /**
+     * The ListingBuilding model constructor.
+     * @property {module:model/ListingBuilding}
+     */
+    ListingBuilding,
+
+    /**
+     * The ListingCollection model constructor.
+     * @property {module:model/ListingCollection}
+     */
+    ListingCollection,
+
+    /**
+     * The ListingLot model constructor.
+     * @property {module:model/ListingLot}
+     */
+    ListingLot,
+
+    /**
+     * The ListingPrice model constructor.
+     * @property {module:model/ListingPrice}
+     */
+    ListingPrice,
+
+    /**
      * The ListingResource model constructor.
      * @property {module:model/ListingResource}
      */
     ListingResource,
-
-    /**
-     * The MarketingMaterialPublishPayload model constructor.
-     * @property {module:model/MarketingMaterialPublishPayload}
-     */
-    MarketingMaterialPublishPayload,
-
-    /**
-     * The MarketingMaterialTemplatePublishPayload model constructor.
-     * @property {module:model/MarketingMaterialTemplatePublishPayload}
-     */
-    MarketingMaterialTemplatePublishPayload,
 
     /**
      * The Order model constructor.
@@ -195,46 +209,10 @@ export {
     PaginationMeta,
 
     /**
-     * The PartialAddress model constructor.
-     * @property {module:model/PartialAddress}
+     * The PropertyWebsite model constructor.
+     * @property {module:model/PropertyWebsite}
      */
-    PartialAddress,
-
-    /**
-     * The PartialGroup model constructor.
-     * @property {module:model/PartialGroup}
-     */
-    PartialGroup,
-
-    /**
-     * The PartialListing model constructor.
-     * @property {module:model/PartialListing}
-     */
-    PartialListing,
-
-    /**
-     * The PartialListingCollection model constructor.
-     * @property {module:model/PartialListingCollection}
-     */
-    PartialListingCollection,
-
-    /**
-     * The ProductItem model constructor.
-     * @property {module:model/ProductItem}
-     */
-    ProductItem,
-
-    /**
-     * The PropertyDetails model constructor.
-     * @property {module:model/PropertyDetails}
-     */
-    PropertyDetails,
-
-    /**
-     * The PropertyWebsites model constructor.
-     * @property {module:model/PropertyWebsites}
-     */
-    PropertyWebsites,
+    PropertyWebsite,
 
     /**
      * The SocialProfiles model constructor.
@@ -259,12 +237,6 @@ export {
     * @property {module:api/ListingsApi}
     */
     ListingsApi,
-
-    /**
-    * The MarketingMaterialsApi service constructor.
-    * @property {module:api/MarketingMaterialsApi}
-    */
-    MarketingMaterialsApi,
 
     /**
     * The OrdersApi service constructor.

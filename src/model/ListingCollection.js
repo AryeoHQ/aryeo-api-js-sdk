@@ -6,25 +6,25 @@
  */
 
 import ApiClient from '../ApiClient';
-import Group from './Group';
+import Listing from './Listing';
 import PaginationLinks from './PaginationLinks';
 import PaginationMeta from './PaginationMeta';
 
 /**
- * The GroupCollection model module.
- * @module model/GroupCollection
+ * The ListingCollection model module.
+ * @module model/ListingCollection
  * @version 2021-06-17
  */
-class GroupCollection {
+class ListingCollection {
     /**
-     * Constructs a new <code>GroupCollection</code>.
-     * A collection of groups.
-     * @alias module:model/GroupCollection
+     * Constructs a new <code>ListingCollection</code>.
+     * A collection of listings.
+     * @alias module:model/ListingCollection
      * @param status {String} What was the state of the request?
      */
     constructor(status) { 
         
-        GroupCollection.initialize(this, status);
+        ListingCollection.initialize(this, status);
     }
 
     /**
@@ -37,21 +37,21 @@ class GroupCollection {
     }
 
     /**
-     * Constructs a <code>GroupCollection</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ListingCollection</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/GroupCollection} obj Optional instance to populate.
-     * @return {module:model/GroupCollection} The populated <code>GroupCollection</code> instance.
+     * @param {module:model/ListingCollection} obj Optional instance to populate.
+     * @return {module:model/ListingCollection} The populated <code>ListingCollection</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new GroupCollection();
+            obj = obj || new ListingCollection();
 
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [Group]);
+                obj['data'] = ApiClient.convertToType(data['data'], [Listing]);
             }
             if (data.hasOwnProperty('meta')) {
                 obj['meta'] = PaginationMeta.constructFromObject(data['meta']);
@@ -70,28 +70,28 @@ class GroupCollection {
  * What was the state of the request?
  * @member {String} status
  */
-GroupCollection.prototype['status'] = undefined;
+ListingCollection.prototype['status'] = undefined;
 
 /**
  * 
- * @member {Array.<module:model/Group>} data
+ * @member {Array.<module:model/Listing>} data
  */
-GroupCollection.prototype['data'] = undefined;
+ListingCollection.prototype['data'] = undefined;
 
 /**
  * @member {module:model/PaginationMeta} meta
  */
-GroupCollection.prototype['meta'] = undefined;
+ListingCollection.prototype['meta'] = undefined;
 
 /**
  * @member {module:model/PaginationLinks} links
  */
-GroupCollection.prototype['links'] = undefined;
+ListingCollection.prototype['links'] = undefined;
 
 
 
 
 
 
-export default GroupCollection;
+export default ListingCollection;
 

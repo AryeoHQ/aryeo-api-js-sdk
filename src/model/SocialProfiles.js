@@ -10,12 +10,12 @@ import ApiClient from '../ApiClient';
 /**
  * The SocialProfiles model module.
  * @module model/SocialProfiles
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class SocialProfiles {
     /**
      * Constructs a new <code>SocialProfiles</code>.
-     * Details for a real estate agent.
+     * External profile URLs for an agent or brokerage group.
      * @alias module:model/SocialProfiles
      */
     constructor() { 

@@ -10,15 +10,15 @@ import ApiClient from '../ApiClient';
 /**
  * The User model module.
  * @module model/User
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class User {
     /**
      * Constructs a new <code>User</code>.
      * A record of a person on the Aryeo platform.
      * @alias module:model/User
-     * @param id {String} UUID of the user.
-     * @param email {String} Email.
+     * @param id {String} ID of the user.
+     * @param email {String} Email address of the user.
      */
     constructor(id, email) { 
         
@@ -49,9 +49,6 @@ class User {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('avatar')) {
-                obj['avatar'] = ApiClient.convertToType(data['avatar'], 'String');
-            }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
@@ -61,11 +58,11 @@ class User {
             if (data.hasOwnProperty('last_name')) {
                 obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
             }
-            if (data.hasOwnProperty('timezone')) {
-                obj['timezone'] = ApiClient.convertToType(data['timezone'], 'String');
-            }
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
+            }
+            if (data.hasOwnProperty('avatar_url')) {
+                obj['avatar_url'] = ApiClient.convertToType(data['avatar_url'], 'String');
             }
             if (data.hasOwnProperty('relationship')) {
                 obj['relationship'] = ApiClient.convertToType(data['relationship'], 'String');
@@ -78,49 +75,43 @@ class User {
 }
 
 /**
- * UUID of the user.
+ * ID of the user.
  * @member {String} id
  */
 User.prototype['id'] = undefined;
 
 /**
- * Avatar.
- * @member {String} avatar
- */
-User.prototype['avatar'] = undefined;
-
-/**
- * Email.
+ * Email address of the user.
  * @member {String} email
  */
 User.prototype['email'] = undefined;
 
 /**
- * First name.
+ * First name of the user.
  * @member {String} first_name
  */
 User.prototype['first_name'] = undefined;
 
 /**
- * Last name.
+ * Last name of the user.
  * @member {String} last_name
  */
 User.prototype['last_name'] = undefined;
 
 /**
- * Timezone.
- * @member {String} timezone
- */
-User.prototype['timezone'] = undefined;
-
-/**
- * Phone number.
+ * A phone number represented in whichever standards specified by the user, typically ###-###-#### (separated by hyphens).
  * @member {String} phone
  */
 User.prototype['phone'] = undefined;
 
 /**
- * Describes user's relationship (access level) to a specified group.
+ * The avatar image URL of a user.
+ * @member {String} avatar_url
+ */
+User.prototype['avatar_url'] = undefined;
+
+/**
+ * Describes user's relationship (access level) to a specified group. Only returned if this resource is returned as a sub-resource of a group.
  * @member {String} relationship
  */
 User.prototype['relationship'] = undefined;

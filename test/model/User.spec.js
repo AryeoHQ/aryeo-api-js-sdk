@@ -54,12 +54,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property avatar (base name: "avatar")', function() {
-      // uncomment below and update the code to test the property avatar
-      //var instance = new Aryeo.User();
-      //expect(instance).to.be();
-    });
-
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
       //var instance = new Aryeo.User();
@@ -78,14 +72,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property timezone (base name: "timezone")', function() {
-      // uncomment below and update the code to test the property timezone
+    it('should have the property phone (base name: "phone")', function() {
+      // uncomment below and update the code to test the property phone
       //var instance = new Aryeo.User();
       //expect(instance).to.be();
     });
 
-    it('should have the property phone (base name: "phone")', function() {
-      // uncomment below and update the code to test the property phone
+    it('should have the property avatarUrl (base name: "avatar_url")', function() {
+      // uncomment below and update the code to test the property avatarUrl
       //var instance = new Aryeo.User();
       //expect(instance).to.be();
     });

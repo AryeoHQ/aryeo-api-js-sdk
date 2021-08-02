@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.PartialListingCollection();
+    instance = new Aryeo.PropertyWebsite();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,28 +41,28 @@
       object[property] = value;
   }
 
-  describe('PartialListingCollection', function() {
-    it('should create an instance of PartialListingCollection', function() {
-      // uncomment below and update the code to test PartialListingCollection
-      //var instane = new Aryeo.PartialListingCollection();
-      //expect(instance).to.be.a(Aryeo.PartialListingCollection);
+  describe('PropertyWebsite', function() {
+    it('should create an instance of PropertyWebsite', function() {
+      // uncomment below and update the code to test PropertyWebsite
+      //var instane = new Aryeo.PropertyWebsite();
+      //expect(instance).to.be.a(Aryeo.PropertyWebsite);
     });
 
-    it('should have the property data (base name: "data")', function() {
-      // uncomment below and update the code to test the property data
-      //var instance = new Aryeo.PartialListingCollection();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new Aryeo.PropertyWebsite();
       //expect(instance).to.be();
     });
 
-    it('should have the property meta (base name: "meta")', function() {
-      // uncomment below and update the code to test the property meta
-      //var instance = new Aryeo.PartialListingCollection();
+    it('should have the property brandedUrl (base name: "branded_url")', function() {
+      // uncomment below and update the code to test the property brandedUrl
+      //var instance = new Aryeo.PropertyWebsite();
       //expect(instance).to.be();
     });
 
-    it('should have the property links (base name: "links")', function() {
-      // uncomment below and update the code to test the property links
-      //var instance = new Aryeo.PartialListingCollection();
+    it('should have the property unbrandedUrl (base name: "unbranded_url")', function() {
+      // uncomment below and update the code to test the property unbrandedUrl
+      //var instance = new Aryeo.PropertyWebsite();
       //expect(instance).to.be();
     });
 

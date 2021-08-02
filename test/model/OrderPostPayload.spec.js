@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property productItems (base name: "product_items")', function() {
-      // uncomment below and update the code to test the property productItems
-      //var instance = new Aryeo.OrderPostPayload();
-      //expect(instance).to.be();
-    });
-
   });
 
 }));

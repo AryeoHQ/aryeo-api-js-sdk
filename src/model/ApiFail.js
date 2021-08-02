@@ -6,23 +6,22 @@
  */
 
 import ApiClient from '../ApiClient';
-import Listing from './Listing';
 
 /**
- * The ListingResource model module.
- * @module model/ListingResource
+ * The ApiFail model module.
+ * @module model/ApiFail
  * @version 2021-06-17
  */
-class ListingResource {
+class ApiFail {
     /**
-     * Constructs a new <code>ListingResource</code>.
-     * A listing.
-     * @alias module:model/ListingResource
+     * Constructs a new <code>ApiFail</code>.
+     * A generic failure returned by the API.
+     * @alias module:model/ApiFail
      * @param status {String} What was the state of the request?
      */
     constructor(status) { 
         
-        ListingResource.initialize(this, status);
+        ApiFail.initialize(this, status);
     }
 
     /**
@@ -35,21 +34,18 @@ class ListingResource {
     }
 
     /**
-     * Constructs a <code>ListingResource</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApiFail</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ListingResource} obj Optional instance to populate.
-     * @return {module:model/ListingResource} The populated <code>ListingResource</code> instance.
+     * @param {module:model/ApiFail} obj Optional instance to populate.
+     * @return {module:model/ApiFail} The populated <code>ApiFail</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ListingResource();
+            obj = obj || new ApiFail();
 
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Listing.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -62,17 +58,12 @@ class ListingResource {
  * What was the state of the request?
  * @member {String} status
  */
-ListingResource.prototype['status'] = undefined;
-
-/**
- * @member {module:model/Listing} data
- */
-ListingResource.prototype['data'] = undefined;
+ApiFail.prototype['status'] = undefined;
 
 
 
 
 
 
-export default ListingResource;
+export default ApiFail;
 

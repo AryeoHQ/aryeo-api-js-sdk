@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.PropertyWebsites();
+    instance = new Aryeo.ListingBuilding();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,28 +41,34 @@
       object[property] = value;
   }
 
-  describe('PropertyWebsites', function() {
-    it('should create an instance of PropertyWebsites', function() {
-      // uncomment below and update the code to test PropertyWebsites
-      //var instane = new Aryeo.PropertyWebsites();
-      //expect(instance).to.be.a(Aryeo.PropertyWebsites);
+  describe('ListingBuilding', function() {
+    it('should create an instance of ListingBuilding', function() {
+      // uncomment below and update the code to test ListingBuilding
+      //var instane = new Aryeo.ListingBuilding();
+      //expect(instance).to.be.a(Aryeo.ListingBuilding);
     });
 
-    it('should have the property brandedUrl (base name: "branded_url")', function() {
-      // uncomment below and update the code to test the property brandedUrl
-      //var instance = new Aryeo.PropertyWebsites();
+    it('should have the property bedrooms (base name: "bedrooms")', function() {
+      // uncomment below and update the code to test the property bedrooms
+      //var instance = new Aryeo.ListingBuilding();
       //expect(instance).to.be();
     });
 
-    it('should have the property unbrandedUrl (base name: "unbranded_url")', function() {
-      // uncomment below and update the code to test the property unbrandedUrl
-      //var instance = new Aryeo.PropertyWebsites();
+    it('should have the property bathrooms (base name: "bathrooms")', function() {
+      // uncomment below and update the code to test the property bathrooms
+      //var instance = new Aryeo.ListingBuilding();
       //expect(instance).to.be();
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new Aryeo.PropertyWebsites();
+    it('should have the property squareFeet (base name: "square_feet")', function() {
+      // uncomment below and update the code to test the property squareFeet
+      //var instance = new Aryeo.ListingBuilding();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property yearBuilt (base name: "year_built")', function() {
+      // uncomment below and update the code to test the property yearBuilt
+      //var instance = new Aryeo.ListingBuilding();
       //expect(instance).to.be();
     });
 

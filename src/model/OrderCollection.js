@@ -13,17 +13,18 @@ import PaginationMeta from './PaginationMeta';
 /**
  * The OrderCollection model module.
  * @module model/OrderCollection
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class OrderCollection {
     /**
      * Constructs a new <code>OrderCollection</code>.
      * A collection of orders.
      * @alias module:model/OrderCollection
+     * @param status {String} What was the state of the request?
      */
-    constructor() { 
+    constructor(status) { 
         
-        OrderCollection.initialize(this);
+        OrderCollection.initialize(this, status);
     }
 
     /**
@@ -31,7 +32,8 @@ class OrderCollection {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, status) { 
+        obj['status'] = status;
     }
 
     /**
@@ -45,6 +47,9 @@ class OrderCollection {
         if (data) {
             obj = obj || new OrderCollection();
 
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = ApiClient.convertToType(data['data'], [Order]);
             }
@@ -62,6 +67,13 @@ class OrderCollection {
 }
 
 /**
+ * What was the state of the request?
+ * @member {String} status
+ */
+OrderCollection.prototype['status'] = undefined;
+
+/**
+ * 
  * @member {Array.<module:model/Order>} data
  */
 OrderCollection.prototype['data'] = undefined;

@@ -48,6 +48,12 @@
       //expect(instance).to.be.a(Aryeo.OrderResource);
     });
 
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Aryeo.OrderResource();
+      //expect(instance).to.be();
+    });
+
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
       //var instance = new Aryeo.OrderResource();

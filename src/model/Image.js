@@ -10,14 +10,14 @@ import ApiClient from '../ApiClient';
 /**
  * The Image model module.
  * @module model/Image
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class Image {
     /**
      * Constructs a new <code>Image</code>.
      * A visual representation of something.
      * @alias module:model/Image
-     * @param id {Number} ID of the image.
+     * @param id {String} ID of the image.
      * @param thumbnailUrl {String} A URL for a thumbnail-sized version of the image.
      * @param largeUrl {String} A URL for a large version of the image.
      * @param originalUrl {String} A URL for the original, full-resolution version of the image. Useful for downloading.
@@ -53,10 +53,7 @@ class Image {
             obj = obj || new Image();
 
             if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
-            }
-            if (data.hasOwnProperty('uuid')) {
-                obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('thumbnail_url')) {
                 obj['thumbnail_url'] = ApiClient.convertToType(data['thumbnail_url'], 'String');
@@ -85,15 +82,9 @@ class Image {
 
 /**
  * ID of the image.
- * @member {Number} id
+ * @member {String} id
  */
 Image.prototype['id'] = undefined;
-
-/**
- * The UUID of the image.
- * @member {String} uuid
- */
-Image.prototype['uuid'] = undefined;
 
 /**
  * A URL for a thumbnail-sized version of the image.

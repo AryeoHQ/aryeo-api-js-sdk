@@ -10,18 +10,19 @@ import ApiClient from '../ApiClient';
 /**
  * The ApiError model module.
  * @module model/ApiError
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class ApiError {
     /**
      * Constructs a new <code>ApiError</code>.
      * A generic error returned by the API.
      * @alias module:model/ApiError
+     * @param status {String} What was the state of the request?
      * @param message {String} The error message.
      */
-    constructor(message) { 
+    constructor(status, message) { 
         
-        ApiError.initialize(this, message);
+        ApiError.initialize(this, status, message);
     }
 
     /**
@@ -29,7 +30,8 @@ class ApiError {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, message) { 
+    static initialize(obj, status, message) { 
+        obj['status'] = status;
         obj['message'] = message;
     }
 
@@ -44,8 +46,14 @@ class ApiError {
         if (data) {
             obj = obj || new ApiError();
 
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
+            }
+            if (data.hasOwnProperty('code')) {
+                obj['code'] = ApiClient.convertToType(data['code'], 'Number');
             }
         }
         return obj;
@@ -55,10 +63,22 @@ class ApiError {
 }
 
 /**
+ * What was the state of the request?
+ * @member {String} status
+ */
+ApiError.prototype['status'] = undefined;
+
+/**
  * The error message.
  * @member {String} message
  */
 ApiError.prototype['message'] = undefined;
+
+/**
+ * A numeric code corresponding to the error.
+ * @member {Number} code
+ */
+ApiError.prototype['code'] = undefined;
 
 
 

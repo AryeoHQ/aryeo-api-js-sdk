@@ -54,20 +54,20 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property displayId (base name: "display_id")', function() {
-      // uncomment below and update the code to test the property displayId
+    it('should have the property number (base name: "number")', function() {
+      // uncomment below and update the code to test the property number
       //var instance = new Aryeo.Order();
       //expect(instance).to.be();
     });
 
-    it('should have the property totalPriceCents (base name: "total_price_cents")', function() {
-      // uncomment below and update the code to test the property totalPriceCents
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instance = new Aryeo.Order();
       //expect(instance).to.be();
     });
 
-    it('should have the property currency (base name: "currency")', function() {
-      // uncomment below and update the code to test the property currency
+    it('should have the property fulfillmentStatus (base name: "fulfillment_status")', function() {
+      // uncomment below and update the code to test the property fulfillmentStatus
       //var instance = new Aryeo.Order();
       //expect(instance).to.be();
     });
@@ -78,20 +78,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property currency (base name: "currency")', function() {
+      // uncomment below and update the code to test the property currency
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property totalAmount (base name: "total_amount")', function() {
+      // uncomment below and update the code to test the property totalAmount
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
     it('should have the property paymentUrl (base name: "payment_url")', function() {
       // uncomment below and update the code to test the property paymentUrl
-      //var instance = new Aryeo.Order();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property listing (base name: "listing")', function() {
-      // uncomment below and update the code to test the property listing
-      //var instance = new Aryeo.Order();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property fulfillmentStatus (base name: "fulfillment_status")', function() {
-      // uncomment below and update the code to test the property fulfillmentStatus
       //var instance = new Aryeo.Order();
       //expect(instance).to.be();
     });

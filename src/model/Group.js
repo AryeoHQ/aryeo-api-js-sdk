@@ -6,7 +6,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import GroupAgentProperties from './GroupAgentProperties';
 import OrderForm from './OrderForm';
 import SocialProfiles from './SocialProfiles';
 import User from './User';
@@ -14,7 +13,7 @@ import User from './User';
 /**
  * The Group model module.
  * @module model/Group
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class Group {
     /**
@@ -22,13 +21,13 @@ class Group {
      * A collection of users that can interact with the Aryeo platform. Permissions and properties are determined based on the group&#39;s type which can be creator, agent, or brokerage.
      * @alias module:model/Group
      * @param id {String} ID of the group.
-     * @param groupType {module:model/Group.GroupTypeEnum} The type of group.
+     * @param type {module:model/Group.TypeEnum} The type of the group. Can be CREATOR, AGENT, or BROKERAGE, and may dictate the attributes of the group returned.
      * @param name {String} The name of the group.
      * @param isBrokerageOrBrokerageAgent {Boolean} Does this group represent a brokerage or an agent who belongs to a brokerage?
      */
-    constructor(id, groupType, name, isBrokerageOrBrokerageAgent) { 
+    constructor(id, type, name, isBrokerageOrBrokerageAgent) { 
         
-        Group.initialize(this, id, groupType, name, isBrokerageOrBrokerageAgent);
+        Group.initialize(this, id, type, name, isBrokerageOrBrokerageAgent);
     }
 
     /**
@@ -36,9 +35,9 @@ class Group {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, groupType, name, isBrokerageOrBrokerageAgent) { 
+    static initialize(obj, id, type, name, isBrokerageOrBrokerageAgent) { 
         obj['id'] = id;
-        obj['group_type'] = groupType;
+        obj['type'] = type;
         obj['name'] = name;
         obj['is_brokerage_or_brokerage_agent'] = isBrokerageOrBrokerageAgent;
     }
@@ -57,14 +56,11 @@ class Group {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('group_type')) {
-                obj['group_type'] = ApiClient.convertToType(data['group_type'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('logo')) {
-                obj['logo'] = ApiClient.convertToType(data['logo'], 'String');
             }
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
@@ -72,26 +68,38 @@ class Group {
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
             }
-            if (data.hasOwnProperty('website')) {
-                obj['website'] = ApiClient.convertToType(data['website'], 'String');
+            if (data.hasOwnProperty('website_url')) {
+                obj['website_url'] = ApiClient.convertToType(data['website_url'], 'String');
             }
-            if (data.hasOwnProperty('is_brokerage_or_brokerage_agent')) {
-                obj['is_brokerage_or_brokerage_agent'] = ApiClient.convertToType(data['is_brokerage_or_brokerage_agent'], 'Boolean');
+            if (data.hasOwnProperty('logo_url')) {
+                obj['logo_url'] = ApiClient.convertToType(data['logo_url'], 'String');
+            }
+            if (data.hasOwnProperty('avatar_url')) {
+                obj['avatar_url'] = ApiClient.convertToType(data['avatar_url'], 'String');
+            }
+            if (data.hasOwnProperty('office_name')) {
+                obj['office_name'] = ApiClient.convertToType(data['office_name'], 'String');
+            }
+            if (data.hasOwnProperty('license_number')) {
+                obj['license_number'] = ApiClient.convertToType(data['license_number'], 'String');
             }
             if (data.hasOwnProperty('social_profiles')) {
                 obj['social_profiles'] = SocialProfiles.constructFromObject(data['social_profiles']);
-            }
-            if (data.hasOwnProperty('agent_properties')) {
-                obj['agent_properties'] = GroupAgentProperties.constructFromObject(data['agent_properties']);
-            }
-            if (data.hasOwnProperty('users')) {
-                obj['users'] = ApiClient.convertToType(data['users'], [User]);
             }
             if (data.hasOwnProperty('default_order_form')) {
                 obj['default_order_form'] = OrderForm.constructFromObject(data['default_order_form']);
             }
             if (data.hasOwnProperty('order_forms')) {
                 obj['order_forms'] = ApiClient.convertToType(data['order_forms'], [OrderForm]);
+            }
+            if (data.hasOwnProperty('owner')) {
+                obj['owner'] = User.constructFromObject(data['owner']);
+            }
+            if (data.hasOwnProperty('users')) {
+                obj['users'] = ApiClient.convertToType(data['users'], [User]);
+            }
+            if (data.hasOwnProperty('is_brokerage_or_brokerage_agent')) {
+                obj['is_brokerage_or_brokerage_agent'] = ApiClient.convertToType(data['is_brokerage_or_brokerage_agent'], 'Boolean');
             }
         }
         return obj;
@@ -107,10 +115,10 @@ class Group {
 Group.prototype['id'] = undefined;
 
 /**
- * The type of group.
- * @member {module:model/Group.GroupTypeEnum} group_type
+ * The type of the group. Can be CREATOR, AGENT, or BROKERAGE, and may dictate the attributes of the group returned.
+ * @member {module:model/Group.TypeEnum} type
  */
-Group.prototype['group_type'] = undefined;
+Group.prototype['type'] = undefined;
 
 /**
  * The name of the group.
@@ -119,34 +127,46 @@ Group.prototype['group_type'] = undefined;
 Group.prototype['name'] = undefined;
 
 /**
- * Group logo.
- * @member {String} logo
- */
-Group.prototype['logo'] = undefined;
-
-/**
- * Email.
+ * The email address of a group.
  * @member {String} email
  */
 Group.prototype['email'] = undefined;
 
 /**
- * Phone number.
+ * A phone number represented in whichever standards specified by the group, typically ###-###-#### (separated by hyphens).
  * @member {String} phone
  */
 Group.prototype['phone'] = undefined;
 
 /**
- * Website.
- * @member {String} website
+ * The website URL of a group.
+ * @member {String} website_url
  */
-Group.prototype['website'] = undefined;
+Group.prototype['website_url'] = undefined;
 
 /**
- * Does this group represent a brokerage or an agent who belongs to a brokerage?
- * @member {Boolean} is_brokerage_or_brokerage_agent
+ * The logo URL of a group.
+ * @member {String} logo_url
  */
-Group.prototype['is_brokerage_or_brokerage_agent'] = undefined;
+Group.prototype['logo_url'] = undefined;
+
+/**
+ * The profile image URL of a real estate agent. Only returned if group's type is AGENT.
+ * @member {String} avatar_url
+ */
+Group.prototype['avatar_url'] = undefined;
+
+/**
+ * The name of the brokerage or team of a real estate agent. Only returned if group's type is AGENT.
+ * @member {String} office_name
+ */
+Group.prototype['office_name'] = undefined;
+
+/**
+ * The license number of a real estate agent. Only returned if group's type is AGENT.
+ * @member {String} license_number
+ */
+Group.prototype['license_number'] = undefined;
 
 /**
  * @member {module:model/SocialProfiles} social_profiles
@@ -154,55 +174,61 @@ Group.prototype['is_brokerage_or_brokerage_agent'] = undefined;
 Group.prototype['social_profiles'] = undefined;
 
 /**
- * @member {module:model/GroupAgentProperties} agent_properties
- */
-Group.prototype['agent_properties'] = undefined;
-
-/**
- * users
- * @member {Array.<module:model/User>} users
- */
-Group.prototype['users'] = undefined;
-
-/**
  * @member {module:model/OrderForm} default_order_form
  */
 Group.prototype['default_order_form'] = undefined;
 
 /**
- * An array of order forms.
+ * An array of order forms a vendor group provides for placing orders. Only returned if group's type is CREATOR. 
  * @member {Array.<module:model/OrderForm>} order_forms
  */
 Group.prototype['order_forms'] = undefined;
+
+/**
+ * @member {module:model/User} owner
+ */
+Group.prototype['owner'] = undefined;
+
+/**
+ * The Aryeo users associated with this group.
+ * @member {Array.<module:model/User>} users
+ */
+Group.prototype['users'] = undefined;
+
+/**
+ * Does this group represent a brokerage or an agent who belongs to a brokerage?
+ * @member {Boolean} is_brokerage_or_brokerage_agent
+ */
+Group.prototype['is_brokerage_or_brokerage_agent'] = undefined;
 
 
 
 
 
 /**
- * Allowed values for the <code>group_type</code> property.
+ * Allowed values for the <code>type</code> property.
  * @enum {String}
  * @readonly
  */
-Group['GroupTypeEnum'] = {
+Group['TypeEnum'] = {
 
     /**
-     * value: "creator"
+     * value: "CREATOR"
      * @const
      */
-    "creator": "creator",
+    "CREATOR": "CREATOR",
 
     /**
-     * value: "agent"
+     * value: "AGENT"
      * @const
      */
-    "agent": "agent",
+    "AGENT": "AGENT",
 
     /**
-     * value: "brokerage"
+     * value: "BROKERAGE"
      * @const
      */
-    "brokerage": "brokerage"
+    "BROKERAGE": "BROKERAGE"
 };
 
 

@@ -10,18 +10,18 @@ import ApiClient from '../ApiClient';
 /**
  * The Video model module.
  * @module model/Video
- * @version 1.0.0
+ * @version 2021-06-17
  */
 class Video {
     /**
      * Constructs a new <code>Video</code>.
      * A recording of moving visual images. Provided either as a download URL (MP4) or a link (e.g. YouTube, Vimeo).
      * @alias module:model/Video
-     * @param id {Number} ID of the video.
+     * @param id {String} ID of the video.
      * @param displayType {module:model/Video.DisplayTypeEnum} The display type determines if the video is branded or unbranded (can also be none or both). This affects whether the video is displayed on branded or unbranded marketing materials such as the property website.
      * @param sourceType {module:model/Video.SourceTypeEnum} The original upload source of the video, used to determine how to handle the playback_url of the video and other display properties. 
-     * @param thumbnailUrl {String} Thumbnail URL for the video.
-     * @param playbackUrl {String} A URL linking to the video.
+     * @param thumbnailUrl {String} A thumbnail image URL for the video.
+     * @param playbackUrl {String} A URL linking to playback stream of the video.
      */
     constructor(id, displayType, sourceType, thumbnailUrl, playbackUrl) { 
         
@@ -53,10 +53,13 @@ class Video {
             obj = obj || new Video();
 
             if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'Number');
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
+            }
+            if (data.hasOwnProperty('duration')) {
+                obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
             }
             if (data.hasOwnProperty('display_type')) {
                 obj['display_type'] = ApiClient.convertToType(data['display_type'], 'String');
@@ -73,9 +76,6 @@ class Video {
             if (data.hasOwnProperty('download_url')) {
                 obj['download_url'] = ApiClient.convertToType(data['download_url'], 'String');
             }
-            if (data.hasOwnProperty('seconds')) {
-                obj['seconds'] = ApiClient.convertToType(data['seconds'], 'Number');
-            }
             if (data.hasOwnProperty('share_url')) {
                 obj['share_url'] = ApiClient.convertToType(data['share_url'], 'String');
             }
@@ -88,7 +88,7 @@ class Video {
 
 /**
  * ID of the video.
- * @member {Number} id
+ * @member {String} id
  */
 Video.prototype['id'] = undefined;
 
@@ -97,6 +97,12 @@ Video.prototype['id'] = undefined;
  * @member {String} title
  */
 Video.prototype['title'] = undefined;
+
+/**
+ * The video's runtime in seconds.
+ * @member {Number} duration
+ */
+Video.prototype['duration'] = undefined;
 
 /**
  * The display type determines if the video is branded or unbranded (can also be none or both). This affects whether the video is displayed on branded or unbranded marketing materials such as the property website.
@@ -111,13 +117,13 @@ Video.prototype['display_type'] = undefined;
 Video.prototype['source_type'] = undefined;
 
 /**
- * Thumbnail URL for the video.
+ * A thumbnail image URL for the video.
  * @member {String} thumbnail_url
  */
 Video.prototype['thumbnail_url'] = undefined;
 
 /**
- * A URL linking to the video.
+ * A URL linking to playback stream of the video.
  * @member {String} playback_url
  */
 Video.prototype['playback_url'] = undefined;
@@ -129,13 +135,7 @@ Video.prototype['playback_url'] = undefined;
 Video.prototype['download_url'] = undefined;
 
 /**
- * The video's runtime in seconds.
- * @member {Number} seconds
- */
-Video.prototype['seconds'] = undefined;
-
-/**
- * Aryeo iFrame player URL
+ * A URL linking to a public viewing optimized webpage the video.
  * @member {String} share_url
  */
 Video.prototype['share_url'] = undefined;
@@ -152,28 +152,28 @@ Video.prototype['share_url'] = undefined;
 Video['DisplayTypeEnum'] = {
 
     /**
-     * value: "branded"
+     * value: "BRANDED"
      * @const
      */
-    "branded": "branded",
+    "BRANDED": "BRANDED",
 
     /**
-     * value: "unbranded"
+     * value: "UNBRANDED"
      * @const
      */
-    "unbranded": "unbranded",
+    "UNBRANDED": "UNBRANDED",
 
     /**
-     * value: "both"
+     * value: "BOTH"
      * @const
      */
-    "both": "both",
+    "BOTH": "BOTH",
 
     /**
-     * value: "none"
+     * value: "NONE"
      * @const
      */
-    "none": "none"
+    "NONE": "NONE"
 };
 
 
@@ -185,34 +185,34 @@ Video['DisplayTypeEnum'] = {
 Video['SourceTypeEnum'] = {
 
     /**
-     * value: "youtube"
+     * value: "YOUTUBE"
      * @const
      */
-    "youtube": "youtube",
+    "YOUTUBE": "YOUTUBE",
 
     /**
-     * value: "vimeo"
+     * value: "VIMEO"
      * @const
      */
-    "vimeo": "vimeo",
+    "VIMEO": "VIMEO",
 
     /**
-     * value: "optimized"
+     * value: "OPTIMIZED"
      * @const
      */
-    "optimized": "optimized",
+    "OPTIMIZED": "OPTIMIZED",
 
     /**
-     * value: "uploaded"
+     * value: "UPLOADED"
      * @const
      */
-    "uploaded": "uploaded",
+    "UPLOADED": "UPLOADED",
 
     /**
-     * value: "link"
+     * value: "LINK"
      * @const
      */
-    "link": "link"
+    "LINK": "LINK"
 };
 
 

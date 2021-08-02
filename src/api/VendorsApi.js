@@ -8,12 +8,14 @@
 
 import ApiClient from "../ApiClient";
 import ApiError from '../model/ApiError';
+import ApiFail from '../model/ApiFail';
 import GroupCollection from '../model/GroupCollection';
+import GroupResource from '../model/GroupResource';
 
 /**
 * Vendors service.
 * @module api/VendorsApi
-* @version 1.0.0
+* @version 2021-06-17
 */
 export default class VendorsApi {
 
@@ -40,22 +42,26 @@ export default class VendorsApi {
     /**
      * Get vendors available to a group.
      * Get vendors available to a group.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.include Comma separated list of optional data to include in the response.
      * @param {module:api/VendorsApi~getVendorsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupCollection}
      */
-    getVendors(callback) {
+    getVendors(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'include': opts['include']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['Token'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = GroupCollection;
@@ -67,45 +73,47 @@ export default class VendorsApi {
     }
 
     /**
-     * Callback function to receive the result of the getVendorsSearch operation.
-     * @callback module:api/VendorsApi~getVendorsSearchCallback
+     * Callback function to receive the result of the getVendorsId operation.
+     * @callback module:api/VendorsApi~getVendorsIdCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/GroupCollection} data The data returned by the service call.
+     * @param {module:model/GroupResource} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Get vendors that can be added to the group's vendor list.
-     * Get vendors that can be added to the group's vendor list, excluding those already available to a group. 
+     * Get vendors available to a group.
+     * Get information about a vendor.
+     * @param {String} vendorId ID of the group that is associated as a vendor.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.query A search query.
-     * @param {String} opts.perPage The number of items per page. Defaults to 25.
-     * @param {String} opts.page The requested page. Defaults to 1.
-     * @param {module:api/VendorsApi~getVendorsSearchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/GroupCollection}
+     * @param {String} opts.include Comma separated list of optional data to include in the response.
+     * @param {module:api/VendorsApi~getVendorsIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GroupResource}
      */
-    getVendorsSearch(opts, callback) {
+    getVendorsId(vendorId, opts, callback) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'vendorId' is set
+      if (vendorId === undefined || vendorId === null) {
+        throw new Error("Missing the required parameter 'vendorId' when calling getVendorsId");
+      }
 
       let pathParams = {
+        'vendor_id': vendorId
       };
       let queryParams = {
-        'query': opts['query'],
-        'per_page': opts['perPage'],
-        'page': opts['page']
+        'include': opts['include']
       };
       let headerParams = {
       };
       let formParams = {
       };
 
-      let authNames = ['JWT'];
+      let authNames = ['Token'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = GroupCollection;
+      let returnType = GroupResource;
       return this.apiClient.callApi(
-        '/vendors/search', 'GET',
+        '/vendors/{vendor_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
