@@ -17,7 +17,7 @@ class User {
      * Constructs a new <code>User</code>.
      * A record of a person on the Aryeo platform.
      * @alias module:model/User
-     * @param id {String} ID of the user.
+     * @param id {String} ID of the user. UUID Version 4.
      * @param email {String} Email address of the user.
      */
     constructor(id, email) { 
@@ -75,7 +75,7 @@ class User {
 }
 
 /**
- * ID of the user.
+ * ID of the user. UUID Version 4.
  * @member {String} id
  */
 User.prototype['id'] = undefined;

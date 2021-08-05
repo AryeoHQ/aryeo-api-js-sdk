@@ -83,7 +83,7 @@ export default class VendorsApi {
     /**
      * Get vendors available to a group.
      * Get information about a vendor.
-     * @param {String} vendorId ID of the group that is associated as a vendor.
+     * @param {String} vendorId The ID of the group that is associated as a vendor. UUID Version 4.
      * @param {Object} opts Optional parameters
      * @param {String} opts.include Comma separated list of optional data to include in the response.
      * @param {module:api/VendorsApi~getVendorsIdCallback} callback The callback function, accepting three arguments: error, data, response

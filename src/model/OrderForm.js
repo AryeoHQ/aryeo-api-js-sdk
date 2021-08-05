@@ -17,7 +17,7 @@ class OrderForm {
      * Constructs a new <code>OrderForm</code>.
      * A mechanism for placing new orders on the Aryeo platform. 
      * @alias module:model/OrderForm
-     * @param id {String} UUID of the order form.
+     * @param id {String} ID of the order form. UUID Version 4.
      * @param url {String} A URL of a publicly-accessible webpage for this order form.
      */
     constructor(id, url) { 
@@ -63,7 +63,7 @@ class OrderForm {
 }
 
 /**
- * UUID of the order form.
+ * ID of the order form. UUID Version 4.
  * @member {String} id
  */
 OrderForm.prototype['id'] = undefined;

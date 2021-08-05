@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **String** | ID of the group. | 
+**id** | **String** | ID of the group. UUID Version 4. | 
 **type** | **String** | The type of the group. Can be CREATOR, AGENT, or BROKERAGE, and may dictate the attributes of the group returned. | 
 **name** | **String** | The name of the group. | 
 **email** | **String** | The email address of a group. | [optional] 

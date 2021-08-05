@@ -115,7 +115,7 @@ export default class ListingsApi {
     /**
      * Get information about a listing.
      * Get information about a listing.
-     * @param {String} listingId The ID of a listing.
+     * @param {String} listingId The ID of a listing. UUID Version 4.
      * @param {Object} opts Optional parameters
      * @param {String} opts.include Comma separated list of optional data to include in the response.
      * @param {module:api/ListingsApi~getListingsIdCallback} callback The callback function, accepting three arguments: error, data, response

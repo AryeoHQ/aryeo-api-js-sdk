@@ -17,7 +17,7 @@ class Video {
      * Constructs a new <code>Video</code>.
      * A recording of moving visual images. Provided either as a download URL (MP4) or a link (e.g. YouTube, Vimeo).
      * @alias module:model/Video
-     * @param id {String} ID of the video.
+     * @param id {String} ID of the video. UUID Version 4.
      * @param displayType {module:model/Video.DisplayTypeEnum} The display type determines if the video is branded or unbranded (can also be none or both). This affects whether the video is displayed on branded or unbranded marketing materials such as the property website.
      * @param sourceType {module:model/Video.SourceTypeEnum} The original upload source of the video, used to determine how to handle the playback_url of the video and other display properties. 
      * @param thumbnailUrl {String} A thumbnail image URL for the video.
@@ -87,7 +87,7 @@ class Video {
 }
 
 /**
- * ID of the video.
+ * ID of the video. UUID Version 4.
  * @member {String} id
  */
 Video.prototype['id'] = undefined;

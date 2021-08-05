@@ -17,7 +17,7 @@ class Image {
      * Constructs a new <code>Image</code>.
      * A visual representation of something.
      * @alias module:model/Image
-     * @param id {String} ID of the image.
+     * @param id {String} ID of the image. UUID Version 4.
      * @param thumbnailUrl {String} A URL for a thumbnail-sized version of the image.
      * @param largeUrl {String} A URL for a large version of the image.
      * @param originalUrl {String} A URL for the original, full-resolution version of the image. Useful for downloading.
@@ -81,7 +81,7 @@ class Image {
 }
 
 /**
- * ID of the image.
+ * ID of the image. UUID Version 4.
  * @member {String} id
  */
 Image.prototype['id'] = undefined;

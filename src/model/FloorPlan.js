@@ -17,7 +17,7 @@ class FloorPlan {
      * Constructs a new <code>FloorPlan</code>.
      * A scale diagram of the arrangement of a building.
      * @alias module:model/FloorPlan
-     * @param id {String} ID of the floor plan.
+     * @param id {String} ID of the floor plan. UUID Version 4.
      * @param originalUrl {String} A URL for the original, full-resolution version of the floor plan. Useful for downloading.
      * @param largeUrl {String} A URL for a large version of the floor plan.
      * @param thumbnailUrl {String} A URL for a thumbnail-sized version of the floor plan.
@@ -76,7 +76,7 @@ class FloorPlan {
 }
 
 /**
- * ID of the floor plan.
+ * ID of the floor plan. UUID Version 4.
  * @member {String} id
  */
 FloorPlan.prototype['id'] = undefined;

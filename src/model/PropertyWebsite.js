@@ -17,7 +17,7 @@ class PropertyWebsite {
      * Constructs a new <code>PropertyWebsite</code>.
      * Website (in branded and unbranded versions) that displays information about a property.
      * @alias module:model/PropertyWebsite
-     * @param id {String} ID of the website.
+     * @param id {String} ID of the website. UUID Version 4.
      * @param brandedUrl {String} URL for branded version of website.
      * @param unbrandedUrl {String} URL for unbranded version of website.
      */
@@ -65,7 +65,7 @@ class PropertyWebsite {
 }
 
 /**
- * ID of the website.
+ * ID of the website. UUID Version 4.
  * @member {String} id
  */
 PropertyWebsite.prototype['id'] = undefined;

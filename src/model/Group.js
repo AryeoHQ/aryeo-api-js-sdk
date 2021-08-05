@@ -20,7 +20,7 @@ class Group {
      * Constructs a new <code>Group</code>.
      * A collection of users that can interact with the Aryeo platform. Permissions and properties are determined based on the group&#39;s type which can be creator, agent, or brokerage.
      * @alias module:model/Group
-     * @param id {String} ID of the group.
+     * @param id {String} ID of the group. UUID Version 4.
      * @param type {module:model/Group.TypeEnum} The type of the group. Can be CREATOR, AGENT, or BROKERAGE, and may dictate the attributes of the group returned.
      * @param name {String} The name of the group.
      * @param isBrokerageOrBrokerageAgent {Boolean} Does this group represent a brokerage or an agent who belongs to a brokerage?
@@ -109,7 +109,7 @@ class Group {
 }
 
 /**
- * ID of the group.
+ * ID of the group. UUID Version 4.
  * @member {String} id
  */
 Group.prototype['id'] = undefined;

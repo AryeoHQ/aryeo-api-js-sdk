@@ -28,7 +28,7 @@ class Listing {
      * Constructs a new <code>Listing</code>.
      * A real estate listing.
      * @alias module:model/Listing
-     * @param id {String} ID of the listing.
+     * @param id {String} ID of the listing. UUID Version 4.
      * @param address {module:model/Address} 
      * @param downloadsEnabled {Boolean} Are downloads enabled for this listing?
      */
@@ -127,7 +127,7 @@ class Listing {
 }
 
 /**
- * ID of the listing.
+ * ID of the listing. UUID Version 4.
  * @member {String} id
  */
 Listing.prototype['id'] = undefined;

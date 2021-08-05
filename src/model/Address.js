@@ -17,7 +17,7 @@ class Address {
      * Constructs a new <code>Address</code>.
      * A street address and additional metadata about a location.
      * @alias module:model/Address
-     * @param id {String} ID of the address.
+     * @param id {String} ID of the address. UUID Version 4.
      * @param latitude {Number} The geographic latitude of some reference point of the location, specified in degrees and decimal parts. Positive numbers must not include the plus symbol.
      * @param longitude {Number} The geographic longitude of some reference point of the location, specified in degrees and decimal parts. Positive numbers must not include the plus symbol.
      */
@@ -107,7 +107,7 @@ class Address {
 }
 
 /**
- * ID of the address.
+ * ID of the address. UUID Version 4.
  * @member {String} id
  */
 Address.prototype['id'] = undefined;

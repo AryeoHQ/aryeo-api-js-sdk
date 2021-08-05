@@ -17,7 +17,7 @@ class InteractiveContent {
      * Constructs a new <code>InteractiveContent</code>.
      * A 3D virtual tour.
      * @alias module:model/InteractiveContent
-     * @param id {String} ID of the content.
+     * @param id {String} ID of the content. UUID Version 4.
      * @param displayType {module:model/InteractiveContent.DisplayTypeEnum} Is the content branded, unbranded, or both?
      * @param contentType {module:model/InteractiveContent.ContentTypeEnum} The type of interactive content.
      * @param url {String} URL for the content.
@@ -73,7 +73,7 @@ class InteractiveContent {
 }
 
 /**
- * ID of the content.
+ * ID of the content. UUID Version 4.
  * @member {String} id
  */
 InteractiveContent.prototype['id'] = undefined;

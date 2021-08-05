@@ -110,7 +110,7 @@ let Token = defaultClient.authentications['Token'];
 Token.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new Aryeo.ListingsApi();
-let listingId = 00000000-0000-0000-0000-000000000000; // String | The ID of a listing.
+let listingId = 00000000-0000-4000-8000-000000000000; // String | The ID of a listing. UUID Version 4.
 let opts = {
   'include': images,videos,orders // String | Comma separated list of optional data to include in the response.
 };
@@ -128,7 +128,7 @@ apiInstance.getListingsId(listingId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **listingId** | [**String**](.md)| The ID of a listing. | 
+ **listingId** | [**String**](.md)| The ID of a listing. UUID Version 4. | 
  **include** | **String**| Comma separated list of optional data to include in the response. | [optional] 
 
 ### Return type
