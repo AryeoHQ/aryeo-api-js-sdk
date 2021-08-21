@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.OrdersApi();
+    instance = new Aryeo.ProductCategory();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,37 +41,25 @@
       object[property] = value;
   }
 
-  describe('OrdersApi', function() {
-    describe('getOrders', function() {
-      it('should call getOrders successfully', function(done) {
-        //uncomment below and update the code to test getOrders
-        //instance.getOrders(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('ProductCategory', function() {
+    it('should create an instance of ProductCategory', function() {
+      // uncomment below and update the code to test ProductCategory
+      //var instane = new Aryeo.ProductCategory();
+      //expect(instance).to.be.a(Aryeo.ProductCategory);
     });
-    describe('getProducts', function() {
-      it('should call getProducts successfully', function(done) {
-        //uncomment below and update the code to test getProducts
-        //instance.getProducts(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instance = new Aryeo.ProductCategory();
+      //expect(instance).to.be();
     });
-    describe('postOrders', function() {
-      it('should call postOrders successfully', function(done) {
-        //uncomment below and update the code to test postOrders
-        //instance.postOrders(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
+      //var instance = new Aryeo.ProductCategory();
+      //expect(instance).to.be();
     });
+
   });
 
 }));

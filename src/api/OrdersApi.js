@@ -12,6 +12,7 @@ import ApiFail from '../model/ApiFail';
 import OrderCollection from '../model/OrderCollection';
 import OrderPostPayload from '../model/OrderPostPayload';
 import OrderResource from '../model/OrderResource';
+import ProductCollection from '../model/ProductCollection';
 
 /**
 * Orders service.
@@ -72,6 +73,57 @@ export default class OrdersApi {
       let returnType = OrderCollection;
       return this.apiClient.callApi(
         '/orders', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getProducts operation.
+     * @callback module:api/OrdersApi~getProductsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/ProductCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get products available to a group.
+     * Get products of a group.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.sort Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `title`.
+     * @param {String} opts.perPage The number of items per page. Defaults to 25.
+     * @param {String} opts.page The requested page. Defaults to 1.
+     * @param {String} opts.filterSearch Return products that have fields matching this term.
+     * @param {String} opts.filterCategoryIds Return products in the given categories.
+     * @param {String} opts.filterType Return products matching the given type. Allowed values are: MAIN, ADDON.
+     * @param {module:api/OrdersApi~getProductsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ProductCollection}
+     */
+    getProducts(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'sort': opts['sort'],
+        'per_page': opts['perPage'],
+        'page': opts['page'],
+        'filter[search]': opts['filterSearch'],
+        'filter[category_ids]': opts['filterCategoryIds'],
+        'filter[type]': opts['filterType']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Token'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ProductCollection;
+      return this.apiClient.callApi(
+        '/products', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

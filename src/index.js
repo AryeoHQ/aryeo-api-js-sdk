@@ -35,6 +35,10 @@ import OrderPostPayload from './model/OrderPostPayload';
 import OrderResource from './model/OrderResource';
 import PaginationLinks from './model/PaginationLinks';
 import PaginationMeta from './model/PaginationMeta';
+import Product from './model/Product';
+import ProductCategory from './model/ProductCategory';
+import ProductCollection from './model/ProductCollection';
+import ProductVariant from './model/ProductVariant';
 import PropertyWebsite from './model/PropertyWebsite';
 import SocialProfiles from './model/SocialProfiles';
 import UnconfirmedAppointment from './model/UnconfirmedAppointment';
@@ -252,6 +256,30 @@ export {
      * @property {module:model/PaginationMeta}
      */
     PaginationMeta,
+
+    /**
+     * The Product model constructor.
+     * @property {module:model/Product}
+     */
+    Product,
+
+    /**
+     * The ProductCategory model constructor.
+     * @property {module:model/ProductCategory}
+     */
+    ProductCategory,
+
+    /**
+     * The ProductCollection model constructor.
+     * @property {module:model/ProductCollection}
+     */
+    ProductCollection,
+
+    /**
+     * The ProductVariant model constructor.
+     * @property {module:model/ProductVariant}
+     */
+    ProductVariant,
 
     /**
      * The PropertyWebsite model constructor.
