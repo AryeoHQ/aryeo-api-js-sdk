@@ -40,8 +40,8 @@ export default class ListingsApi {
      */
 
     /**
-     * Get the listings available to a group.
-     * Get the listings available to a group.
+     * List all listings.
+     * Lists all listings available to a group.
      * @param {Object} opts Optional parameters
      * @param {String} opts.include Comma separated list of optional data to include in the response.
      * @param {String} opts.filterSearch Return listings that have fields matching this term.
@@ -113,8 +113,8 @@ export default class ListingsApi {
      */
 
     /**
-     * Get information about a listing.
-     * Get information about a listing.
+     * Retrieve a listing.
+     * Retrieves the details of a listing with the given ID.
      * @param {String} listingId The ID of a listing. UUID Version 4.
      * @param {Object} opts Optional parameters
      * @param {String} opts.include Comma separated list of optional data to include in the response.

@@ -4,8 +4,8 @@ All URIs are relative to *https://api.aryeo.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getVendors**](VendorsApi.md#getVendors) | **GET** /vendors | Get vendors available to a group.
-[**getVendorsId**](VendorsApi.md#getVendorsId) | **GET** /vendors/{vendor_id} | Get vendors available to a group.
+[**getVendors**](VendorsApi.md#getVendors) | **GET** /vendors | List all vendors.
+[**getVendorsId**](VendorsApi.md#getVendorsId) | **GET** /vendors/{vendor_id} | Retrieve a vendor.
 
 
 
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 
 > GroupCollection getVendors(opts)
 
-Get vendors available to a group.
+List all vendors.
 
-Get vendors available to a group.
+Lists all vendors available to a group.
 
 ### Example
 
@@ -64,9 +64,9 @@ Name | Type | Description  | Notes
 
 > GroupResource getVendorsId(vendorId, opts)
 
-Get vendors available to a group.
+Retrieve a vendor.
 
-Get information about a vendor.
+Retrieves the details of a vendor with the given ID.
 
 ### Example
 

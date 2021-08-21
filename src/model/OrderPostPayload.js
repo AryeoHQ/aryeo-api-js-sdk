@@ -48,6 +48,9 @@ class OrderPostPayload {
             if (data.hasOwnProperty('payment_status')) {
                 obj['payment_status'] = ApiClient.convertToType(data['payment_status'], 'String');
             }
+            if (data.hasOwnProperty('place_id')) {
+                obj['place_id'] = ApiClient.convertToType(data['place_id'], 'String');
+            }
         }
         return obj;
     }
@@ -66,6 +69,12 @@ OrderPostPayload.prototype['fulfillment_status'] = undefined;
  * @member {module:model/OrderPostPayload.PaymentStatusEnum} payment_status
  */
 OrderPostPayload.prototype['payment_status'] = undefined;
+
+/**
+ * Google Places ID of the address to attach to the order.
+ * @member {String} place_id
+ */
+OrderPostPayload.prototype['place_id'] = undefined;
 
 
 

@@ -4,8 +4,8 @@ All URIs are relative to *https://api.aryeo.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getListings**](ListingsApi.md#getListings) | **GET** /listings | Get the listings available to a group.
-[**getListingsId**](ListingsApi.md#getListingsId) | **GET** /listings/{listing_id} | Get information about a listing.
+[**getListings**](ListingsApi.md#getListings) | **GET** /listings | List all listings.
+[**getListingsId**](ListingsApi.md#getListingsId) | **GET** /listings/{listing_id} | Retrieve a listing.
 
 
 
@@ -13,9 +13,9 @@ Method | HTTP request | Description
 
 > ListingCollection getListings(opts)
 
-Get the listings available to a group.
+List all listings.
 
-Get the listings available to a group.
+Lists all listings available to a group.
 
 ### Example
 
@@ -96,9 +96,9 @@ Name | Type | Description  | Notes
 
 > ListingResource getListingsId(listingId, opts)
 
-Get information about a listing.
+Retrieve a listing.
 
-Get information about a listing.
+Retrieves the details of a listing with the given ID.
 
 ### Example
 

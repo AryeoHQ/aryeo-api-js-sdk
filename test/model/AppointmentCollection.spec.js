@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.OrderPostPayload();
+    instance = new Aryeo.AppointmentCollection();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,28 +41,34 @@
       object[property] = value;
   }
 
-  describe('OrderPostPayload', function() {
-    it('should create an instance of OrderPostPayload', function() {
-      // uncomment below and update the code to test OrderPostPayload
-      //var instane = new Aryeo.OrderPostPayload();
-      //expect(instance).to.be.a(Aryeo.OrderPostPayload);
+  describe('AppointmentCollection', function() {
+    it('should create an instance of AppointmentCollection', function() {
+      // uncomment below and update the code to test AppointmentCollection
+      //var instane = new Aryeo.AppointmentCollection();
+      //expect(instance).to.be.a(Aryeo.AppointmentCollection);
     });
 
-    it('should have the property fulfillmentStatus (base name: "fulfillment_status")', function() {
-      // uncomment below and update the code to test the property fulfillmentStatus
-      //var instance = new Aryeo.OrderPostPayload();
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Aryeo.AppointmentCollection();
       //expect(instance).to.be();
     });
 
-    it('should have the property paymentStatus (base name: "payment_status")', function() {
-      // uncomment below and update the code to test the property paymentStatus
-      //var instance = new Aryeo.OrderPostPayload();
+    it('should have the property data (base name: "data")', function() {
+      // uncomment below and update the code to test the property data
+      //var instance = new Aryeo.AppointmentCollection();
       //expect(instance).to.be();
     });
 
-    it('should have the property placeId (base name: "place_id")', function() {
-      // uncomment below and update the code to test the property placeId
-      //var instance = new Aryeo.OrderPostPayload();
+    it('should have the property meta (base name: "meta")', function() {
+      // uncomment below and update the code to test the property meta
+      //var instance = new Aryeo.AppointmentCollection();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property links (base name: "links")', function() {
+      // uncomment below and update the code to test the property links
+      //var instance = new Aryeo.AppointmentCollection();
       //expect(instance).to.be();
     });
 

@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.OrderPostPayload();
+    instance = new Aryeo.AppointmentCancelPutPayload();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,28 +41,16 @@
       object[property] = value;
   }
 
-  describe('OrderPostPayload', function() {
-    it('should create an instance of OrderPostPayload', function() {
-      // uncomment below and update the code to test OrderPostPayload
-      //var instane = new Aryeo.OrderPostPayload();
-      //expect(instance).to.be.a(Aryeo.OrderPostPayload);
+  describe('AppointmentCancelPutPayload', function() {
+    it('should create an instance of AppointmentCancelPutPayload', function() {
+      // uncomment below and update the code to test AppointmentCancelPutPayload
+      //var instane = new Aryeo.AppointmentCancelPutPayload();
+      //expect(instance).to.be.a(Aryeo.AppointmentCancelPutPayload);
     });
 
-    it('should have the property fulfillmentStatus (base name: "fulfillment_status")', function() {
-      // uncomment below and update the code to test the property fulfillmentStatus
-      //var instance = new Aryeo.OrderPostPayload();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property paymentStatus (base name: "payment_status")', function() {
-      // uncomment below and update the code to test the property paymentStatus
-      //var instance = new Aryeo.OrderPostPayload();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property placeId (base name: "place_id")', function() {
-      // uncomment below and update the code to test the property placeId
-      //var instance = new Aryeo.OrderPostPayload();
+    it('should have the property notifyCustomer (base name: "notify_customer")', function() {
+      // uncomment below and update the code to test the property notifyCustomer
+      //var instance = new Aryeo.AppointmentCancelPutPayload();
       //expect(instance).to.be();
     });
 

@@ -48,12 +48,16 @@ All URIs are relative to *https://api.aryeo.com/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*Aryeo.ListingsApi* | [**getListings**](docs/ListingsApi.md#getListings) | **GET** /listings | Get the listings available to a group.
-*Aryeo.ListingsApi* | [**getListingsId**](docs/ListingsApi.md#getListingsId) | **GET** /listings/{listing_id} | Get information about a listing.
-*Aryeo.OrdersApi* | [**getOrders**](docs/OrdersApi.md#getOrders) | **GET** /orders | Get orders available to a group.
+*Aryeo.AppointmentsApi* | [**getAppointments**](docs/AppointmentsApi.md#getAppointments) | **GET** /appointments | List all appointments.
+*Aryeo.AppointmentsApi* | [**getUnconfirmedAppointments**](docs/AppointmentsApi.md#getUnconfirmedAppointments) | **GET** /unconfirmed-appointments | List all unconfirmed appointments.
+*Aryeo.AppointmentsApi* | [**putAppointmentsAppointmentIdCancel**](docs/AppointmentsApi.md#putAppointmentsAppointmentIdCancel) | **PUT** /appointments/{appointment_id}/cancel | Cancel an appointment.
+*Aryeo.AppointmentsApi* | [**putAppointmentsAppointmentIdReschedule**](docs/AppointmentsApi.md#putAppointmentsAppointmentIdReschedule) | **PUT** /appointments/{appointment_id}/reschedule | Reschedule an appointment.
+*Aryeo.ListingsApi* | [**getListings**](docs/ListingsApi.md#getListings) | **GET** /listings | List all listings.
+*Aryeo.ListingsApi* | [**getListingsId**](docs/ListingsApi.md#getListingsId) | **GET** /listings/{listing_id} | Retrieve a listing.
+*Aryeo.OrdersApi* | [**getOrders**](docs/OrdersApi.md#getOrders) | **GET** /orders | List all orders.
 *Aryeo.OrdersApi* | [**postOrders**](docs/OrdersApi.md#postOrders) | **POST** /orders | Create an order.
-*Aryeo.VendorsApi* | [**getVendors**](docs/VendorsApi.md#getVendors) | **GET** /vendors | Get vendors available to a group.
-*Aryeo.VendorsApi* | [**getVendorsId**](docs/VendorsApi.md#getVendorsId) | **GET** /vendors/{vendor_id} | Get vendors available to a group.
+*Aryeo.VendorsApi* | [**getVendors**](docs/VendorsApi.md#getVendors) | **GET** /vendors | List all vendors.
+*Aryeo.VendorsApi* | [**getVendorsId**](docs/VendorsApi.md#getVendorsId) | **GET** /vendors/{vendor_id} | Retrieve a vendor.
 
 
 ## Documentation for Models
@@ -61,6 +65,11 @@ Class | Method | HTTP request | Description
  - [Aryeo.Address](docs/Address.md)
  - [Aryeo.ApiError](docs/ApiError.md)
  - [Aryeo.ApiFail](docs/ApiFail.md)
+ - [Aryeo.Appointment](docs/Appointment.md)
+ - [Aryeo.AppointmentCancelPutPayload](docs/AppointmentCancelPutPayload.md)
+ - [Aryeo.AppointmentCollection](docs/AppointmentCollection.md)
+ - [Aryeo.AppointmentReschedulePutPayload](docs/AppointmentReschedulePutPayload.md)
+ - [Aryeo.AppointmentResource](docs/AppointmentResource.md)
  - [Aryeo.FloorPlan](docs/FloorPlan.md)
  - [Aryeo.Group](docs/Group.md)
  - [Aryeo.GroupCollection](docs/GroupCollection.md)
@@ -76,12 +85,15 @@ Class | Method | HTTP request | Description
  - [Aryeo.Order](docs/Order.md)
  - [Aryeo.OrderCollection](docs/OrderCollection.md)
  - [Aryeo.OrderForm](docs/OrderForm.md)
+ - [Aryeo.OrderItem](docs/OrderItem.md)
  - [Aryeo.OrderPostPayload](docs/OrderPostPayload.md)
  - [Aryeo.OrderResource](docs/OrderResource.md)
  - [Aryeo.PaginationLinks](docs/PaginationLinks.md)
  - [Aryeo.PaginationMeta](docs/PaginationMeta.md)
  - [Aryeo.PropertyWebsite](docs/PropertyWebsite.md)
  - [Aryeo.SocialProfiles](docs/SocialProfiles.md)
+ - [Aryeo.UnconfirmedAppointment](docs/UnconfirmedAppointment.md)
+ - [Aryeo.UnconfirmedAppointmentCollection](docs/UnconfirmedAppointmentCollection.md)
  - [Aryeo.User](docs/User.md)
  - [Aryeo.Video](docs/Video.md)
 

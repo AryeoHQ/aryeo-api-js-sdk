@@ -102,6 +102,24 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property address (base name: "address")', function() {
+      // uncomment below and update the code to test the property address
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property customer (base name: "customer")', function() {
+      // uncomment below and update the code to test the property customer
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property items (base name: "items")', function() {
+      // uncomment below and update the code to test the property items
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -10,6 +10,11 @@ import ApiClient from './ApiClient';
 import Address from './model/Address';
 import ApiError from './model/ApiError';
 import ApiFail from './model/ApiFail';
+import Appointment from './model/Appointment';
+import AppointmentCancelPutPayload from './model/AppointmentCancelPutPayload';
+import AppointmentCollection from './model/AppointmentCollection';
+import AppointmentReschedulePutPayload from './model/AppointmentReschedulePutPayload';
+import AppointmentResource from './model/AppointmentResource';
 import FloorPlan from './model/FloorPlan';
 import Group from './model/Group';
 import GroupCollection from './model/GroupCollection';
@@ -25,14 +30,18 @@ import ListingResource from './model/ListingResource';
 import Order from './model/Order';
 import OrderCollection from './model/OrderCollection';
 import OrderForm from './model/OrderForm';
+import OrderItem from './model/OrderItem';
 import OrderPostPayload from './model/OrderPostPayload';
 import OrderResource from './model/OrderResource';
 import PaginationLinks from './model/PaginationLinks';
 import PaginationMeta from './model/PaginationMeta';
 import PropertyWebsite from './model/PropertyWebsite';
 import SocialProfiles from './model/SocialProfiles';
+import UnconfirmedAppointment from './model/UnconfirmedAppointment';
+import UnconfirmedAppointmentCollection from './model/UnconfirmedAppointmentCollection';
 import User from './model/User';
 import Video from './model/Video';
+import AppointmentsApi from './api/AppointmentsApi';
 import ListingsApi from './api/ListingsApi';
 import OrdersApi from './api/OrdersApi';
 import VendorsApi from './api/VendorsApi';
@@ -93,6 +102,36 @@ export {
      * @property {module:model/ApiFail}
      */
     ApiFail,
+
+    /**
+     * The Appointment model constructor.
+     * @property {module:model/Appointment}
+     */
+    Appointment,
+
+    /**
+     * The AppointmentCancelPutPayload model constructor.
+     * @property {module:model/AppointmentCancelPutPayload}
+     */
+    AppointmentCancelPutPayload,
+
+    /**
+     * The AppointmentCollection model constructor.
+     * @property {module:model/AppointmentCollection}
+     */
+    AppointmentCollection,
+
+    /**
+     * The AppointmentReschedulePutPayload model constructor.
+     * @property {module:model/AppointmentReschedulePutPayload}
+     */
+    AppointmentReschedulePutPayload,
+
+    /**
+     * The AppointmentResource model constructor.
+     * @property {module:model/AppointmentResource}
+     */
+    AppointmentResource,
 
     /**
      * The FloorPlan model constructor.
@@ -185,6 +224,12 @@ export {
     OrderForm,
 
     /**
+     * The OrderItem model constructor.
+     * @property {module:model/OrderItem}
+     */
+    OrderItem,
+
+    /**
      * The OrderPostPayload model constructor.
      * @property {module:model/OrderPostPayload}
      */
@@ -221,6 +266,18 @@ export {
     SocialProfiles,
 
     /**
+     * The UnconfirmedAppointment model constructor.
+     * @property {module:model/UnconfirmedAppointment}
+     */
+    UnconfirmedAppointment,
+
+    /**
+     * The UnconfirmedAppointmentCollection model constructor.
+     * @property {module:model/UnconfirmedAppointmentCollection}
+     */
+    UnconfirmedAppointmentCollection,
+
+    /**
      * The User model constructor.
      * @property {module:model/User}
      */
@@ -231,6 +288,12 @@ export {
      * @property {module:model/Video}
      */
     Video,
+
+    /**
+    * The AppointmentsApi service constructor.
+    * @property {module:api/AppointmentsApi}
+    */
+    AppointmentsApi,
 
     /**
     * The ListingsApi service constructor.

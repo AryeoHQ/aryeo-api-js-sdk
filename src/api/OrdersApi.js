@@ -41,8 +41,8 @@ export default class OrdersApi {
      */
 
     /**
-     * Get orders available to a group.
-     * Get orders of a group.
+     * List all orders.
+     * Lists all orders of a group.
      * @param {Object} opts Optional parameters
      * @param {String} opts.sort Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `-created_at`.
      * @param {String} opts.perPage The number of items per page. Defaults to 25.
