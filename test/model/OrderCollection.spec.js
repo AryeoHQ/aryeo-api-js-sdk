@@ -44,7 +44,7 @@
   describe('OrderCollection', function() {
     it('should create an instance of OrderCollection', function() {
       // uncomment below and update the code to test OrderCollection
-      //var instane = new Aryeo.OrderCollection();
+      //var instance = new Aryeo.OrderCollection();
       //expect(instance).to.be.a(Aryeo.OrderCollection);
     });
 

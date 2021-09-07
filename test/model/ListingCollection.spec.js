@@ -44,7 +44,7 @@
   describe('ListingCollection', function() {
     it('should create an instance of ListingCollection', function() {
       // uncomment below and update the code to test ListingCollection
-      //var instane = new Aryeo.ListingCollection();
+      //var instance = new Aryeo.ListingCollection();
       //expect(instance).to.be.a(Aryeo.ListingCollection);
     });
 

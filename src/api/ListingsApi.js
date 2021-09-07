@@ -7,8 +7,10 @@
 
 
 import ApiClient from "../ApiClient";
-import ApiError from '../model/ApiError';
-import ApiFail from '../model/ApiFail';
+import ApiError403 from '../model/ApiError403';
+import ApiError404 from '../model/ApiError404';
+import ApiError500 from '../model/ApiError500';
+import ApiFail422 from '../model/ApiFail422';
 import ListingCollection from '../model/ListingCollection';
 import ListingResource from '../model/ListingResource';
 

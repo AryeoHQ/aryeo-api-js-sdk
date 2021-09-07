@@ -44,7 +44,7 @@
   describe('UnconfirmedAppointmentCollection', function() {
     it('should create an instance of UnconfirmedAppointmentCollection', function() {
       // uncomment below and update the code to test UnconfirmedAppointmentCollection
-      //var instane = new Aryeo.UnconfirmedAppointmentCollection();
+      //var instance = new Aryeo.UnconfirmedAppointmentCollection();
       //expect(instance).to.be.a(Aryeo.UnconfirmedAppointmentCollection);
     });
 

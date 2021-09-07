@@ -44,7 +44,7 @@
   describe('OrderResource', function() {
     it('should create an instance of OrderResource', function() {
       // uncomment below and update the code to test OrderResource
-      //var instane = new Aryeo.OrderResource();
+      //var instance = new Aryeo.OrderResource();
       //expect(instance).to.be.a(Aryeo.OrderResource);
     });
 

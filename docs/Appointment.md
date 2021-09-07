@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **duration** | **Number** | The length of the appointment in minutes. | [optional] 
 **order** | [**Order**](Order.md) |  | [optional] 
 **users** | [**[User]**](User.md) | Users attached to the appointment. | [optional] 
+**items** | [**[OrderItem]**](OrderItem.md) | Items attached to the appointment. | [optional] 
 
 
 

@@ -7,8 +7,11 @@
 
 
 import ApiClient from "../ApiClient";
-import ApiError from '../model/ApiError';
-import ApiFail from '../model/ApiFail';
+import ApiError403 from '../model/ApiError403';
+import ApiError404 from '../model/ApiError404';
+import ApiError409 from '../model/ApiError409';
+import ApiError500 from '../model/ApiError500';
+import ApiFail422 from '../model/ApiFail422';
 import AppointmentCancelPutPayload from '../model/AppointmentCancelPutPayload';
 import AppointmentCollection from '../model/AppointmentCollection';
 import AppointmentReschedulePutPayload from '../model/AppointmentReschedulePutPayload';
@@ -175,7 +178,7 @@ export default class AppointmentsApi {
 
       let authNames = ['Token'];
       let contentTypes = ['application/json'];
-      let accepts = ['application/json', 'application/xml'];
+      let accepts = ['application/json'];
       let returnType = AppointmentResource;
       return this.apiClient.callApi(
         '/appointments/{appointment_id}/cancel', 'PUT',

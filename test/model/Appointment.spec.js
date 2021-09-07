@@ -44,7 +44,7 @@
   describe('Appointment', function() {
     it('should create an instance of Appointment', function() {
       // uncomment below and update the code to test Appointment
-      //var instane = new Aryeo.Appointment();
+      //var instance = new Aryeo.Appointment();
       //expect(instance).to.be.a(Aryeo.Appointment);
     });
 
@@ -98,6 +98,12 @@
 
     it('should have the property users (base name: "users")', function() {
       // uncomment below and update the code to test the property users
+      //var instance = new Aryeo.Appointment();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property items (base name: "items")', function() {
+      // uncomment below and update the code to test the property items
       //var instance = new Aryeo.Appointment();
       //expect(instance).to.be();
     });

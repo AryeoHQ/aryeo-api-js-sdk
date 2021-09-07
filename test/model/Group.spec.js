@@ -44,7 +44,7 @@
   describe('Group', function() {
     it('should create an instance of Group', function() {
       // uncomment below and update the code to test Group
-      //var instane = new Aryeo.Group();
+      //var instance = new Aryeo.Group();
       //expect(instance).to.be.a(Aryeo.Group);
     });
 

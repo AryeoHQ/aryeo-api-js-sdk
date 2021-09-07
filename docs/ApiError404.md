@@ -1,4 +1,4 @@
-# Aryeo.ApiError
+# Aryeo.ApiError404
 
 ## Properties
 

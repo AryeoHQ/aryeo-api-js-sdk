@@ -44,7 +44,7 @@
   describe('GroupCollection', function() {
     it('should create an instance of GroupCollection', function() {
       // uncomment below and update the code to test GroupCollection
-      //var instane = new Aryeo.GroupCollection();
+      //var instance = new Aryeo.GroupCollection();
       //expect(instance).to.be.a(Aryeo.GroupCollection);
     });
 

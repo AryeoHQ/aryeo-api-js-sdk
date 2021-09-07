@@ -44,7 +44,7 @@
   describe('GroupResource', function() {
     it('should create an instance of GroupResource', function() {
       // uncomment below and update the code to test GroupResource
-      //var instane = new Aryeo.GroupResource();
+      //var instance = new Aryeo.GroupResource();
       //expect(instance).to.be.a(Aryeo.GroupResource);
     });
 

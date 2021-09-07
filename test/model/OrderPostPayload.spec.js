@@ -44,7 +44,7 @@
   describe('OrderPostPayload', function() {
     it('should create an instance of OrderPostPayload', function() {
       // uncomment below and update the code to test OrderPostPayload
-      //var instane = new Aryeo.OrderPostPayload();
+      //var instance = new Aryeo.OrderPostPayload();
       //expect(instance).to.be.a(Aryeo.OrderPostPayload);
     });
 

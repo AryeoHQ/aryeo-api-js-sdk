@@ -64,8 +64,11 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Aryeo.Address](docs/Address.md)
- - [Aryeo.ApiError](docs/ApiError.md)
- - [Aryeo.ApiFail](docs/ApiFail.md)
+ - [Aryeo.ApiError403](docs/ApiError403.md)
+ - [Aryeo.ApiError404](docs/ApiError404.md)
+ - [Aryeo.ApiError409](docs/ApiError409.md)
+ - [Aryeo.ApiError500](docs/ApiError500.md)
+ - [Aryeo.ApiFail422](docs/ApiFail422.md)
  - [Aryeo.Appointment](docs/Appointment.md)
  - [Aryeo.AppointmentCancelPutPayload](docs/AppointmentCancelPutPayload.md)
  - [Aryeo.AppointmentCollection](docs/AppointmentCollection.md)

@@ -44,7 +44,7 @@
   describe('Image', function() {
     it('should create an instance of Image', function() {
       // uncomment below and update the code to test Image
-      //var instane = new Aryeo.Image();
+      //var instance = new Aryeo.Image();
       //expect(instance).to.be.a(Aryeo.Image);
     });
 

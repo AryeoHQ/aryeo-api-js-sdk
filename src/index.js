@@ -8,8 +8,11 @@
 
 import ApiClient from './ApiClient';
 import Address from './model/Address';
-import ApiError from './model/ApiError';
-import ApiFail from './model/ApiFail';
+import ApiError403 from './model/ApiError403';
+import ApiError404 from './model/ApiError404';
+import ApiError409 from './model/ApiError409';
+import ApiError500 from './model/ApiError500';
+import ApiFail422 from './model/ApiFail422';
 import Appointment from './model/Appointment';
 import AppointmentCancelPutPayload from './model/AppointmentCancelPutPayload';
 import AppointmentCollection from './model/AppointmentCollection';
@@ -96,16 +99,34 @@ export {
     Address,
 
     /**
-     * The ApiError model constructor.
-     * @property {module:model/ApiError}
+     * The ApiError403 model constructor.
+     * @property {module:model/ApiError403}
      */
-    ApiError,
+    ApiError403,
 
     /**
-     * The ApiFail model constructor.
-     * @property {module:model/ApiFail}
+     * The ApiError404 model constructor.
+     * @property {module:model/ApiError404}
      */
-    ApiFail,
+    ApiError404,
+
+    /**
+     * The ApiError409 model constructor.
+     * @property {module:model/ApiError409}
+     */
+    ApiError409,
+
+    /**
+     * The ApiError500 model constructor.
+     * @property {module:model/ApiError500}
+     */
+    ApiError500,
+
+    /**
+     * The ApiFail422 model constructor.
+     * @property {module:model/ApiFail422}
+     */
+    ApiFail422,
 
     /**
      * The Appointment model constructor.

@@ -44,7 +44,7 @@
   describe('InteractiveContent', function() {
     it('should create an instance of InteractiveContent', function() {
       // uncomment below and update the code to test InteractiveContent
-      //var instane = new Aryeo.InteractiveContent();
+      //var instance = new Aryeo.InteractiveContent();
       //expect(instance).to.be.a(Aryeo.InteractiveContent);
     });
 

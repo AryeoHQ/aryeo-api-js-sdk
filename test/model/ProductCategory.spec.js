@@ -44,7 +44,7 @@
   describe('ProductCategory', function() {
     it('should create an instance of ProductCategory', function() {
       // uncomment below and update the code to test ProductCategory
-      //var instane = new Aryeo.ProductCategory();
+      //var instance = new Aryeo.ProductCategory();
       //expect(instance).to.be.a(Aryeo.ProductCategory);
     });
 

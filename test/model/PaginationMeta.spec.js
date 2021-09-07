@@ -44,7 +44,7 @@
   describe('PaginationMeta', function() {
     it('should create an instance of PaginationMeta', function() {
       // uncomment below and update the code to test PaginationMeta
-      //var instane = new Aryeo.PaginationMeta();
+      //var instance = new Aryeo.PaginationMeta();
       //expect(instance).to.be.a(Aryeo.PaginationMeta);
     });
 

@@ -44,7 +44,7 @@
   describe('ListingBuilding', function() {
     it('should create an instance of ListingBuilding', function() {
       // uncomment below and update the code to test ListingBuilding
-      //var instane = new Aryeo.ListingBuilding();
+      //var instance = new Aryeo.ListingBuilding();
       //expect(instance).to.be.a(Aryeo.ListingBuilding);
     });
 

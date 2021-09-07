@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.PropertyWebsite();
+    instance = new Aryeo.ApiError404();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,28 +41,28 @@
       object[property] = value;
   }
 
-  describe('PropertyWebsite', function() {
-    it('should create an instance of PropertyWebsite', function() {
-      // uncomment below and update the code to test PropertyWebsite
-      //var instance = new Aryeo.PropertyWebsite();
-      //expect(instance).to.be.a(Aryeo.PropertyWebsite);
+  describe('ApiError404', function() {
+    it('should create an instance of ApiError404', function() {
+      // uncomment below and update the code to test ApiError404
+      //var instance = new Aryeo.ApiError404();
+      //expect(instance).to.be.a(Aryeo.ApiError404);
     });
 
-    it('should have the property id (base name: "id")', function() {
-      // uncomment below and update the code to test the property id
-      //var instance = new Aryeo.PropertyWebsite();
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instance = new Aryeo.ApiError404();
       //expect(instance).to.be();
     });
 
-    it('should have the property brandedUrl (base name: "branded_url")', function() {
-      // uncomment below and update the code to test the property brandedUrl
-      //var instance = new Aryeo.PropertyWebsite();
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
+      //var instance = new Aryeo.ApiError404();
       //expect(instance).to.be();
     });
 
-    it('should have the property unbrandedUrl (base name: "unbranded_url")', function() {
-      // uncomment below and update the code to test the property unbrandedUrl
-      //var instance = new Aryeo.PropertyWebsite();
+    it('should have the property code (base name: "code")', function() {
+      // uncomment below and update the code to test the property code
+      //var instance = new Aryeo.ApiError404();
       //expect(instance).to.be();
     });
 

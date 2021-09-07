@@ -87,9 +87,9 @@ let opts = {
   'sort': -created_at, // String | Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `title`.
   'perPage': 25, // String | The number of items per page. Defaults to 25.
   'page': 2, // String | The requested page. Defaults to 1.
-  'filterSearch': "filterSearch_example", // String | Return products that have fields matching this term.
-  'filterCategoryIds': "filterCategoryIds_example", // String | Return products in the given categories.
-  'filterType': "filterType_example" // String | Return products matching the given type. Allowed values are: MAIN, ADDON.
+  'filterSearch': Photography, // String | Return products that have fields matching this term.
+  'filterCategoryIds': ["00000000-0000-4000-8000-000000000000"], // Array | Return products in the given categories.
+  'filterType': MAIN // String | Return products matching the given type. Allowed values are: MAIN, ADDON.
 };
 apiInstance.getProducts(opts, (error, data, response) => {
   if (error) {
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **perPage** | **String**| The number of items per page. Defaults to 25. | [optional] 
  **page** | **String**| The requested page. Defaults to 1. | [optional] 
  **filterSearch** | **String**| Return products that have fields matching this term. | [optional] 
- **filterCategoryIds** | **String**| Return products in the given categories. | [optional] 
+ **filterCategoryIds** | [**Array**](.md)| Return products in the given categories. | [optional] 
  **filterType** | **String**| Return products matching the given type. Allowed values are: MAIN, ADDON. | [optional] 
 
 ### Return type

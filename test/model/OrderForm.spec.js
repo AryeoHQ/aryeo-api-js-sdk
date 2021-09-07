@@ -44,7 +44,7 @@
   describe('OrderForm', function() {
     it('should create an instance of OrderForm', function() {
       // uncomment below and update the code to test OrderForm
-      //var instane = new Aryeo.OrderForm();
+      //var instance = new Aryeo.OrderForm();
       //expect(instance).to.be.a(Aryeo.OrderForm);
     });
 

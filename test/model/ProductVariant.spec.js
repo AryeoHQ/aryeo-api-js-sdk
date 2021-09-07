@@ -44,7 +44,7 @@
   describe('ProductVariant', function() {
     it('should create an instance of ProductVariant', function() {
       // uncomment below and update the code to test ProductVariant
-      //var instane = new Aryeo.ProductVariant();
+      //var instance = new Aryeo.ProductVariant();
       //expect(instance).to.be.a(Aryeo.ProductVariant);
     });
 

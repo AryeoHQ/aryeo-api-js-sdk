@@ -7,6 +7,7 @@
 
 import ApiClient from '../ApiClient';
 import Order from './Order';
+import OrderItem from './OrderItem';
 import User from './User';
 
 /**
@@ -73,6 +74,9 @@ class Appointment {
             if (data.hasOwnProperty('users')) {
                 obj['users'] = ApiClient.convertToType(data['users'], [User]);
             }
+            if (data.hasOwnProperty('items')) {
+                obj['items'] = ApiClient.convertToType(data['items'], [OrderItem]);
+            }
         }
         return obj;
     }
@@ -132,6 +136,12 @@ Appointment.prototype['order'] = undefined;
  * @member {Array.<module:model/User>} users
  */
 Appointment.prototype['users'] = undefined;
+
+/**
+ * Items attached to the appointment.
+ * @member {Array.<module:model/OrderItem>} items
+ */
+Appointment.prototype['items'] = undefined;
 
 
 

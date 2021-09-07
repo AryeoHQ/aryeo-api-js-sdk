@@ -22,7 +22,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Aryeo.ApiFail();
+    instance = new Aryeo.ApiError403();
   });
 
   var getProperty = function(object, getter, property) {
@@ -41,16 +41,28 @@
       object[property] = value;
   }
 
-  describe('ApiFail', function() {
-    it('should create an instance of ApiFail', function() {
-      // uncomment below and update the code to test ApiFail
-      //var instane = new Aryeo.ApiFail();
-      //expect(instance).to.be.a(Aryeo.ApiFail);
+  describe('ApiError403', function() {
+    it('should create an instance of ApiError403', function() {
+      // uncomment below and update the code to test ApiError403
+      //var instance = new Aryeo.ApiError403();
+      //expect(instance).to.be.a(Aryeo.ApiError403);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instance = new Aryeo.ApiFail();
+      //var instance = new Aryeo.ApiError403();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property message (base name: "message")', function() {
+      // uncomment below and update the code to test the property message
+      //var instance = new Aryeo.ApiError403();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property code (base name: "code")', function() {
+      // uncomment below and update the code to test the property code
+      //var instance = new Aryeo.ApiError403();
       //expect(instance).to.be();
     });
 

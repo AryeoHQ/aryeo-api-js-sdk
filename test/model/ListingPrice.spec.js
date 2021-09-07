@@ -44,7 +44,7 @@
   describe('ListingPrice', function() {
     it('should create an instance of ListingPrice', function() {
       // uncomment below and update the code to test ListingPrice
-      //var instane = new Aryeo.ListingPrice();
+      //var instance = new Aryeo.ListingPrice();
       //expect(instance).to.be.a(Aryeo.ListingPrice);
     });
 

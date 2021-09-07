@@ -8,20 +8,20 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ApiFail model module.
- * @module model/ApiFail
+ * The ApiFail422 model module.
+ * @module model/ApiFail422
  * @version 2021-06-17
  */
-class ApiFail {
+class ApiFail422 {
     /**
-     * Constructs a new <code>ApiFail</code>.
-     * A generic failure returned by the API.
-     * @alias module:model/ApiFail
+     * Constructs a new <code>ApiFail422</code>.
+     * A processing or validation failure returned by the API.
+     * @alias module:model/ApiFail422
      * @param status {String} What was the state of the request?
      */
     constructor(status) { 
         
-        ApiFail.initialize(this, status);
+        ApiFail422.initialize(this, status);
     }
 
     /**
@@ -34,15 +34,15 @@ class ApiFail {
     }
 
     /**
-     * Constructs a <code>ApiFail</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ApiFail422</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ApiFail} obj Optional instance to populate.
-     * @return {module:model/ApiFail} The populated <code>ApiFail</code> instance.
+     * @param {module:model/ApiFail422} obj Optional instance to populate.
+     * @return {module:model/ApiFail422} The populated <code>ApiFail422</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ApiFail();
+            obj = obj || new ApiFail422();
 
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -58,12 +58,12 @@ class ApiFail {
  * What was the state of the request?
  * @member {String} status
  */
-ApiFail.prototype['status'] = undefined;
+ApiFail422.prototype['status'] = undefined;
 
 
 
 
 
 
-export default ApiFail;
+export default ApiFail422;
 
