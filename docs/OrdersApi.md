@@ -5,6 +5,7 @@ All URIs are relative to *https://api.aryeo.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /orders | List all orders.
+[**getOrdersId**](OrdersApi.md#getOrdersId) | **GET** /orders/{order_id} | Retrieve an order.
 [**getProducts**](OrdersApi.md#getProducts) | **GET** /products | Get products available to a group.
 [**postOrders**](OrdersApi.md#postOrders) | **POST** /orders | Create an order.
 
@@ -54,6 +55,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrderCollection**](OrderCollection.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getOrdersId
+
+> OrderResource getOrdersId(orderId, opts)
+
+Retrieve an order.
+
+Retrieves the details of an order with the given ID.
+
+### Example
+
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer access token for authorization: Token
+let Token = defaultClient.authentications['Token'];
+Token.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new Aryeo.OrdersApi();
+let orderId = 00000000-0000-4000-8000-000000000000; // String | The ID of an order. UUID Version 4.
+let opts = {
+  'include': items,appointments,unconfirmed_appointments // String | Comma separated list of optional data to include in the response.
+};
+apiInstance.getOrdersId(orderId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | [**String**](.md)| The ID of an order. UUID Version 4. | 
+ **include** | **String**| Comma separated list of optional data to include in the response. | [optional] 
+
+### Return type
+
+[**OrderResource**](OrderResource.md)
 
 ### Authorization
 

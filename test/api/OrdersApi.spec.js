@@ -52,6 +52,16 @@
         done();
       });
     });
+    describe('getOrdersId', function() {
+      it('should call getOrdersId successfully', function(done) {
+        //uncomment below and update the code to test getOrdersId
+        //instance.getOrdersId(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getProducts', function() {
       it('should call getProducts successfully', function(done) {
         //uncomment below and update the code to test getProducts
