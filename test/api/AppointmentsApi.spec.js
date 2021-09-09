@@ -62,6 +62,16 @@
         done();
       });
     });
+    describe('getUnconfirmedAppointmentsId', function() {
+      it('should call getUnconfirmedAppointmentsId successfully', function(done) {
+        //uncomment below and update the code to test getUnconfirmedAppointmentsId
+        //instance.getUnconfirmedAppointmentsId(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('putAppointmentsAppointmentIdCancel', function() {
       it('should call putAppointmentsAppointmentIdCancel successfully', function(done) {
         //uncomment below and update the code to test putAppointmentsAppointmentIdCancel

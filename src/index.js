@@ -46,6 +46,7 @@ import PropertyWebsite from './model/PropertyWebsite';
 import SocialProfiles from './model/SocialProfiles';
 import UnconfirmedAppointment from './model/UnconfirmedAppointment';
 import UnconfirmedAppointmentCollection from './model/UnconfirmedAppointmentCollection';
+import UnconfirmedAppointmentResource from './model/UnconfirmedAppointmentResource';
 import User from './model/User';
 import Video from './model/Video';
 import AppointmentsApi from './api/AppointmentsApi';
@@ -325,6 +326,12 @@ export {
      * @property {module:model/UnconfirmedAppointmentCollection}
      */
     UnconfirmedAppointmentCollection,
+
+    /**
+     * The UnconfirmedAppointmentResource model constructor.
+     * @property {module:model/UnconfirmedAppointmentResource}
+     */
+    UnconfirmedAppointmentResource,
 
     /**
      * The User model constructor.

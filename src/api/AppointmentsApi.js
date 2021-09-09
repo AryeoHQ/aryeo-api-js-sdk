@@ -17,6 +17,7 @@ import AppointmentCollection from '../model/AppointmentCollection';
 import AppointmentReschedulePutPayload from '../model/AppointmentReschedulePutPayload';
 import AppointmentResource from '../model/AppointmentResource';
 import UnconfirmedAppointmentCollection from '../model/UnconfirmedAppointmentCollection';
+import UnconfirmedAppointmentResource from '../model/UnconfirmedAppointmentResource';
 
 /**
 * Appointments service.
@@ -136,6 +137,53 @@ export default class AppointmentsApi {
       let returnType = UnconfirmedAppointmentCollection;
       return this.apiClient.callApi(
         '/unconfirmed-appointments', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getUnconfirmedAppointmentsId operation.
+     * @callback module:api/AppointmentsApi~getUnconfirmedAppointmentsIdCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UnconfirmedAppointmentResource} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Retrieve an unconfirmed appointment.
+     * Retrieves the details of an unconfirmed appointment with the given ID.
+     * @param {String} unconfirmedAppointmentId The ID of an appointment.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.include Comma separated list of optional data to include in the response.
+     * @param {module:api/AppointmentsApi~getUnconfirmedAppointmentsIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UnconfirmedAppointmentResource}
+     */
+    getUnconfirmedAppointmentsId(unconfirmedAppointmentId, opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'unconfirmedAppointmentId' is set
+      if (unconfirmedAppointmentId === undefined || unconfirmedAppointmentId === null) {
+        throw new Error("Missing the required parameter 'unconfirmedAppointmentId' when calling getUnconfirmedAppointmentsId");
+      }
+
+      let pathParams = {
+        'unconfirmed_appointment_id': unconfirmedAppointmentId
+      };
+      let queryParams = {
+        'include': opts['include']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Token'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = UnconfirmedAppointmentResource;
+      return this.apiClient.callApi(
+        '/unconfirmed-appointments/{unconfirmed_appointment_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

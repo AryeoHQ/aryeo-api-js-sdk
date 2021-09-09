@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAppointments**](AppointmentsApi.md#getAppointments) | **GET** /appointments | List all appointments.
 [**getUnconfirmedAppointments**](AppointmentsApi.md#getUnconfirmedAppointments) | **GET** /unconfirmed-appointments | List all unconfirmed appointments.
+[**getUnconfirmedAppointmentsId**](AppointmentsApi.md#getUnconfirmedAppointmentsId) | **GET** /unconfirmed-appointments/{unconfirmed_appointment_id} | Retrieve an unconfirmed appointment.
 [**putAppointmentsAppointmentIdCancel**](AppointmentsApi.md#putAppointmentsAppointmentIdCancel) | **PUT** /appointments/{appointment_id}/cancel | Cancel an appointment.
 [**putAppointmentsAppointmentIdReschedule**](AppointmentsApi.md#putAppointmentsAppointmentIdReschedule) | **PUT** /appointments/{appointment_id}/reschedule | Reschedule an appointment.
 
@@ -124,6 +125,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UnconfirmedAppointmentCollection**](UnconfirmedAppointmentCollection.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getUnconfirmedAppointmentsId
+
+> UnconfirmedAppointmentResource getUnconfirmedAppointmentsId(unconfirmedAppointmentId, opts)
+
+Retrieve an unconfirmed appointment.
+
+Retrieves the details of an unconfirmed appointment with the given ID.
+
+### Example
+
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer access token for authorization: Token
+let Token = defaultClient.authentications['Token'];
+Token.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new Aryeo.AppointmentsApi();
+let unconfirmedAppointmentId = 00000000-0000-0000-0000-000000000000; // String | The ID of an appointment.
+let opts = {
+  'include': order,users // String | Comma separated list of optional data to include in the response.
+};
+apiInstance.getUnconfirmedAppointmentsId(unconfirmedAppointmentId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unconfirmedAppointmentId** | [**String**](.md)| The ID of an appointment. | 
+ **include** | **String**| Comma separated list of optional data to include in the response. | [optional] 
+
+### Return type
+
+[**UnconfirmedAppointmentResource**](UnconfirmedAppointmentResource.md)
 
 ### Authorization
 
