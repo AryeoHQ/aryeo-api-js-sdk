@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getOrders**](OrdersApi.md#getOrders) | **GET** /orders | List all orders.
 [**getOrdersId**](OrdersApi.md#getOrdersId) | **GET** /orders/{order_id} | Retrieve an order.
-[**getProducts**](OrdersApi.md#getProducts) | **GET** /products | Get products available to a group.
+[**getProducts**](OrdersApi.md#getProducts) | **GET** /products | List all products.
 [**postOrders**](OrdersApi.md#postOrders) | **POST** /orders | Create an order.
 
 
@@ -123,9 +123,9 @@ Name | Type | Description  | Notes
 
 > ProductCollection getProducts(opts)
 
-Get products available to a group.
+List all products.
 
-Get products of a group.
+List all products of a group.
 
 ### Example
 
@@ -142,7 +142,7 @@ let opts = {
   'perPage': 25, // String | The number of items per page. Defaults to 25.
   'page': 2, // String | The requested page. Defaults to 1.
   'filterSearch': Photography, // String | Return products that have fields matching this term.
-  'filterCategoryIds': ["00000000-0000-4000-8000-000000000000"], // Array | Return products in the given categories.
+  'filterCategoryIds': ["00000000-0000-4000-8000-000000000000"], // [String] | Return products in the given categories.
   'filterType': MAIN // String | Return products matching the given type. Allowed values are: MAIN, ADDON.
 };
 apiInstance.getProducts(opts, (error, data, response) => {
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
  **perPage** | **String**| The number of items per page. Defaults to 25. | [optional] 
  **page** | **String**| The requested page. Defaults to 1. | [optional] 
  **filterSearch** | **String**| Return products that have fields matching this term. | [optional] 
- **filterCategoryIds** | [**Array**](.md)| Return products in the given categories. | [optional] 
+ **filterCategoryIds** | [**[String]**](String.md)| Return products in the given categories. | [optional] 
  **filterType** | **String**| Return products matching the given type. Allowed values are: MAIN, ADDON. | [optional] 
 
 ### Return type

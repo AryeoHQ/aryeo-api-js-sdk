@@ -57,7 +57,7 @@ Class | Method | HTTP request | Description
 *Aryeo.ListingsApi* | [**getListingsId**](docs/ListingsApi.md#getListingsId) | **GET** /listings/{listing_id} | Retrieve a listing.
 *Aryeo.OrdersApi* | [**getOrders**](docs/OrdersApi.md#getOrders) | **GET** /orders | List all orders.
 *Aryeo.OrdersApi* | [**getOrdersId**](docs/OrdersApi.md#getOrdersId) | **GET** /orders/{order_id} | Retrieve an order.
-*Aryeo.OrdersApi* | [**getProducts**](docs/OrdersApi.md#getProducts) | **GET** /products | Get products available to a group.
+*Aryeo.OrdersApi* | [**getProducts**](docs/OrdersApi.md#getProducts) | **GET** /products | List all products.
 *Aryeo.OrdersApi* | [**postOrders**](docs/OrdersApi.md#postOrders) | **POST** /orders | Create an order.
 *Aryeo.VendorsApi* | [**getVendors**](docs/VendorsApi.md#getVendors) | **GET** /vendors | List all vendors.
 *Aryeo.VendorsApi* | [**getVendorsId**](docs/VendorsApi.md#getVendorsId) | **GET** /vendors/{vendor_id} | Retrieve a vendor.

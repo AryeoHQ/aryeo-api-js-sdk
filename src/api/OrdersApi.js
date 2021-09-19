@@ -137,14 +137,14 @@ export default class OrdersApi {
      */
 
     /**
-     * Get products available to a group.
-     * Get products of a group.
+     * List all products.
+     * List all products of a group.
      * @param {Object} opts Optional parameters
      * @param {String} opts.sort Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `title`.
      * @param {String} opts.perPage The number of items per page. Defaults to 25.
      * @param {String} opts.page The requested page. Defaults to 1.
      * @param {String} opts.filterSearch Return products that have fields matching this term.
-     * @param {Array} opts.filterCategoryIds Return products in the given categories.
+     * @param {Array.<String>} opts.filterCategoryIds Return products in the given categories.
      * @param {String} opts.filterType Return products matching the given type. Allowed values are: MAIN, ADDON.
      * @param {module:api/OrdersApi~getProductsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ProductCollection}
@@ -160,7 +160,7 @@ export default class OrdersApi {
         'per_page': opts['perPage'],
         'page': opts['page'],
         'filter[search]': opts['filterSearch'],
-        'filter[category_ids]': opts['filterCategoryIds'],
+        'filter[category_ids]': this.apiClient.buildCollectionParam(opts['filterCategoryIds'], 'multi'),
         'filter[type]': opts['filterType']
       };
       let headerParams = {

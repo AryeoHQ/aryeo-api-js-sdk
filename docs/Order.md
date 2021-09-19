@@ -15,7 +15,10 @@ Name | Type | Description | Notes
 **statusUrl** | **String** | A URL of a publicly-accessible webpage to see the order&#39;s status. | 
 **address** | [**Address**](Address.md) |  | [optional] 
 **customer** | [**Group**](Group.md) |  | [optional] 
+**listing** | [**Listing**](Listing.md) |  | [optional] 
 **items** | [**[OrderItem]**](OrderItem.md) | items | [optional] 
+**appointments** | [**[Appointment]**](Appointment.md) |  | [optional] 
+**unconfirmedAppointments** | [**[UnconfirmedAppointment]**](UnconfirmedAppointment.md) |  | [optional] 
 
 
 

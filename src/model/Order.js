@@ -7,8 +7,11 @@
 
 import ApiClient from '../ApiClient';
 import Address from './Address';
+import Appointment from './Appointment';
 import Group from './Group';
+import Listing from './Listing';
 import OrderItem from './OrderItem';
+import UnconfirmedAppointment from './UnconfirmedAppointment';
 
 /**
  * The Order model module.
@@ -90,8 +93,17 @@ class Order {
             if (data.hasOwnProperty('customer')) {
                 obj['customer'] = Group.constructFromObject(data['customer']);
             }
+            if (data.hasOwnProperty('listing')) {
+                obj['listing'] = Listing.constructFromObject(data['listing']);
+            }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], [OrderItem]);
+            }
+            if (data.hasOwnProperty('appointments')) {
+                obj['appointments'] = ApiClient.convertToType(data['appointments'], [Appointment]);
+            }
+            if (data.hasOwnProperty('unconfirmed_appointments')) {
+                obj['unconfirmed_appointments'] = ApiClient.convertToType(data['unconfirmed_appointments'], [UnconfirmedAppointment]);
             }
         }
         return obj;
@@ -165,10 +177,25 @@ Order.prototype['address'] = undefined;
 Order.prototype['customer'] = undefined;
 
 /**
+ * @member {module:model/Listing} listing
+ */
+Order.prototype['listing'] = undefined;
+
+/**
  * items
  * @member {Array.<module:model/OrderItem>} items
  */
 Order.prototype['items'] = undefined;
+
+/**
+ * @member {Array.<module:model/Appointment>} appointments
+ */
+Order.prototype['appointments'] = undefined;
+
+/**
+ * @member {Array.<module:model/UnconfirmedAppointment>} unconfirmed_appointments
+ */
+Order.prototype['unconfirmed_appointments'] = undefined;
 
 
 

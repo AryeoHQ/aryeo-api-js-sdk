@@ -114,8 +114,26 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property listing (base name: "listing")', function() {
+      // uncomment below and update the code to test the property listing
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
     it('should have the property items (base name: "items")', function() {
       // uncomment below and update the code to test the property items
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property appointments (base name: "appointments")', function() {
+      // uncomment below and update the code to test the property appointments
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property unconfirmedAppointments (base name: "unconfirmed_appointments")', function() {
+      // uncomment below and update the code to test the property unconfirmedAppointments
       //var instance = new Aryeo.Order();
       //expect(instance).to.be();
     });

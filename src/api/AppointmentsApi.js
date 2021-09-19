@@ -54,7 +54,7 @@ export default class AppointmentsApi {
      * @param {module:model/String} opts.filterTense Return appointments that are upcoming or in the past.
      * @param {Date} opts.filterStartAtGte Return appointments where the start_at field is greater than or equal to this value. Effectively, appointments that start after this date.
      * @param {Date} opts.filterStartAtLte Return appointments where the start_at field is less than or equal to this value. Effectively, appointments that start before this date.
-     * @param {Array} opts.filterUserIds The IDs of users whose appointments will be retrieved. UUID Version 4.
+     * @param {Array.<String>} opts.filterUserIds The IDs of users whose appointments will be retrieved. UUID Version 4.
      * @param {String} opts.sort Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `-start_at`.
      * @param {String} opts.perPage The number of items per page. Defaults to 25.
      * @param {String} opts.page The requested page. Defaults to 1.
@@ -72,7 +72,7 @@ export default class AppointmentsApi {
         'filter[tense]': opts['filterTense'],
         'filter[start_at_gte]': opts['filterStartAtGte'],
         'filter[start_at_lte]': opts['filterStartAtLte'],
-        'filter[user_ids]': opts['filterUserIds'],
+        'filter[user_ids]': this.apiClient.buildCollectionParam(opts['filterUserIds'], 'multi'),
         'sort': opts['sort'],
         'per_page': opts['perPage'],
         'page': opts['page']
@@ -106,7 +106,7 @@ export default class AppointmentsApi {
      * List all unconfirmed appointments. These are appointments that have not been scheduled. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.include Comma separated list of optional data to include in the response.
-     * @param {Array} opts.filterUserIds The IDs of users whose appointments will be retrieved. UUID Version 4.
+     * @param {Array.<String>} opts.filterUserIds The IDs of users whose appointments will be retrieved. UUID Version 4.
      * @param {String} opts.sort Comma separated list of fields used for sorting. Placing a minus symbol in front of a field name sorts in descending order. Defaults to `-start_at`.
      * @param {String} opts.perPage The number of items per page. Defaults to 25.
      * @param {String} opts.page The requested page. Defaults to 1.
@@ -121,7 +121,7 @@ export default class AppointmentsApi {
       };
       let queryParams = {
         'include': opts['include'],
-        'filter[user_ids]': opts['filterUserIds'],
+        'filter[user_ids]': this.apiClient.buildCollectionParam(opts['filterUserIds'], 'multi'),
         'sort': opts['sort'],
         'per_page': opts['perPage'],
         'page': opts['page']
