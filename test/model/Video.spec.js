@@ -44,7 +44,7 @@
   describe('Video', function() {
     it('should create an instance of Video', function() {
       // uncomment below and update the code to test Video
-      //var instance = new Aryeo.Video();
+      //var instane = new Aryeo.Video();
       //expect(instance).to.be.a(Aryeo.Video);
     });
 

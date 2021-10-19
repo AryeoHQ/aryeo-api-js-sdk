@@ -44,7 +44,7 @@
   describe('ApiFail422', function() {
     it('should create an instance of ApiFail422', function() {
       // uncomment below and update the code to test ApiFail422
-      //var instance = new Aryeo.ApiFail422();
+      //var instane = new Aryeo.ApiFail422();
       //expect(instance).to.be.a(Aryeo.ApiFail422);
     });
 

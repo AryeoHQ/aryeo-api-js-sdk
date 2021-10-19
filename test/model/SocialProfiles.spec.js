@@ -44,7 +44,7 @@
   describe('SocialProfiles', function() {
     it('should create an instance of SocialProfiles', function() {
       // uncomment below and update the code to test SocialProfiles
-      //var instance = new Aryeo.SocialProfiles();
+      //var instane = new Aryeo.SocialProfiles();
       //expect(instance).to.be.a(Aryeo.SocialProfiles);
     });
 

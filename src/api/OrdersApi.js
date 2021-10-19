@@ -144,6 +144,7 @@ export default class OrdersApi {
      * @param {String} opts.perPage The number of items per page. Defaults to 25.
      * @param {String} opts.page The requested page. Defaults to 1.
      * @param {String} opts.filterSearch Return products that have fields matching this term.
+     * @param {Boolean} opts.filterIncludeInactive Include inactive products (in addition to active products) when returning products.
      * @param {Array.<String>} opts.filterCategoryIds Return products in the given categories.
      * @param {String} opts.filterType Return products matching the given type. Allowed values are: MAIN, ADDON.
      * @param {module:api/OrdersApi~getProductsCallback} callback The callback function, accepting three arguments: error, data, response
@@ -160,6 +161,7 @@ export default class OrdersApi {
         'per_page': opts['perPage'],
         'page': opts['page'],
         'filter[search]': opts['filterSearch'],
+        'filter[include_inactive]': opts['filterIncludeInactive'],
         'filter[category_ids]': this.apiClient.buildCollectionParam(opts['filterCategoryIds'], 'multi'),
         'filter[type]': opts['filterType']
       };

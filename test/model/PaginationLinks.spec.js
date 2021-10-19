@@ -44,7 +44,7 @@
   describe('PaginationLinks', function() {
     it('should create an instance of PaginationLinks', function() {
       // uncomment below and update the code to test PaginationLinks
-      //var instance = new Aryeo.PaginationLinks();
+      //var instane = new Aryeo.PaginationLinks();
       //expect(instance).to.be.a(Aryeo.PaginationLinks);
     });
 

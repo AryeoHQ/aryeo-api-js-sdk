@@ -44,7 +44,7 @@
   describe('Product', function() {
     it('should create an instance of Product', function() {
       // uncomment below and update the code to test Product
-      //var instance = new Aryeo.Product();
+      //var instane = new Aryeo.Product();
       //expect(instance).to.be.a(Aryeo.Product);
     });
 
@@ -62,6 +62,12 @@
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
+      //var instance = new Aryeo.Product();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property active (base name: "active")', function() {
+      // uncomment below and update the code to test the property active
       //var instance = new Aryeo.Product();
       //expect(instance).to.be();
     });

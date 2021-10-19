@@ -44,7 +44,7 @@
   describe('AppointmentResource', function() {
     it('should create an instance of AppointmentResource', function() {
       // uncomment below and update the code to test AppointmentResource
-      //var instance = new Aryeo.AppointmentResource();
+      //var instane = new Aryeo.AppointmentResource();
       //expect(instance).to.be.a(Aryeo.AppointmentResource);
     });
 

@@ -45,11 +45,17 @@ class OrderPostPayload {
             if (data.hasOwnProperty('fulfillment_status')) {
                 obj['fulfillment_status'] = ApiClient.convertToType(data['fulfillment_status'], 'String');
             }
+            if (data.hasOwnProperty('internal_notes')) {
+                obj['internal_notes'] = ApiClient.convertToType(data['internal_notes'], 'String');
+            }
             if (data.hasOwnProperty('payment_status')) {
                 obj['payment_status'] = ApiClient.convertToType(data['payment_status'], 'String');
             }
-            if (data.hasOwnProperty('place_id')) {
-                obj['place_id'] = ApiClient.convertToType(data['place_id'], 'String');
+            if (data.hasOwnProperty('address_id')) {
+                obj['address_id'] = ApiClient.convertToType(data['address_id'], 'String');
+            }
+            if (data.hasOwnProperty('customer_id')) {
+                obj['customer_id'] = ApiClient.convertToType(data['customer_id'], 'String');
             }
         }
         return obj;
@@ -65,16 +71,28 @@ class OrderPostPayload {
 OrderPostPayload.prototype['fulfillment_status'] = undefined;
 
 /**
+ * Internal notes that will be attached to the order. Viewable only by the team.
+ * @member {String} internal_notes
+ */
+OrderPostPayload.prototype['internal_notes'] = undefined;
+
+/**
  * The payment status of the order. Defaults to \"UNPAID\". 
  * @member {module:model/OrderPostPayload.PaymentStatusEnum} payment_status
  */
 OrderPostPayload.prototype['payment_status'] = undefined;
 
 /**
- * Google Places ID of the address to attach to the order.
- * @member {String} place_id
+ * ID of the address to associate with the order. UUID Version 4.
+ * @member {String} address_id
  */
-OrderPostPayload.prototype['place_id'] = undefined;
+OrderPostPayload.prototype['address_id'] = undefined;
+
+/**
+ * ID of the customer to associate with the order. UUID Version 4.
+ * @member {String} customer_id
+ */
+OrderPostPayload.prototype['customer_id'] = undefined;
 
 
 

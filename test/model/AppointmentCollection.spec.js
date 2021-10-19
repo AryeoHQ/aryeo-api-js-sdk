@@ -44,7 +44,7 @@
   describe('AppointmentCollection', function() {
     it('should create an instance of AppointmentCollection', function() {
       // uncomment below and update the code to test AppointmentCollection
-      //var instance = new Aryeo.AppointmentCollection();
+      //var instane = new Aryeo.AppointmentCollection();
       //expect(instance).to.be.a(Aryeo.AppointmentCollection);
     });
 

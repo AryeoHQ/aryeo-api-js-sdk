@@ -44,7 +44,7 @@
   describe('OrderItem', function() {
     it('should create an instance of OrderItem', function() {
       // uncomment below and update the code to test OrderItem
-      //var instance = new Aryeo.OrderItem();
+      //var instane = new Aryeo.OrderItem();
       //expect(instance).to.be.a(Aryeo.OrderItem);
     });
 

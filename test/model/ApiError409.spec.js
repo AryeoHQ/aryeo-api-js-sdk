@@ -44,7 +44,7 @@
   describe('ApiError409', function() {
     it('should create an instance of ApiError409', function() {
       // uncomment below and update the code to test ApiError409
-      //var instance = new Aryeo.ApiError409();
+      //var instane = new Aryeo.ApiError409();
       //expect(instance).to.be.a(Aryeo.ApiError409);
     });
 

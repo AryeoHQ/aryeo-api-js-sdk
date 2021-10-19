@@ -53,6 +53,9 @@ class Group {
         if (data) {
             obj = obj || new Group();
 
+            if (data.hasOwnProperty('object')) {
+                obj['object'] = ApiClient.convertToType(data['object'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -107,6 +110,12 @@ class Group {
 
 
 }
+
+/**
+ * String representing the object’s type. Objects of the same type share the same schema.
+ * @member {String} object
+ */
+Group.prototype['object'] = undefined;
 
 /**
  * ID of the group. UUID Version 4.

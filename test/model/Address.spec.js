@@ -44,7 +44,7 @@
   describe('Address', function() {
     it('should create an instance of Address', function() {
       // uncomment below and update the code to test Address
-      //var instance = new Aryeo.Address();
+      //var instane = new Aryeo.Address();
       //expect(instance).to.be.a(Aryeo.Address);
     });
 

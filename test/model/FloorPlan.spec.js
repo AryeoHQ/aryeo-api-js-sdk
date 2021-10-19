@@ -44,7 +44,7 @@
   describe('FloorPlan', function() {
     it('should create an instance of FloorPlan', function() {
       // uncomment below and update the code to test FloorPlan
-      //var instance = new Aryeo.FloorPlan();
+      //var instane = new Aryeo.FloorPlan();
       //expect(instance).to.be.a(Aryeo.FloorPlan);
     });
 

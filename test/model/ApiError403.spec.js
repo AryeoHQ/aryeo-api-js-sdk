@@ -44,7 +44,7 @@
   describe('ApiError403', function() {
     it('should create an instance of ApiError403', function() {
       // uncomment below and update the code to test ApiError403
-      //var instance = new Aryeo.ApiError403();
+      //var instane = new Aryeo.ApiError403();
       //expect(instance).to.be.a(Aryeo.ApiError403);
     });
 

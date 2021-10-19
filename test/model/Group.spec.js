@@ -44,8 +44,14 @@
   describe('Group', function() {
     it('should create an instance of Group', function() {
       // uncomment below and update the code to test Group
-      //var instance = new Aryeo.Group();
+      //var instane = new Aryeo.Group();
       //expect(instance).to.be.a(Aryeo.Group);
+    });
+
+    it('should have the property object (base name: "object")', function() {
+      // uncomment below and update the code to test the property object
+      //var instance = new Aryeo.Group();
+      //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {

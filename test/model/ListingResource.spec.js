@@ -44,7 +44,7 @@
   describe('ListingResource', function() {
     it('should create an instance of ListingResource', function() {
       // uncomment below and update the code to test ListingResource
-      //var instance = new Aryeo.ListingResource();
+      //var instane = new Aryeo.ListingResource();
       //expect(instance).to.be.a(Aryeo.ListingResource);
     });
 

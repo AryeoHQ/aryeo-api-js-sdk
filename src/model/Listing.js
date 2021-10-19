@@ -28,13 +28,14 @@ class Listing {
      * Constructs a new <code>Listing</code>.
      * A real estate listing.
      * @alias module:model/Listing
+     * @param object {String} String representing the object’s type. Objects of the same type share the same schema.
      * @param id {String} ID of the listing. UUID Version 4.
      * @param address {module:model/Address} 
      * @param downloadsEnabled {Boolean} Are downloads enabled for this listing?
      */
-    constructor(id, address, downloadsEnabled) { 
+    constructor(object, id, address, downloadsEnabled) { 
         
-        Listing.initialize(this, id, address, downloadsEnabled);
+        Listing.initialize(this, object, id, address, downloadsEnabled);
     }
 
     /**
@@ -42,7 +43,8 @@ class Listing {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, id, address, downloadsEnabled) { 
+    static initialize(obj, object, id, address, downloadsEnabled) { 
+        obj['object'] = object;
         obj['id'] = id;
         obj['address'] = address;
         obj['downloads_enabled'] = downloadsEnabled;
@@ -59,6 +61,9 @@ class Listing {
         if (data) {
             obj = obj || new Listing();
 
+            if (data.hasOwnProperty('object')) {
+                obj['object'] = ApiClient.convertToType(data['object'], 'String');
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
@@ -125,6 +130,12 @@ class Listing {
 
 
 }
+
+/**
+ * String representing the object’s type. Objects of the same type share the same schema.
+ * @member {String} object
+ */
+Listing.prototype['object'] = undefined;
 
 /**
  * ID of the listing. UUID Version 4.

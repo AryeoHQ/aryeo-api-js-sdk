@@ -44,7 +44,7 @@
   describe('AppointmentCancelPutPayload', function() {
     it('should create an instance of AppointmentCancelPutPayload', function() {
       // uncomment below and update the code to test AppointmentCancelPutPayload
-      //var instance = new Aryeo.AppointmentCancelPutPayload();
+      //var instane = new Aryeo.AppointmentCancelPutPayload();
       //expect(instance).to.be.a(Aryeo.AppointmentCancelPutPayload);
     });
 

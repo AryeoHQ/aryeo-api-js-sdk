@@ -59,6 +59,9 @@ class Product {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('active')) {
+                obj['active'] = ApiClient.convertToType(data['active'], 'Boolean');
+            }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
@@ -92,6 +95,12 @@ Product.prototype['title'] = undefined;
  * @member {String} description
  */
 Product.prototype['description'] = undefined;
+
+/**
+ * The active status of a product.
+ * @member {Boolean} active
+ */
+Product.prototype['active'] = undefined;
 
 /**
  * The type of product.

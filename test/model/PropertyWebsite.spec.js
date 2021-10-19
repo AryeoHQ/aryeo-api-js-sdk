@@ -44,7 +44,7 @@
   describe('PropertyWebsite', function() {
     it('should create an instance of PropertyWebsite', function() {
       // uncomment below and update the code to test PropertyWebsite
-      //var instance = new Aryeo.PropertyWebsite();
+      //var instane = new Aryeo.PropertyWebsite();
       //expect(instance).to.be.a(Aryeo.PropertyWebsite);
     });
 

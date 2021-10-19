@@ -44,7 +44,7 @@
   describe('ApiError500', function() {
     it('should create an instance of ApiError500', function() {
       // uncomment below and update the code to test ApiError500
-      //var instance = new Aryeo.ApiError500();
+      //var instane = new Aryeo.ApiError500();
       //expect(instance).to.be.a(Aryeo.ApiError500);
     });
 

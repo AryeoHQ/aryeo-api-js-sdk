@@ -44,7 +44,7 @@
   describe('ProductCollection', function() {
     it('should create an instance of ProductCollection', function() {
       // uncomment below and update the code to test ProductCollection
-      //var instance = new Aryeo.ProductCollection();
+      //var instane = new Aryeo.ProductCollection();
       //expect(instance).to.be.a(Aryeo.ProductCollection);
     });
 

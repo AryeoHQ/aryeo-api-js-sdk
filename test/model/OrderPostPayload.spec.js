@@ -44,12 +44,18 @@
   describe('OrderPostPayload', function() {
     it('should create an instance of OrderPostPayload', function() {
       // uncomment below and update the code to test OrderPostPayload
-      //var instance = new Aryeo.OrderPostPayload();
+      //var instane = new Aryeo.OrderPostPayload();
       //expect(instance).to.be.a(Aryeo.OrderPostPayload);
     });
 
     it('should have the property fulfillmentStatus (base name: "fulfillment_status")', function() {
       // uncomment below and update the code to test the property fulfillmentStatus
+      //var instance = new Aryeo.OrderPostPayload();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property internalNotes (base name: "internal_notes")', function() {
+      // uncomment below and update the code to test the property internalNotes
       //var instance = new Aryeo.OrderPostPayload();
       //expect(instance).to.be();
     });
@@ -60,8 +66,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property placeId (base name: "place_id")', function() {
-      // uncomment below and update the code to test the property placeId
+    it('should have the property addressId (base name: "address_id")', function() {
+      // uncomment below and update the code to test the property addressId
+      //var instance = new Aryeo.OrderPostPayload();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property customerId (base name: "customer_id")', function() {
+      // uncomment below and update the code to test the property customerId
       //var instance = new Aryeo.OrderPostPayload();
       //expect(instance).to.be();
     });

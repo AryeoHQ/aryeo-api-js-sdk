@@ -44,8 +44,14 @@
   describe('Listing', function() {
     it('should create an instance of Listing', function() {
       // uncomment below and update the code to test Listing
-      //var instance = new Aryeo.Listing();
+      //var instane = new Aryeo.Listing();
       //expect(instance).to.be.a(Aryeo.Listing);
+    });
+
+    it('should have the property object (base name: "object")', function() {
+      // uncomment below and update the code to test the property object
+      //var instance = new Aryeo.Listing();
+      //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {

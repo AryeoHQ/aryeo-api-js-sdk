@@ -142,6 +142,7 @@ let opts = {
   'perPage': 25, // String | The number of items per page. Defaults to 25.
   'page': 2, // String | The requested page. Defaults to 1.
   'filterSearch': Photography, // String | Return products that have fields matching this term.
+  'filterIncludeInactive': true, // Boolean | Include inactive products (in addition to active products) when returning products.
   'filterCategoryIds': ["00000000-0000-4000-8000-000000000000"], // [String] | Return products in the given categories.
   'filterType': MAIN // String | Return products matching the given type. Allowed values are: MAIN, ADDON.
 };
@@ -163,6 +164,7 @@ Name | Type | Description  | Notes
  **perPage** | **String**| The number of items per page. Defaults to 25. | [optional] 
  **page** | **String**| The requested page. Defaults to 1. | [optional] 
  **filterSearch** | **String**| Return products that have fields matching this term. | [optional] 
+ **filterIncludeInactive** | **Boolean**| Include inactive products (in addition to active products) when returning products. | [optional] 
  **filterCategoryIds** | [**[String]**](String.md)| Return products in the given categories. | [optional] 
  **filterType** | **String**| Return products matching the given type. Allowed values are: MAIN, ADDON. | [optional] 
 

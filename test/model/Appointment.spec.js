@@ -44,7 +44,7 @@
   describe('Appointment', function() {
     it('should create an instance of Appointment', function() {
       // uncomment below and update the code to test Appointment
-      //var instance = new Aryeo.Appointment();
+      //var instane = new Aryeo.Appointment();
       //expect(instance).to.be.a(Aryeo.Appointment);
     });
 

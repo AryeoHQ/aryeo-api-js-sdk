@@ -44,7 +44,7 @@
   describe('UnconfirmedAppointmentResource', function() {
     it('should create an instance of UnconfirmedAppointmentResource', function() {
       // uncomment below and update the code to test UnconfirmedAppointmentResource
-      //var instance = new Aryeo.UnconfirmedAppointmentResource();
+      //var instane = new Aryeo.UnconfirmedAppointmentResource();
       //expect(instance).to.be.a(Aryeo.UnconfirmedAppointmentResource);
     });
 
