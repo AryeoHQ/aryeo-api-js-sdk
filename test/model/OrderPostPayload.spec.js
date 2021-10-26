@@ -78,6 +78,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property notify (base name: "notify")', function() {
+      // uncomment below and update the code to test the property notify
+      //var instance = new Aryeo.OrderPostPayload();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

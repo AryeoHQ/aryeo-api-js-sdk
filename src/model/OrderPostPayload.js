@@ -57,6 +57,9 @@ class OrderPostPayload {
             if (data.hasOwnProperty('customer_id')) {
                 obj['customer_id'] = ApiClient.convertToType(data['customer_id'], 'String');
             }
+            if (data.hasOwnProperty('notify')) {
+                obj['notify'] = ApiClient.convertToType(data['notify'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -93,6 +96,12 @@ OrderPostPayload.prototype['address_id'] = undefined;
  * @member {String} customer_id
  */
 OrderPostPayload.prototype['customer_id'] = undefined;
+
+/**
+ * Indicates if the customer and creator notifications should be sent when creating the order. Requires an address and customer to be set in order for the notifications to be sent.
+ * @member {Boolean} notify
+ */
+OrderPostPayload.prototype['notify'] = undefined;
 
 
 
