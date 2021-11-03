@@ -57,6 +57,9 @@ class ProductVariant {
             if (data.hasOwnProperty('price')) {
                 obj['price'] = ApiClient.convertToType(data['price'], 'Number');
             }
+            if (data.hasOwnProperty('duration')) {
+                obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
+            }
         }
         return obj;
     }
@@ -81,6 +84,12 @@ ProductVariant.prototype['title'] = undefined;
  * @member {Number} price
  */
 ProductVariant.prototype['price'] = undefined;
+
+/**
+ * The duration of the product item, in minutes.
+ * @member {Number} duration
+ */
+ProductVariant.prototype['duration'] = undefined;
 
 
 
