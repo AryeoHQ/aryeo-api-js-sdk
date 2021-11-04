@@ -5,6 +5,8 @@ All URIs are relative to *https://api.aryeo.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAppointments**](AppointmentsApi.md#getAppointments) | **GET** /appointments | List all appointments.
+[**getAvailableDates**](AppointmentsApi.md#getAvailableDates) | **GET** /scheduling/available-dates | Fetch available days for a user or group
+[**getAvailableTimeslots**](AppointmentsApi.md#getAvailableTimeslots) | **GET** /scheduling/available-timeslots | Fetch available timeslots for a user or group
 [**getUnconfirmedAppointments**](AppointmentsApi.md#getUnconfirmedAppointments) | **GET** /unconfirmed-appointments | List all unconfirmed appointments.
 [**getUnconfirmedAppointmentsId**](AppointmentsApi.md#getUnconfirmedAppointmentsId) | **GET** /unconfirmed-appointments/{unconfirmed_appointment_id} | Retrieve an unconfirmed appointment.
 [**putAppointmentsAppointmentIdCancel**](AppointmentsApi.md#putAppointmentsAppointmentIdCancel) | **PUT** /appointments/{appointment_id}/cancel | Cancel an appointment.
@@ -66,6 +68,142 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppointmentCollection**](AppointmentCollection.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAvailableDates
+
+> CalendarDayCollection getAvailableDates(opts)
+
+Fetch available days for a user or group
+
+Fetch available calendar days for scheduling or rescheduling an appointment. Availability can be retrieved using a specific start &amp; end date range, or using a timeframe. When using a timeframe, the page parameter can be used to flip through weeks, months, etc.
+
+### Example
+
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer access token for authorization: Token
+let Token = defaultClient.authentications['Token'];
+Token.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new Aryeo.AppointmentsApi();
+let opts = {
+  'filterUserIds': ["00000000-0000-4000-8000-000000000000"], // [String] | The IDs of users whose availability will be retrieved. UUID Version 4.
+  'filterAppointmentId': 00000000-0000-4000-8000-000000000000, // String | Appointment ID used to fetch availability for an existing order
+  'filterStartAt': 2021-01-01T13:00Z, // Date | Returns availability after start_at
+  'filterEndAt': 2021-01-02T13:00Z, // Date | Returns availability before end_at
+  'filterTimeframe': MONTH, // [String] | Returns availability for a specific timeframe. Used instead of start_at & end_at
+  'duration': 60, // Number | Duration of the event to schedule. Required if appointment_id isn't specified
+  'interval': 15, // Number | Interval of bookable timeslots starting at x minutes on the hour . Required if appointment_id isn't specified
+  'timezone': 2, // String | Timezone of the client. Localizes the available days
+  'page': 1, // Number | The requested page of results
+  'perPage': 5 // Number | The number of results per page. Only applies when using a date range
+};
+apiInstance.getAvailableDates(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filterUserIds** | [**[String]**](String.md)| The IDs of users whose availability will be retrieved. UUID Version 4. | [optional] 
+ **filterAppointmentId** | **String**| Appointment ID used to fetch availability for an existing order | [optional] 
+ **filterStartAt** | **Date**| Returns availability after start_at | [optional] 
+ **filterEndAt** | **Date**| Returns availability before end_at | [optional] 
+ **filterTimeframe** | [**[String]**](String.md)| Returns availability for a specific timeframe. Used instead of start_at &amp; end_at | [optional] 
+ **duration** | **Number**| Duration of the event to schedule. Required if appointment_id isn&#39;t specified | [optional] 
+ **interval** | **Number**| Interval of bookable timeslots starting at x minutes on the hour . Required if appointment_id isn&#39;t specified | [optional] 
+ **timezone** | **String**| Timezone of the client. Localizes the available days | [optional] 
+ **page** | **Number**| The requested page of results | [optional] 
+ **perPage** | **Number**| The number of results per page. Only applies when using a date range | [optional] 
+
+### Return type
+
+[**CalendarDayCollection**](CalendarDayCollection.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAvailableTimeslots
+
+> TimeslotCollection getAvailableTimeslots(opts)
+
+Fetch available timeslots for a user or group
+
+Fetch available timeslots for scheduling or rescheduling an appointment. Timeslots can be retrieved using a specific start &amp; end date range, or using a timeframe. When using a timeframe, the page parameter can be used to flip through days or weeks.
+
+### Example
+
+```javascript
+import Aryeo from 'aryeo';
+let defaultClient = Aryeo.ApiClient.instance;
+// Configure Bearer access token for authorization: Token
+let Token = defaultClient.authentications['Token'];
+Token.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new Aryeo.AppointmentsApi();
+let opts = {
+  'filterUserIds': ["00000000-0000-4000-8000-000000000000"], // [String] | The IDs of users whose appointments will be retrieved. UUID Version 4.
+  'filterAppointmentId': 00000000-0000-4000-8000-000000000000, // String | Appointment ID used to fetch availability for an existing order
+  'filterStartAt': 2021-01-01T13:00Z, // Date | Returns availability after start_at
+  'filterEndAt': 2021-01-02T13:00Z, // Date | Returns availability before end_at
+  'filterTimeframe': MONTH, // [String] | Returns availability for a specific timeframe. Used instead of start_at & end_at
+  'duration': 60, // Number | Duration of the event to schedule. Required if appointment_id isn't specified
+  'interval': 25, // Number | Interval of bookable timeslots starting at x minutes on the hour . Required if appointment_id isn't specified
+  'page': 1, // Number | The requested page of results
+  'perPage': 5 // Number | The number of results per page. Only applies when using a date range
+};
+apiInstance.getAvailableTimeslots(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filterUserIds** | [**[String]**](String.md)| The IDs of users whose appointments will be retrieved. UUID Version 4. | [optional] 
+ **filterAppointmentId** | **String**| Appointment ID used to fetch availability for an existing order | [optional] 
+ **filterStartAt** | **Date**| Returns availability after start_at | [optional] 
+ **filterEndAt** | **Date**| Returns availability before end_at | [optional] 
+ **filterTimeframe** | [**[String]**](String.md)| Returns availability for a specific timeframe. Used instead of start_at &amp; end_at | [optional] 
+ **duration** | **Number**| Duration of the event to schedule. Required if appointment_id isn&#39;t specified | [optional] 
+ **interval** | **Number**| Interval of bookable timeslots starting at x minutes on the hour . Required if appointment_id isn&#39;t specified | [optional] 
+ **page** | **Number**| The requested page of results | [optional] 
+ **perPage** | **Number**| The number of results per page. Only applies when using a date range | [optional] 
+
+### Return type
+
+[**TimeslotCollection**](TimeslotCollection.md)
 
 ### Authorization
 

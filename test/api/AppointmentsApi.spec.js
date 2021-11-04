@@ -52,6 +52,26 @@
         done();
       });
     });
+    describe('getAvailableDates', function() {
+      it('should call getAvailableDates successfully', function(done) {
+        //uncomment below and update the code to test getAvailableDates
+        //instance.getAvailableDates(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getAvailableTimeslots', function() {
+      it('should call getAvailableTimeslots successfully', function(done) {
+        //uncomment below and update the code to test getAvailableTimeslots
+        //instance.getAvailableTimeslots(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getUnconfirmedAppointments', function() {
       it('should call getUnconfirmedAppointments successfully', function(done) {
         //uncomment below and update the code to test getUnconfirmedAppointments

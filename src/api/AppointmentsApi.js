@@ -16,6 +16,8 @@ import AppointmentCancelPutPayload from '../model/AppointmentCancelPutPayload';
 import AppointmentCollection from '../model/AppointmentCollection';
 import AppointmentReschedulePutPayload from '../model/AppointmentReschedulePutPayload';
 import AppointmentResource from '../model/AppointmentResource';
+import CalendarDayCollection from '../model/CalendarDayCollection';
+import TimeslotCollection from '../model/TimeslotCollection';
 import UnconfirmedAppointmentCollection from '../model/UnconfirmedAppointmentCollection';
 import UnconfirmedAppointmentResource from '../model/UnconfirmedAppointmentResource';
 
@@ -88,6 +90,122 @@ export default class AppointmentsApi {
       let returnType = AppointmentCollection;
       return this.apiClient.callApi(
         '/appointments', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAvailableDates operation.
+     * @callback module:api/AppointmentsApi~getAvailableDatesCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CalendarDayCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch available days for a user or group
+     * Fetch available calendar days for scheduling or rescheduling an appointment. Availability can be retrieved using a specific start & end date range, or using a timeframe. When using a timeframe, the page parameter can be used to flip through weeks, months, etc.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.filterUserIds The IDs of users whose availability will be retrieved. UUID Version 4.
+     * @param {String} opts.filterAppointmentId Appointment ID used to fetch availability for an existing order
+     * @param {Date} opts.filterStartAt Returns availability after start_at
+     * @param {Date} opts.filterEndAt Returns availability before end_at
+     * @param {Array.<module:model/String>} opts.filterTimeframe Returns availability for a specific timeframe. Used instead of start_at & end_at
+     * @param {Number} opts.duration Duration of the event to schedule. Required if appointment_id isn't specified
+     * @param {Number} opts.interval Interval of bookable timeslots starting at x minutes on the hour . Required if appointment_id isn't specified
+     * @param {String} opts.timezone Timezone of the client. Localizes the available days
+     * @param {Number} opts.page The requested page of results
+     * @param {Number} opts.perPage The number of results per page. Only applies when using a date range
+     * @param {module:api/AppointmentsApi~getAvailableDatesCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CalendarDayCollection}
+     */
+    getAvailableDates(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'filter[user_ids]': this.apiClient.buildCollectionParam(opts['filterUserIds'], 'multi'),
+        'filter[appointment_id]': opts['filterAppointmentId'],
+        'filter[start_at]': opts['filterStartAt'],
+        'filter[end_at]': opts['filterEndAt'],
+        'filter[timeframe]': this.apiClient.buildCollectionParam(opts['filterTimeframe'], 'multi'),
+        'duration': opts['duration'],
+        'interval': opts['interval'],
+        'timezone': opts['timezone'],
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Token'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = CalendarDayCollection;
+      return this.apiClient.callApi(
+        '/scheduling/available-dates', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getAvailableTimeslots operation.
+     * @callback module:api/AppointmentsApi~getAvailableTimeslotsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/TimeslotCollection} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Fetch available timeslots for a user or group
+     * Fetch available timeslots for scheduling or rescheduling an appointment. Timeslots can be retrieved using a specific start & end date range, or using a timeframe. When using a timeframe, the page parameter can be used to flip through days or weeks.
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.filterUserIds The IDs of users whose appointments will be retrieved. UUID Version 4.
+     * @param {String} opts.filterAppointmentId Appointment ID used to fetch availability for an existing order
+     * @param {Date} opts.filterStartAt Returns availability after start_at
+     * @param {Date} opts.filterEndAt Returns availability before end_at
+     * @param {Array.<module:model/String>} opts.filterTimeframe Returns availability for a specific timeframe. Used instead of start_at & end_at
+     * @param {Number} opts.duration Duration of the event to schedule. Required if appointment_id isn't specified
+     * @param {Number} opts.interval Interval of bookable timeslots starting at x minutes on the hour . Required if appointment_id isn't specified
+     * @param {Number} opts.page The requested page of results
+     * @param {Number} opts.perPage The number of results per page. Only applies when using a date range
+     * @param {module:api/AppointmentsApi~getAvailableTimeslotsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/TimeslotCollection}
+     */
+    getAvailableTimeslots(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'filter[user_ids]': this.apiClient.buildCollectionParam(opts['filterUserIds'], 'multi'),
+        'filter[appointment_id]': opts['filterAppointmentId'],
+        'filter[start_at]': opts['filterStartAt'],
+        'filter[end_at]': opts['filterEndAt'],
+        'filter[timeframe]': this.apiClient.buildCollectionParam(opts['filterTimeframe'], 'multi'),
+        'duration': opts['duration'],
+        'interval': opts['interval'],
+        'page': opts['page'],
+        'per_page': opts['perPage']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['Token'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = TimeslotCollection;
+      return this.apiClient.callApi(
+        '/scheduling/available-timeslots', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

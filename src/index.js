@@ -18,6 +18,8 @@ import AppointmentCancelPutPayload from './model/AppointmentCancelPutPayload';
 import AppointmentCollection from './model/AppointmentCollection';
 import AppointmentReschedulePutPayload from './model/AppointmentReschedulePutPayload';
 import AppointmentResource from './model/AppointmentResource';
+import CalendarDay from './model/CalendarDay';
+import CalendarDayCollection from './model/CalendarDayCollection';
 import FloorPlan from './model/FloorPlan';
 import Group from './model/Group';
 import GroupCollection from './model/GroupCollection';
@@ -44,6 +46,8 @@ import ProductCollection from './model/ProductCollection';
 import ProductVariant from './model/ProductVariant';
 import PropertyWebsite from './model/PropertyWebsite';
 import SocialProfiles from './model/SocialProfiles';
+import Timeslot from './model/Timeslot';
+import TimeslotCollection from './model/TimeslotCollection';
 import UnconfirmedAppointment from './model/UnconfirmedAppointment';
 import UnconfirmedAppointmentCollection from './model/UnconfirmedAppointmentCollection';
 import UnconfirmedAppointmentResource from './model/UnconfirmedAppointmentResource';
@@ -158,6 +162,18 @@ export {
      * @property {module:model/AppointmentResource}
      */
     AppointmentResource,
+
+    /**
+     * The CalendarDay model constructor.
+     * @property {module:model/CalendarDay}
+     */
+    CalendarDay,
+
+    /**
+     * The CalendarDayCollection model constructor.
+     * @property {module:model/CalendarDayCollection}
+     */
+    CalendarDayCollection,
 
     /**
      * The FloorPlan model constructor.
@@ -314,6 +330,18 @@ export {
      * @property {module:model/SocialProfiles}
      */
     SocialProfiles,
+
+    /**
+     * The Timeslot model constructor.
+     * @property {module:model/Timeslot}
+     */
+    Timeslot,
+
+    /**
+     * The TimeslotCollection model constructor.
+     * @property {module:model/TimeslotCollection}
+     */
+    TimeslotCollection,
 
     /**
      * The UnconfirmedAppointment model constructor.

@@ -49,6 +49,8 @@ All URIs are relative to *https://api.aryeo.com/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Aryeo.AppointmentsApi* | [**getAppointments**](docs/AppointmentsApi.md#getAppointments) | **GET** /appointments | List all appointments.
+*Aryeo.AppointmentsApi* | [**getAvailableDates**](docs/AppointmentsApi.md#getAvailableDates) | **GET** /scheduling/available-dates | Fetch available days for a user or group
+*Aryeo.AppointmentsApi* | [**getAvailableTimeslots**](docs/AppointmentsApi.md#getAvailableTimeslots) | **GET** /scheduling/available-timeslots | Fetch available timeslots for a user or group
 *Aryeo.AppointmentsApi* | [**getUnconfirmedAppointments**](docs/AppointmentsApi.md#getUnconfirmedAppointments) | **GET** /unconfirmed-appointments | List all unconfirmed appointments.
 *Aryeo.AppointmentsApi* | [**getUnconfirmedAppointmentsId**](docs/AppointmentsApi.md#getUnconfirmedAppointmentsId) | **GET** /unconfirmed-appointments/{unconfirmed_appointment_id} | Retrieve an unconfirmed appointment.
 *Aryeo.AppointmentsApi* | [**putAppointmentsAppointmentIdCancel**](docs/AppointmentsApi.md#putAppointmentsAppointmentIdCancel) | **PUT** /appointments/{appointment_id}/cancel | Cancel an appointment.
@@ -76,6 +78,8 @@ Class | Method | HTTP request | Description
  - [Aryeo.AppointmentCollection](docs/AppointmentCollection.md)
  - [Aryeo.AppointmentReschedulePutPayload](docs/AppointmentReschedulePutPayload.md)
  - [Aryeo.AppointmentResource](docs/AppointmentResource.md)
+ - [Aryeo.CalendarDay](docs/CalendarDay.md)
+ - [Aryeo.CalendarDayCollection](docs/CalendarDayCollection.md)
  - [Aryeo.FloorPlan](docs/FloorPlan.md)
  - [Aryeo.Group](docs/Group.md)
  - [Aryeo.GroupCollection](docs/GroupCollection.md)
@@ -102,6 +106,8 @@ Class | Method | HTTP request | Description
  - [Aryeo.ProductVariant](docs/ProductVariant.md)
  - [Aryeo.PropertyWebsite](docs/PropertyWebsite.md)
  - [Aryeo.SocialProfiles](docs/SocialProfiles.md)
+ - [Aryeo.Timeslot](docs/Timeslot.md)
+ - [Aryeo.TimeslotCollection](docs/TimeslotCollection.md)
  - [Aryeo.UnconfirmedAppointment](docs/UnconfirmedAppointment.md)
  - [Aryeo.UnconfirmedAppointmentCollection](docs/UnconfirmedAppointmentCollection.md)
  - [Aryeo.UnconfirmedAppointmentResource](docs/UnconfirmedAppointmentResource.md)
