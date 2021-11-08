@@ -48,9 +48,6 @@ class OrderPostPayload {
             if (data.hasOwnProperty('internal_notes')) {
                 obj['internal_notes'] = ApiClient.convertToType(data['internal_notes'], 'String');
             }
-            if (data.hasOwnProperty('payment_status')) {
-                obj['payment_status'] = ApiClient.convertToType(data['payment_status'], 'String');
-            }
             if (data.hasOwnProperty('address_id')) {
                 obj['address_id'] = ApiClient.convertToType(data['address_id'], 'String');
             }
@@ -78,12 +75,6 @@ OrderPostPayload.prototype['fulfillment_status'] = undefined;
  * @member {String} internal_notes
  */
 OrderPostPayload.prototype['internal_notes'] = undefined;
-
-/**
- * The payment status of the order. Defaults to \"UNPAID\". 
- * @member {module:model/OrderPostPayload.PaymentStatusEnum} payment_status
- */
-OrderPostPayload.prototype['payment_status'] = undefined;
 
 /**
  * ID of the address to associate with the order. UUID Version 4.
@@ -125,27 +116,6 @@ OrderPostPayload['FulfillmentStatusEnum'] = {
      * @const
      */
     "UNFULFILLED": "UNFULFILLED"
-};
-
-
-/**
- * Allowed values for the <code>payment_status</code> property.
- * @enum {String}
- * @readonly
- */
-OrderPostPayload['PaymentStatusEnum'] = {
-
-    /**
-     * value: "PAID"
-     * @const
-     */
-    "PAID": "PAID",
-
-    /**
-     * value: "UNPAID"
-     * @const
-     */
-    "UNPAID": "UNPAID"
 };
 
 

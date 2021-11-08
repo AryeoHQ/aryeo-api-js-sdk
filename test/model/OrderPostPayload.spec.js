@@ -60,12 +60,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property paymentStatus (base name: "payment_status")', function() {
-      // uncomment below and update the code to test the property paymentStatus
-      //var instance = new Aryeo.OrderPostPayload();
-      //expect(instance).to.be();
-    });
-
     it('should have the property addressId (base name: "address_id")', function() {
       // uncomment below and update the code to test the property addressId
       //var instance = new Aryeo.OrderPostPayload();
