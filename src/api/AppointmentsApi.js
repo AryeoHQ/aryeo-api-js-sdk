@@ -221,7 +221,7 @@ export default class AppointmentsApi {
 
     /**
      * List all unconfirmed appointments.
-     * List all unconfirmed appointments. These are appointments that have not been scheduled. 
+     * List all unconfirmed appointments. These are appointments that have not been scheduled.
      * @param {Object} opts Optional parameters
      * @param {String} opts.include Comma separated list of optional data to include in the response.
      * @param {Array.<String>} opts.filterUserIds The IDs of users whose appointments will be retrieved. UUID Version 4.
@@ -317,7 +317,7 @@ export default class AppointmentsApi {
 
     /**
      * Cancel an appointment.
-     * Cancel an appointment. The appointments order's customer can be optionally notified of this change. 
+     * Cancel an appointment. The appointments order's customer can be optionally notified of this change.
      * @param {String} appointmentId The ID of an appointment.
      * @param {Object} opts Optional parameters
      * @param {module:model/AppointmentCancelPutPayload} opts.appointmentCancelPutPayload 
@@ -363,7 +363,7 @@ export default class AppointmentsApi {
 
     /**
      * Reschedule an appointment.
-     * Reschedule an appointment. The appointments order's customer can be optionally notified of this change. 
+     * Reschedule an appointment. The appointments order's customer can be optionally notified of this change.
      * @param {String} appointmentId The ID of an appointment.
      * @param {Object} opts Optional parameters
      * @param {module:model/AppointmentReschedulePutPayload} opts.appointmentReschedulePutPayload 

@@ -50,7 +50,7 @@ export default class ListingsApi {
      * @param {String} opts.filterAddress Return listings that have an address matching this term.
      * @param {String} opts.filterListAgent Return listings that have a listing agent or co-listing agent matching this term.
      * @param {module:model/String} opts.filterStatus Return listings that have a certain status.
-     * @param {Boolean} opts.filterActive Set as true to return listings that have an active status (e.g. active statuses include `COMING_SOON`, `FOR_SALE`, `FOR_LEASE`, `PENDING_SALE`, `PENDING_LEASE`, `SOLD`, `LEASED`). 
+     * @param {Boolean} opts.filterActive Set as true to return listings that have an active status (e.g. active statuses include `COMING_SOON`, `FOR_SALE`, `FOR_LEASE`, `PENDING_SALE`, `PENDING_LEASE`, `SOLD`, `LEASED`).
      * @param {Number} opts.filterPriceGte Return listings where the price field is greater than or equal to this value.
      * @param {Number} opts.filterPriceLte Return listings where the price field is less than or equal to this value.
      * @param {Number} opts.filterSquareFeetGte Return listings where the square feet field is greater than or equal to this value.
