@@ -87,6 +87,12 @@ class Order {
             if (data.hasOwnProperty('status_url')) {
                 obj['status_url'] = ApiClient.convertToType(data['status_url'], 'String');
             }
+            if (data.hasOwnProperty('downloads_allowed')) {
+                obj['downloads_allowed'] = ApiClient.convertToType(data['downloads_allowed'], 'Boolean');
+            }
+            if (data.hasOwnProperty('payments_allowed')) {
+                obj['payments_allowed'] = ApiClient.convertToType(data['payments_allowed'], 'Boolean');
+            }
             if (data.hasOwnProperty('address')) {
                 obj['address'] = Address.constructFromObject(data['address']);
             }
@@ -165,6 +171,18 @@ Order.prototype['payment_url'] = undefined;
  * @member {String} status_url
  */
 Order.prototype['status_url'] = undefined;
+
+/**
+ * Indicates if the current user is allowed to download content from the attached listing.
+ * @member {Boolean} downloads_allowed
+ */
+Order.prototype['downloads_allowed'] = undefined;
+
+/**
+ * Indicates if the current user is allowed to make a payment for the order.
+ * @member {Boolean} payments_allowed
+ */
+Order.prototype['payments_allowed'] = undefined;
 
 /**
  * @member {module:model/Address} address

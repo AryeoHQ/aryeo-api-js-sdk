@@ -57,6 +57,12 @@ class OrderPostPayload {
             if (data.hasOwnProperty('notify')) {
                 obj['notify'] = ApiClient.convertToType(data['notify'], 'Boolean');
             }
+            if (data.hasOwnProperty('lock_download_for_payment')) {
+                obj['lock_download_for_payment'] = ApiClient.convertToType(data['lock_download_for_payment'], 'Boolean');
+            }
+            if (data.hasOwnProperty('allow_payments_before_fulfillment')) {
+                obj['allow_payments_before_fulfillment'] = ApiClient.convertToType(data['allow_payments_before_fulfillment'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -93,6 +99,18 @@ OrderPostPayload.prototype['customer_id'] = undefined;
  * @member {Boolean} notify
  */
 OrderPostPayload.prototype['notify'] = undefined;
+
+/**
+ * Indicates if the downloads for the attached listing should be locked while there is an outstanding balance on the order.
+ * @member {Boolean} lock_download_for_payment
+ */
+OrderPostPayload.prototype['lock_download_for_payment'] = undefined;
+
+/**
+ * Indicates if the order will allow payments from the customer before the order is marked as fulfilled.
+ * @member {Boolean} allow_payments_before_fulfillment
+ */
+OrderPostPayload.prototype['allow_payments_before_fulfillment'] = undefined;
 
 
 

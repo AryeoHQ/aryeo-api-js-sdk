@@ -102,6 +102,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property downloadsAllowed (base name: "downloads_allowed")', function() {
+      // uncomment below and update the code to test the property downloadsAllowed
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property paymentsAllowed (base name: "payments_allowed")', function() {
+      // uncomment below and update the code to test the property paymentsAllowed
+      //var instance = new Aryeo.Order();
+      //expect(instance).to.be();
+    });
+
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
       //var instance = new Aryeo.Order();

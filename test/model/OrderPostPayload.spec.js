@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property lockDownloadForPayment (base name: "lock_download_for_payment")', function() {
+      // uncomment below and update the code to test the property lockDownloadForPayment
+      //var instance = new Aryeo.OrderPostPayload();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property allowPaymentsBeforeFulfillment (base name: "allow_payments_before_fulfillment")', function() {
+      // uncomment below and update the code to test the property allowPaymentsBeforeFulfillment
+      //var instance = new Aryeo.OrderPostPayload();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
